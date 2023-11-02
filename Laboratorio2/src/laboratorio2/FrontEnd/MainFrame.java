@@ -26,21 +26,26 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        Btn_AdminLogin = new javax.swing.JButton();
         IntFrame_AdminLogin = new javax.swing.JInternalFrame();
-        jTextField1 = new javax.swing.JTextField();
+        Lbl_AdminUser = new javax.swing.JLabel();
+        Tfield_AdminUser = new javax.swing.JTextField();
+        Lbl_AdminPasword = new javax.swing.JLabel();
+        Pfield_AdminsPasword = new javax.swing.JPasswordField();
+        Btn_ConfirmLogin = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototype 1");
         setResizable(false);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/media/admin.png"))); // NOI18N
-        jButton1.setMaximumSize(new java.awt.Dimension(100, 100));
-        jButton1.setMinimumSize(new java.awt.Dimension(100, 100));
-        jButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Btn_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/media/admin.png"))); // NOI18N
+        Btn_AdminLogin.setMaximumSize(new java.awt.Dimension(100, 100));
+        Btn_AdminLogin.setMinimumSize(new java.awt.Dimension(100, 100));
+        Btn_AdminLogin.setPreferredSize(new java.awt.Dimension(100, 100));
+        Btn_AdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Btn_AdminLoginActionPerformed(evt);
             }
         });
 
@@ -51,10 +56,27 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminLogin.setName(""); // NOI18N
         IntFrame_AdminLogin.setVisible(true);
 
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Lbl_AdminUser.setText("Usuario:");
+
+        Tfield_AdminUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                Tfield_AdminUserActionPerformed(evt);
+            }
+        });
+
+        Lbl_AdminPasword.setText("Contraseña:");
+
+        Btn_ConfirmLogin.setText("Entrar");
+        Btn_ConfirmLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_ConfirmLoginActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Olvidé mi contraseña :(");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel1MousePressed(evt);
             }
         });
 
@@ -63,16 +85,39 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminLoginLayout.setHorizontalGroup(
             IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IntFrame_AdminLoginLayout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(288, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IntFrame_AdminLoginLayout.createSequentialGroup()
+                        .addGroup(IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Lbl_AdminPasword, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                            .addComponent(Lbl_AdminUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Tfield_AdminUser)
+                            .addComponent(Pfield_AdminsPasword, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)))
+                    .addGroup(IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, IntFrame_AdminLoginLayout.createSequentialGroup()
+                            .addGap(125, 125, 125)
+                            .addComponent(Btn_ConfirmLogin))))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         IntFrame_AdminLoginLayout.setVerticalGroup(
             IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IntFrame_AdminLoginLayout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addGroup(IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Tfield_AdminUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Lbl_AdminUser))
+                .addGap(18, 18, 18)
+                .addGroup(IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Lbl_AdminPasword)
+                    .addComponent(Pfield_AdminsPasword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(67, 67, 67)
+                .addComponent(Btn_ConfirmLogin)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -81,7 +126,7 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Btn_AdminLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
@@ -94,20 +139,28 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(IntFrame_AdminLogin)
                 .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Btn_AdminLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Btn_AdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_AdminLoginActionPerformed
         IntFrame_AdminLogin.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Btn_AdminLoginActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void Tfield_AdminUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tfield_AdminUserActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_Tfield_AdminUserActionPerformed
+
+    private void Btn_ConfirmLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ConfirmLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_ConfirmLoginActionPerformed
+
+    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
+        System.out.println("ockamsockamsock");
+    }//GEN-LAST:event_jLabel1MousePressed
 
     /**
      * @param args the command line arguments
@@ -145,8 +198,13 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Btn_AdminLogin;
+    private javax.swing.JButton Btn_ConfirmLogin;
     private javax.swing.JInternalFrame IntFrame_AdminLogin;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel Lbl_AdminPasword;
+    private javax.swing.JLabel Lbl_AdminUser;
+    private javax.swing.JPasswordField Pfield_AdminsPasword;
+    private javax.swing.JTextField Tfield_AdminUser;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
