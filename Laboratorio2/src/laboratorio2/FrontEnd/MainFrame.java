@@ -328,25 +328,18 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_BackPasswordChange;
     private javax.swing.JButton Btn_ConfirmChange;
     private javax.swing.JButton Btn_ConfirmLogin;
-    private javax.swing.JButton Btn_ConfirmLogin1;
     private javax.swing.JInternalFrame IntFrame_AdminLogin;
-    private javax.swing.JInternalFrame IntFrame_AdminLogin1;
     private javax.swing.JInternalFrame IntFrame_PasswordChange;
     private javax.swing.JLabel Lbl_AdminPassword;
-    private javax.swing.JLabel Lbl_AdminPassword1;
     private javax.swing.JLabel Lbl_AdminUser;
-    private javax.swing.JLabel Lbl_AdminUser1;
     private javax.swing.JLabel Lbl_ConfirmNewPassword;
     private javax.swing.JLabel Lbl_LastPassword;
     private javax.swing.JLabel Lbl_NewPassword;
     private javax.swing.JLabel Lbl_PasswordChange;
-    private javax.swing.JLabel Lbl_PasswordChange1;
     private javax.swing.JPasswordField Pfield_AdminPassword;
-    private javax.swing.JPasswordField Pfield_AdminPassword1;
     private javax.swing.JPasswordField Pfield_ConfirmNewPassword;
     private javax.swing.JPasswordField Pfield_LastPassword;
     private javax.swing.JPasswordField Pfield_NewPassword;
     private javax.swing.JTextField Tfield_AdminUser;
-    private javax.swing.JTextField Tfield_AdminUser1;
     // End of variables declaration//GEN-END:variables
 }
