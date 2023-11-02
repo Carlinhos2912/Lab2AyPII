@@ -4,7 +4,7 @@ public class Autos {
     
     private String Placa;   //Formato XXX000
     private String Color;   //Color primario del automovil
-    private int Modelo; //Año de salida al mercado del automovil
+    private String Modelo; //Año de salida al mercado del automovil
     private double PrecioDeVenta;  //Precio de venta del automovil
 
     public String getPlaca() {
@@ -23,11 +23,11 @@ public class Autos {
         this.Color = Color;
     }
 
-    public int getModelo() {
+    public String getModelo() {
         return Modelo;
     }
 
-    public void setModelo(int Modelo) {
+    public void setModelo(String Modelo) {
         this.Modelo = Modelo;
     }
 
@@ -37,6 +37,8 @@ public class Autos {
 
     public void setPrecioDeVenta(double PrecioDeVenta) {
         this.PrecioDeVenta = PrecioDeVenta;
-    }    
+    }
+
+    
 
 }
