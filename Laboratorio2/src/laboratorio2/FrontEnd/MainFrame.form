@@ -97,16 +97,14 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="Tfield_AdminUser" max="32767" attributes="0"/>
-                              <Component id="Pfield_AdminsPasword" pref="238" max="32767" attributes="0"/>
+                              <Component id="Pfield_AdminPasword" pref="238" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-                              <Component id="Btn_ConfirmLogin" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                          <Component id="Btn_ConfirmLogin" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="Lbl_PasworChange" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="40" max="32767" attributes="0"/>
               </Group>
@@ -123,12 +121,12 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Lbl_AdminPasword" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Pfield_AdminsPasword" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Pfield_AdminPasword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                   <Component id="Btn_ConfirmLogin" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lbl_PasworChange" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="79" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -150,7 +148,7 @@
             <Property name="text" type="java.lang.String" value="Contrase&#xf1;a:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="Pfield_AdminsPasword">
+        <Component class="javax.swing.JPasswordField" name="Pfield_AdminPasword">
         </Component>
         <Component class="javax.swing.JButton" name="Btn_ConfirmLogin">
           <Properties>
@@ -160,12 +158,13 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_ConfirmLoginActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="Lbl_PasworChange">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Olvid&#xe9; mi contrase&#xf1;a :("/>
+            <Property name="text" type="java.lang.String" value="Cambiar la contrase&#xf1;a de administrador"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Events>
-            <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel1MousePressed"/>
+            <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Lbl_PasworChangeMousePressed"/>
           </Events>
         </Component>
       </SubComponents>
