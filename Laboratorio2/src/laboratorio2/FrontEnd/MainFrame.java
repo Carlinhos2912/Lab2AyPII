@@ -146,6 +146,11 @@ public class MainFrame extends javax.swing.JFrame {
         Button_Salir.setFont(new java.awt.Font("Lithos", 0, 13)); // NOI18N
         Button_Salir.setForeground(new java.awt.Color(255, 255, 255));
         Button_Salir.setText("Salir");
+        Button_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_SalirActionPerformed(evt);
+            }
+        });
         IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
 
         Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/1.png"))); // NOI18N
@@ -380,6 +385,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void Button_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_SalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Button_SalirActionPerformed
 
     /**
      * @param args the command line arguments
