@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package laboratorio2.FrontEnd;
-import laboratorio2.BackEnd.TheMagic;
 import laboratorio2.BackEnd.Admin;
+import laboratorio2.BackEnd.TheMagic;
 /**
  *
  * @author carlo
@@ -28,21 +28,50 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PopUp_AdminLogin = new javax.swing.JDialog();
+        Lbl_PopUp_AdminLogin = new javax.swing.JLabel();
         IntFrame_AdminLogin = new javax.swing.JInternalFrame();
         Lbl_AdminUser = new javax.swing.JLabel();
         Tfield_AdminUser = new javax.swing.JTextField();
         Lbl_AdminPassword = new javax.swing.JLabel();
         Pfield_AdminPassword = new javax.swing.JPasswordField();
-        Btn_AdminLogin = new javax.swing.JButton();
+        Btn_ConfirmAdminLogin = new javax.swing.JButton();
         Lbl_PasswordChange = new javax.swing.JLabel();
         IntFrame_PasswordChange = new javax.swing.JInternalFrame();
-        Lbl_AdminUser1 = new javax.swing.JLabel();
-        Tfield_AdminUser1 = new javax.swing.JTextField();
-        Lbl_AdminPassword1 = new javax.swing.JLabel();
-        Pfield_AdminPassword1 = new javax.swing.JPasswordField();
-        Btn_AdminLogin1 = new javax.swing.JButton();
-        Lbl_PasswordChange1 = new javax.swing.JLabel();
+        Lbl_LastPassword = new javax.swing.JLabel();
+        Pfield_LastPassword = new javax.swing.JPasswordField();
+        Lbl_NewPassword = new javax.swing.JLabel();
+        Pfield_NewPassword = new javax.swing.JPasswordField();
+        Lbl_ConfirmNewPassword = new javax.swing.JLabel();
+        Pfield_ConfirmNewPassword = new javax.swing.JPasswordField();
+        Btn_ConfirmPasswordChange = new javax.swing.JButton();
+        Btn_BackChangePassword = new javax.swing.JButton();
         IntFrame_ClientView = new javax.swing.JInternalFrame();
+        IntFrame_AdminView = new javax.swing.JInternalFrame();
+
+        PopUp_AdminLogin.setAlwaysOnTop(true);
+        PopUp_AdminLogin.setFont(getFont());
+        PopUp_AdminLogin.setIconImage(null);
+        PopUp_AdminLogin.setIconImages(null);
+
+        Lbl_PopUp_AdminLogin.setText("Login correcto");
+
+        javax.swing.GroupLayout PopUp_AdminLoginLayout = new javax.swing.GroupLayout(PopUp_AdminLogin.getContentPane());
+        PopUp_AdminLogin.getContentPane().setLayout(PopUp_AdminLoginLayout);
+        PopUp_AdminLoginLayout.setHorizontalGroup(
+            PopUp_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PopUp_AdminLoginLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(Lbl_PopUp_AdminLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(102, Short.MAX_VALUE))
+        );
+        PopUp_AdminLoginLayout.setVerticalGroup(
+            PopUp_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PopUp_AdminLoginLayout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(Lbl_PopUp_AdminLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(143, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototype 1");
@@ -55,22 +84,23 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminLogin.setResizable(true);
         IntFrame_AdminLogin.setTitle("Admin Log in");
         IntFrame_AdminLogin.setLayer(1);
-        IntFrame_AdminLogin.setMinimumSize(new java.awt.Dimension(488, 488));
+        IntFrame_AdminLogin.setMinimumSize(new java.awt.Dimension(500, 500));
+        IntFrame_AdminLogin.setPreferredSize(new java.awt.Dimension(500, 500));
         try {
             IntFrame_AdminLogin.setSelected(true);
         } catch (java.beans.PropertyVetoException e1) {
             e1.printStackTrace();
         }
-        IntFrame_AdminLogin.setVisible(false);
+        IntFrame_AdminLogin.setVisible(true);
 
         Lbl_AdminUser.setText("Usuario: ");
 
         Lbl_AdminPassword.setText("Contraseña: ");
 
-        Btn_AdminLogin.setText("Ingresar");
-        Btn_AdminLogin.addActionListener(new java.awt.event.ActionListener() {
+        Btn_ConfirmAdminLogin.setText("Ingresar");
+        Btn_ConfirmAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_AdminLoginActionPerformed(evt);
+                Btn_ConfirmAdminLoginActionPerformed(evt);
             }
         });
 
@@ -92,7 +122,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(Lbl_PasswordChange, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Btn_AdminLogin))
+                    .addComponent(Btn_ConfirmAdminLogin))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(IntFrame_AdminLoginLayout.createSequentialGroup()
                 .addGroup(IntFrame_AdminLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,16 +148,19 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(Lbl_AdminPassword)
                     .addComponent(Pfield_AdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(114, 114, 114)
-                .addComponent(Btn_AdminLogin)
+                .addComponent(Btn_ConfirmAdminLogin)
                 .addGap(18, 18, 18)
                 .addComponent(Lbl_PasswordChange)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         IntFrame_PasswordChange.setClosable(true);
+        IntFrame_PasswordChange.setResizable(true);
         IntFrame_PasswordChange.setTitle("Cambio de contraseña");
         IntFrame_PasswordChange.setLayer(2);
-        IntFrame_PasswordChange.setMinimumSize(new java.awt.Dimension(488, 488));
+        IntFrame_PasswordChange.setMinimumSize(new java.awt.Dimension(500, 500));
+        IntFrame_PasswordChange.setNormalBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        IntFrame_PasswordChange.setPreferredSize(new java.awt.Dimension(500, 500));
         try {
             IntFrame_PasswordChange.setSelected(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -135,22 +168,23 @@ public class MainFrame extends javax.swing.JFrame {
         }
         IntFrame_PasswordChange.setVisible(false);
 
-        Lbl_AdminUser1.setText("Usuario: ");
+        Lbl_LastPassword.setText("Anterior contraseña: ");
 
-        Lbl_AdminPassword1.setText("Contraseña: ");
+        Lbl_NewPassword.setText("Nueva contraseña: ");
 
-        Btn_AdminLogin1.setText("Ingresar");
-        Btn_AdminLogin1.addActionListener(new java.awt.event.ActionListener() {
+        Lbl_ConfirmNewPassword.setText("Confirmar nueva contraseña: ");
+
+        Btn_ConfirmPasswordChange.setText("Confirmar");
+        Btn_ConfirmPasswordChange.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_AdminLogin1ActionPerformed(evt);
+                Btn_ConfirmPasswordChangeActionPerformed(evt);
             }
         });
 
-        Lbl_PasswordChange1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Lbl_PasswordChange1.setText("Cambiar contraseña");
-        Lbl_PasswordChange1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Lbl_PasswordChange1MouseClicked(evt);
+        Btn_BackChangePassword.setText("Atras");
+        Btn_BackChangePassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_BackChangePasswordActionPerformed(evt);
             }
         });
 
@@ -160,53 +194,96 @@ public class MainFrame extends javax.swing.JFrame {
             IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Lbl_AdminPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Lbl_PasswordChange1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Btn_AdminLogin1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
                 .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
-                        .addGap(206, 206, 206)
-                        .addComponent(Pfield_AdminPassword1))
+                        .addComponent(Lbl_LastPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(310, 310, 310))
                     .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(Lbl_AdminUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Tfield_AdminUser1)))
-                .addGap(6, 6, 6))
+                        .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
+                                .addGap(200, 200, 200)
+                                .addComponent(Pfield_LastPassword))
+                            .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
+                                .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Lbl_NewPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Lbl_ConfirmNewPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(304, 304, 304))
+                            .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
+                                .addGap(200, 200, 200)
+                                .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Pfield_NewPassword)
+                                    .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
+                                        .addComponent(Btn_ConfirmPasswordChange)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(Btn_BackChangePassword)
+                                        .addGap(0, 0, 0))
+                                    .addComponent(Pfield_ConfirmNewPassword))))
+                        .addContainerGap())))
         );
         IntFrame_PasswordChangeLayout.setVerticalGroup(
             IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IntFrame_PasswordChangeLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(68, 68, 68)
                 .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lbl_AdminUser1)
-                    .addComponent(Tfield_AdminUser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(66, 66, 66)
+                    .addComponent(Lbl_LastPassword)
+                    .addComponent(Pfield_LastPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
                 .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lbl_AdminPassword1)
-                    .addComponent(Pfield_AdminPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(114, 114, 114)
-                .addComponent(Btn_AdminLogin1)
-                .addGap(18, 18, 18)
-                .addComponent(Lbl_PasswordChange1)
+                    .addComponent(Lbl_NewPassword)
+                    .addComponent(Pfield_NewPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Lbl_ConfirmNewPassword)
+                    .addComponent(Pfield_ConfirmNewPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(IntFrame_PasswordChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Btn_ConfirmPasswordChange)
+                    .addComponent(Btn_BackChangePassword))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        IntFrame_ClientView.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        IntFrame_ClientView.setVisible(true);
+        IntFrame_ClientView.setResizable(true);
+        IntFrame_ClientView.setTitle("Vista de cliente");
+        IntFrame_ClientView.setMinimumSize(new java.awt.Dimension(500, 500));
+        IntFrame_ClientView.setNormalBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        IntFrame_ClientView.setPreferredSize(new java.awt.Dimension(500, 500));
+        try {
+            IntFrame_ClientView.setSelected(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+        IntFrame_ClientView.setVisible(false);
 
         javax.swing.GroupLayout IntFrame_ClientViewLayout = new javax.swing.GroupLayout(IntFrame_ClientView.getContentPane());
         IntFrame_ClientView.getContentPane().setLayout(IntFrame_ClientViewLayout);
         IntFrame_ClientViewLayout.setHorizontalGroup(
             IntFrame_ClientViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         IntFrame_ClientViewLayout.setVerticalGroup(
             IntFrame_ClientViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        IntFrame_AdminView.setTitle("Vista de administrador");
+        IntFrame_AdminView.setMinimumSize(new java.awt.Dimension(500, 500));
+        IntFrame_AdminView.setNormalBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        IntFrame_AdminView.setPreferredSize(new java.awt.Dimension(500, 500));
+        try {
+            IntFrame_AdminView.setSelected(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+        IntFrame_AdminView.setVisible(false);
+
+        javax.swing.GroupLayout IntFrame_AdminViewLayout = new javax.swing.GroupLayout(IntFrame_AdminView.getContentPane());
+        IntFrame_AdminView.getContentPane().setLayout(IntFrame_AdminViewLayout);
+        IntFrame_AdminViewLayout.setHorizontalGroup(
+            IntFrame_AdminViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        IntFrame_AdminViewLayout.setVerticalGroup(
+            IntFrame_AdminViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -215,22 +292,25 @@ public class MainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(IntFrame_ClientView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(IntFrame_AdminLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(IntFrame_PasswordChange, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(IntFrame_AdminLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
+                    .addComponent(IntFrame_PasswordChange, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(IntFrame_ClientView, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(IntFrame_AdminView, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(IntFrame_AdminLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(IntFrame_AdminLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(IntFrame_PasswordChange, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-            .addComponent(IntFrame_ClientView)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(IntFrame_ClientView, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(IntFrame_AdminView, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         try {
@@ -248,29 +328,44 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (java.beans.PropertyVetoException e1) {
             e1.printStackTrace();
         }
+        try {
+            IntFrame_AdminView.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Btn_AdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_AdminLoginActionPerformed
+    private void Btn_ConfirmAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ConfirmAdminLoginActionPerformed
         Admin GenCredentials = new Admin();
         GenCredentials.setUser(Tfield_AdminUser.getText());
         GenCredentials.setPassword(String.valueOf(Pfield_AdminPassword.getPassword()));
         TheMagic.Autentication(GenCredentials);
-    }//GEN-LAST:event_Btn_AdminLoginActionPerformed
+    }//GEN-LAST:event_Btn_ConfirmAdminLoginActionPerformed
 
     private void Lbl_PasswordChangeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_PasswordChangeMouseClicked
+        Pfield_AdminPassword.setText("");
         IntFrame_AdminLogin.setVisible(false);
         IntFrame_PasswordChange.setVisible(true);
     }//GEN-LAST:event_Lbl_PasswordChangeMouseClicked
 
-    private void Btn_AdminLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_AdminLogin1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Btn_AdminLogin1ActionPerformed
+    private void Btn_ConfirmPasswordChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ConfirmPasswordChangeActionPerformed
+        String Last = String.valueOf(Pfield_LastPassword.getPassword());
+        String New = String.valueOf(Pfield_NewPassword.getPassword());
+        String Confirm = String.valueOf(Pfield_ConfirmNewPassword.getPassword());
+        TheMagic.AutenticatePasswordChange(Last, New, Confirm);
+    }//GEN-LAST:event_Btn_ConfirmPasswordChangeActionPerformed
 
-    private void Lbl_PasswordChange1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_PasswordChange1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Lbl_PasswordChange1MouseClicked
+    private void Btn_BackChangePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_BackChangePasswordActionPerformed
+        //Borrar los campos del cambio
+            Pfield_LastPassword.setText("");
+            Pfield_NewPassword.setText("");
+            Pfield_ConfirmNewPassword.setText("");
+            //Volver al login de administrador
+            IntFrame_PasswordChange.setVisible(false);
+            IntFrame_AdminLogin.setVisible(true);
+    }//GEN-LAST:event_Btn_BackChangePasswordActionPerformed
 
     
     /**
@@ -309,20 +404,25 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Btn_AdminLogin;
-    private javax.swing.JButton Btn_AdminLogin1;
-    private javax.swing.JInternalFrame IntFrame_AdminLogin;
+    private javax.swing.JButton Btn_BackChangePassword;
+    private javax.swing.JButton Btn_ConfirmAdminLogin;
+    private javax.swing.JButton Btn_ConfirmPasswordChange;
+    public static javax.swing.JInternalFrame IntFrame_AdminLogin;
+    public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_ClientView;
-    private javax.swing.JInternalFrame IntFrame_PasswordChange;
+    public static javax.swing.JInternalFrame IntFrame_PasswordChange;
     private javax.swing.JLabel Lbl_AdminPassword;
-    private javax.swing.JLabel Lbl_AdminPassword1;
     private javax.swing.JLabel Lbl_AdminUser;
-    private javax.swing.JLabel Lbl_AdminUser1;
+    private javax.swing.JLabel Lbl_ConfirmNewPassword;
+    private javax.swing.JLabel Lbl_LastPassword;
+    private javax.swing.JLabel Lbl_NewPassword;
     private javax.swing.JLabel Lbl_PasswordChange;
-    private javax.swing.JLabel Lbl_PasswordChange1;
-    private javax.swing.JPasswordField Pfield_AdminPassword;
-    private javax.swing.JPasswordField Pfield_AdminPassword1;
+    public static javax.swing.JLabel Lbl_PopUp_AdminLogin;
+    public static javax.swing.JPasswordField Pfield_AdminPassword;
+    public static javax.swing.JPasswordField Pfield_ConfirmNewPassword;
+    public static javax.swing.JPasswordField Pfield_LastPassword;
+    public static javax.swing.JPasswordField Pfield_NewPassword;
+    public static javax.swing.JDialog PopUp_AdminLogin;
     private javax.swing.JTextField Tfield_AdminUser;
-    private javax.swing.JTextField Tfield_AdminUser1;
     // End of variables declaration//GEN-END:variables
 }
