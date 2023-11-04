@@ -423,7 +423,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Button_Salir;
     private javax.swing.JLabel Fondo1;
-    private javax.swing.JInternalFrame IntFrame_AdminLogin;
+    public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_ClientView;
     public static javax.swing.JInternalFrame IntFrame_PasswordChange;
@@ -432,7 +432,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_NewPassword;
     private javax.swing.JLabel Lbl_PasswordChange;
     public static javax.swing.JLabel Lbl_PopUp_AdminLogin;
-    private javax.swing.JPasswordField Pfield_AdminPassword;
+    public static javax.swing.JPasswordField Pfield_AdminPassword;
     public static javax.swing.JPasswordField Pfield_ConfirmNewPassword;
     public static javax.swing.JPasswordField Pfield_LastPassword;
     public static javax.swing.JPasswordField Pfield_NewPassword;
