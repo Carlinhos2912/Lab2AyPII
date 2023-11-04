@@ -84,8 +84,8 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototype 1");
         setAlwaysOnTop(true);
-        setExtendedState(this.MAXIMIZED_BOTH);
-        setMinimumSize(new java.awt.Dimension(700, 700));
+        setMinimumSize(new java.awt.Dimension(720, 440));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         IntFrame_AdminLogin.setClosable(true);
@@ -274,7 +274,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(IntFrame_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 423, 0, 0));
+        getContentPane().add(IntFrame_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 440));
         try {
             IntFrame_PasswordChange.setMaximum(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -302,7 +302,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(IntFrame_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 423, 0, 0));
+        getContentPane().add(IntFrame_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 440));
         try {
             IntFrame_ClientView.setMaximum(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -330,7 +330,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(IntFrame_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 423, 0, 0));
+        getContentPane().add(IntFrame_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 440));
         try {
             IntFrame_AdminView.setMaximum(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -387,7 +387,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void Button_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_SalirActionPerformed
-        // TODO add your handling code here:
+        IntFrame_AdminLogin.setVisible(false);
+        IntFrame_ClientView.setVisible(true);
     }//GEN-LAST:event_Button_SalirActionPerformed
 
     /**
