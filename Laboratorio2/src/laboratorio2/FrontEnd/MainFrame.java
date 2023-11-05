@@ -75,6 +75,7 @@ public class MainFrame extends javax.swing.JFrame {
         Btn_CarsAdminConfig = new javax.swing.JButton();
         Btn_ClientsAdminConfig = new javax.swing.JButton();
         Btn_SalesAdminConfig = new javax.swing.JButton();
+        Btn_Back_AdminView = new javax.swing.JButton();
 
         PopUp_AdminLogin.setAlwaysOnTop(true);
         PopUp_AdminLogin.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -569,6 +570,11 @@ public class MainFrame extends javax.swing.JFrame {
         }
 
         Btn_CarsAdminConfig.setText("Autos");
+        Btn_CarsAdminConfig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_CarsAdminConfigActionPerformed(evt);
+            }
+        });
         IntFrame_AdminView.getContentPane().add(Btn_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 260, 60));
 
         Btn_ClientsAdminConfig.setText("Clientes");
@@ -581,6 +587,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_AdminView.getContentPane().add(Btn_SalesAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 260, 60));
+
+        Btn_Back_AdminView.setText("Regresar a cliente");
+        IntFrame_AdminView.getContentPane().add(Btn_Back_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 250, 50));
 
         getContentPane().add(IntFrame_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
         try {
@@ -659,6 +668,10 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminLogin.setVisible(true);
     }//GEN-LAST:event_Lbl_AdminEntryMouseClicked
 
+    private void Btn_CarsAdminConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarsAdminConfigActionPerformed
+        
+    }//GEN-LAST:event_Btn_CarsAdminConfigActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -697,6 +710,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_BackChangePassword;
+    private javax.swing.JButton Btn_Back_AdminView;
     private javax.swing.JButton Btn_CarsAdminConfig;
     private javax.swing.JButton Btn_ClientsAdminConfig;
     private javax.swing.JButton Btn_ConfirmAdminLogin;
