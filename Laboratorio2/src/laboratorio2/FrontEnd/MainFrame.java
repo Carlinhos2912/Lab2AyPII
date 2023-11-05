@@ -135,7 +135,7 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminLogin.getContentPane().add(Tfield_AdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 200, 30));
 
         Btn_ConfirmAdminLogin.setBackground(new java.awt.Color(44, 131, 218));
-        Btn_ConfirmAdminLogin.setFont(new java.awt.Font("Lithos", 0, 14)); // NOI18N
+        Btn_ConfirmAdminLogin.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 18)); // NOI18N
         Btn_ConfirmAdminLogin.setForeground(new java.awt.Color(199, 227, 255));
         Btn_ConfirmAdminLogin.setText("Ingresar");
         Btn_ConfirmAdminLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -143,9 +143,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_ConfirmAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, -1, 30));
+        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 228, 110, -1));
 
-        Lbl_PasswordChange.setFont(new java.awt.Font("Lithos", 0, 5)); // NOI18N
+        Lbl_PasswordChange.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 8)); // NOI18N
         Lbl_PasswordChange.setForeground(new java.awt.Color(44, 131, 218));
         Lbl_PasswordChange.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lbl_PasswordChange.setText("Cambiar contraseña");
@@ -160,7 +160,7 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminLogin.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 1458, -1, -1));
 
         Button_Salir.setBackground(new java.awt.Color(56, 220, 220));
-        Button_Salir.setFont(new java.awt.Font("Lithos", 0, 13)); // NOI18N
+        Button_Salir.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 18)); // NOI18N
         Button_Salir.setForeground(new java.awt.Color(255, 255, 255));
         Button_Salir.setText("Salir");
         Button_Salir.addActionListener(new java.awt.event.ActionListener() {

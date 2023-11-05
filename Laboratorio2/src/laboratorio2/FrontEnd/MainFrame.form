@@ -148,7 +148,7 @@
               <Color blue="da" green="83" red="2c" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lithos" size="14" style="0"/>
+              <Font name="Toony Sans PERSONAL USE" size="18" style="0"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="e3" red="c7" type="rgb"/>
@@ -160,14 +160,14 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="460" y="230" width="-1" height="30"/>
+              <AbsoluteConstraints x="460" y="228" width="110" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="Lbl_PasswordChange">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lithos" size="5" style="0"/>
+              <Font name="Toony Sans PERSONAL USE" size="8" style="0"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="da" green="83" red="2c" type="rgb"/>
@@ -201,7 +201,7 @@
               <Color blue="dc" green="dc" red="38" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lithos" size="13" style="0"/>
+              <Font name="Toony Sans PERSONAL USE" size="18" style="0"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
