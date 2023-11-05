@@ -85,6 +85,7 @@ public class MainFrame extends javax.swing.JFrame {
         setTitle("Prototype 1");
         setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(720, 440));
+        setPreferredSize(new java.awt.Dimension(960, 540));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
