@@ -191,7 +191,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Pfield_AdminPasswordActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Pfield_AdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 200, 30));
+        IntFrame_AdminLogin.getContentPane().add(Pfield_AdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 200, 30));
 
         Tfield_AdminUser.setBackground(new java.awt.Color(199, 227, 255));
         Tfield_AdminUser.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +199,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Tfield_AdminUserActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Tfield_AdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 200, 30));
+        IntFrame_AdminLogin.getContentPane().add(Tfield_AdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 200, 30));
 
         Btn_ConfirmAdminLogin.setBackground(new java.awt.Color(44, 131, 218));
         Btn_ConfirmAdminLogin.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 18)); // NOI18N
@@ -210,9 +210,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_ConfirmAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 228, 110, -1));
+        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 110, 30));
 
-        Lbl_PasswordChange.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 8)); // NOI18N
+        Lbl_PasswordChange.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 14)); // NOI18N
         Lbl_PasswordChange.setForeground(new java.awt.Color(44, 131, 218));
         Lbl_PasswordChange.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lbl_PasswordChange.setText("Cambiar contraseña");
@@ -221,7 +221,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Lbl_PasswordChangeMouseClicked(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 140, 70));
+        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 270, 70));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         IntFrame_AdminLogin.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 1458, -1, -1));
@@ -235,9 +235,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Button_SalirActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
+        IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
 
-        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/1.png"))); // NOI18N
+        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Login-fi (700 x 370).png"))); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Lbl_Bg_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         getContentPane().add(IntFrame_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
