@@ -13,8 +13,6 @@ import laboratorio2.BackEnd.TheMagic;
  */
 public class MainFrame extends javax.swing.JFrame {
 
-    
-
     public MainFrame() {
 
         initComponents();
@@ -86,7 +84,6 @@ public class MainFrame extends javax.swing.JFrame {
         PopUp_AdminLogin.setModalityType(java.awt.Dialog.ModalityType.DOCUMENT_MODAL);
         PopUp_AdminLogin.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Lbl_PopUp_Base.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/3.png"))); // NOI18N
         Lbl_PopUp_Base.setText("Login correcto");
         Lbl_PopUp_Base.setMaximumSize(new java.awt.Dimension(300, 300));
         Lbl_PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 300));
@@ -155,7 +152,7 @@ public class MainFrame extends javax.swing.JFrame {
         }
 
         IntFrame_AdminLogin.setClosable(true);
-        IntFrame_AdminLogin.setTitle("CarCrafter Log in");
+        IntFrame_AdminLogin.setTitle("Inciar Sesión");
         IntFrame_AdminLogin.setLayer(1);
         IntFrame_AdminLogin.setMaximumSize(new java.awt.Dimension(700, 400));
         IntFrame_AdminLogin.setMinimumSize(new java.awt.Dimension(700, 400));
@@ -191,7 +188,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Pfield_AdminPasswordActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Pfield_AdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 200, 30));
+        IntFrame_AdminLogin.getContentPane().add(Pfield_AdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 185, 180, 25));
 
         Tfield_AdminUser.setBackground(new java.awt.Color(199, 227, 255));
         Tfield_AdminUser.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +196,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Tfield_AdminUserActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Tfield_AdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 200, 30));
+        IntFrame_AdminLogin.getContentPane().add(Tfield_AdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 141, 180, 25));
 
         Btn_ConfirmAdminLogin.setBackground(new java.awt.Color(44, 131, 218));
         Btn_ConfirmAdminLogin.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 18)); // NOI18N
@@ -210,23 +207,25 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_ConfirmAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 228, 110, -1));
+        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 110, -1));
 
-        Lbl_PasswordChange.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 8)); // NOI18N
+        Lbl_PasswordChange.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Lbl_PasswordChange.setForeground(new java.awt.Color(44, 131, 218));
         Lbl_PasswordChange.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lbl_PasswordChange.setText("Cambiar contraseña");
+        Lbl_PasswordChange.setToolTipText("");
+        Lbl_PasswordChange.setAlignmentY(0.0F);
         Lbl_PasswordChange.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_PasswordChangeMouseClicked(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 140, 70));
+        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 157, 190, 30));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         IntFrame_AdminLogin.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 1458, -1, -1));
 
-        Button_Salir.setBackground(new java.awt.Color(56, 220, 220));
+        Button_Salir.setBackground(new java.awt.Color(149, 227, 244));
         Button_Salir.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 18)); // NOI18N
         Button_Salir.setForeground(new java.awt.Color(255, 255, 255));
         Button_Salir.setText("Salir");
@@ -235,9 +234,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Button_SalirActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
+        IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
 
-        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/1.png"))); // NOI18N
+        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Fondo-Login.png"))); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Lbl_Bg_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         getContentPane().add(IntFrame_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -247,6 +246,7 @@ public class MainFrame extends javax.swing.JFrame {
             e1.printStackTrace();
         }
 
+        IntFrame_ClientView.setBorder(null);
         IntFrame_ClientView.setTitle("Vista de cliente");
         IntFrame_ClientView.setMaximumSize(new java.awt.Dimension(960, 540));
         IntFrame_ClientView.setMinimumSize(new java.awt.Dimension(960, 540));
@@ -669,7 +669,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_Lbl_AdminEntryMouseClicked
 
     private void Btn_CarsAdminConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarsAdminConfigActionPerformed
-        
+
     }//GEN-LAST:event_Btn_CarsAdminConfigActionPerformed
 
     /**
@@ -757,5 +757,4 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables
 
-    
 }
