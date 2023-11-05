@@ -93,6 +93,9 @@
         <Property name="selected" type="boolean" value="true"/>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="internalFrameClosed" listener="javax.swing.event.InternalFrameListener" parameters="javax.swing.event.InternalFrameEvent" handler="IntFrame_AdminLoginInternalFrameClosed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
       </AuxValues>

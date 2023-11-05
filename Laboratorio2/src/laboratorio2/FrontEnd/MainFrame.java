@@ -99,6 +99,23 @@ public class MainFrame extends javax.swing.JFrame {
             e1.printStackTrace();
         }
         IntFrame_AdminLogin.setVisible(true);
+        IntFrame_AdminLogin.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                IntFrame_AdminLoginInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
         IntFrame_AdminLogin.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Pfield_AdminPassword.setBackground(new java.awt.Color(199, 227, 255));
@@ -390,6 +407,10 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminLogin.setVisible(false);
         IntFrame_ClientView.setVisible(true);
     }//GEN-LAST:event_Button_SalirActionPerformed
+
+    private void IntFrame_AdminLoginInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_AdminLoginInternalFrameClosed
+        IntFrame_ClientView.setVisible(true);
+    }//GEN-LAST:event_IntFrame_AdminLoginInternalFrameClosed
 
     /**
      * @param args the command line arguments
