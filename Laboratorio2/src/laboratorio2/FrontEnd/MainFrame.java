@@ -41,6 +41,7 @@ public class MainFrame extends javax.swing.JFrame {
         Pfield_ConfirmNewPassword = new javax.swing.JPasswordField();
         Btn_ConfirmPasswordChange = new javax.swing.JButton();
         Btn_BackChangePassword = new javax.swing.JButton();
+        Lbl_Bg_PasswordChange = new javax.swing.JLabel();
         IntFrame_AdminLogin = new javax.swing.JInternalFrame();
         Pfield_AdminPassword = new javax.swing.JPasswordField();
         Tfield_AdminUser = new javax.swing.JTextField();
@@ -48,12 +49,13 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_PasswordChange = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Button_Salir = new javax.swing.JButton();
-        Fondo1 = new javax.swing.JLabel();
+        Lbl_Bg_AdminLogin = new javax.swing.JLabel();
         IntFrame_ClientView = new javax.swing.JInternalFrame();
         IntFrame_BuyACar = new javax.swing.JInternalFrame();
         Scroll_Table_CarsList = new javax.swing.JScrollPane();
         Table_CarsList = new javax.swing.JTable();
         Lbl_AdminEntry = new javax.swing.JLabel();
+        Lbl_Bg_ClientView = new javax.swing.JLabel();
         IntFrame_AdminView = new javax.swing.JInternalFrame();
         IntFrame_CarsAdminConfig = new javax.swing.JInternalFrame();
         jButton1 = new javax.swing.JButton();
@@ -138,6 +140,11 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_PasswordChange.getContentPane().add(Btn_BackChangePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 242, -1, -1));
+
+        Lbl_Bg_PasswordChange.setMaximumSize(new java.awt.Dimension(700, 370));
+        Lbl_Bg_PasswordChange.setMinimumSize(new java.awt.Dimension(700, 370));
+        Lbl_Bg_PasswordChange.setPreferredSize(new java.awt.Dimension(700, 370));
+        IntFrame_PasswordChange.getContentPane().add(Lbl_Bg_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         getContentPane().add(IntFrame_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -229,8 +236,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
 
-        Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/1.png"))); // NOI18N
-        IntFrame_AdminLogin.getContentPane().add(Fondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 720, 420));
+        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/1.png"))); // NOI18N
+        IntFrame_AdminLogin.getContentPane().add(Lbl_Bg_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         getContentPane().add(IntFrame_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -270,7 +277,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         IntFrame_BuyACarLayout.setVerticalGroup(
             IntFrame_BuyACarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 374, Short.MAX_VALUE)
         );
 
         IntFrame_ClientView.getContentPane().add(IntFrame_BuyACar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -320,7 +327,17 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_ClientView.getContentPane().add(Scroll_Table_CarsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 400, 400));
 
         Lbl_AdminEntry.setText("Entrar a las opciones de administrador");
+        Lbl_AdminEntry.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_AdminEntryMouseClicked(evt);
+            }
+        });
         IntFrame_ClientView.getContentPane().add(Lbl_AdminEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 220, -1));
+
+        Lbl_Bg_ClientView.setMaximumSize(new java.awt.Dimension(960, 510));
+        Lbl_Bg_ClientView.setMinimumSize(new java.awt.Dimension(960, 510));
+        Lbl_Bg_ClientView.setPreferredSize(new java.awt.Dimension(960, 510));
+        IntFrame_ClientView.getContentPane().add(Lbl_Bg_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 510));
 
         getContentPane().add(IntFrame_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
         try {
@@ -638,6 +655,10 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Btn_SalesAdminConfigActionPerformed
 
+    private void Lbl_AdminEntryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_AdminEntryMouseClicked
+        IntFrame_AdminLogin.setVisible(true);
+    }//GEN-LAST:event_Lbl_AdminEntryMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -682,7 +703,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Btn_SalesAdminConfig;
     private javax.swing.JButton Button_Salir;
-    private javax.swing.JLabel Fondo1;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_BuyACar;
@@ -692,6 +712,9 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JInternalFrame IntFrame_PasswordChange;
     public static javax.swing.JInternalFrame IntFrame_SalesAdminConfig;
     private javax.swing.JLabel Lbl_AdminEntry;
+    private javax.swing.JLabel Lbl_Bg_AdminLogin;
+    private javax.swing.JLabel Lbl_Bg_ClientView;
+    private javax.swing.JLabel Lbl_Bg_PasswordChange;
     private javax.swing.JLabel Lbl_ConfirmNewPassword;
     private javax.swing.JLabel Lbl_LastPassword;
     private javax.swing.JLabel Lbl_NewPassword;
