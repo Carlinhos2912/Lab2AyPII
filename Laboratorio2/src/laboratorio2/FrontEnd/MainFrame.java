@@ -84,8 +84,8 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototype 1");
         setAlwaysOnTop(true);
-        setExtendedState(this.MAXIMIZED_BOTH);
-        setMinimumSize(new java.awt.Dimension(700, 700));
+        setMinimumSize(new java.awt.Dimension(720, 440));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         IntFrame_AdminLogin.setClosable(true);
@@ -99,6 +99,23 @@ public class MainFrame extends javax.swing.JFrame {
             e1.printStackTrace();
         }
         IntFrame_AdminLogin.setVisible(true);
+        IntFrame_AdminLogin.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                IntFrame_AdminLoginInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
         IntFrame_AdminLogin.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Pfield_AdminPassword.setBackground(new java.awt.Color(199, 227, 255));
@@ -146,6 +163,11 @@ public class MainFrame extends javax.swing.JFrame {
         Button_Salir.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 18)); // NOI18N
         Button_Salir.setForeground(new java.awt.Color(255, 255, 255));
         Button_Salir.setText("Salir");
+        Button_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_SalirActionPerformed(evt);
+            }
+        });
         IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
 
         Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/1.png"))); // NOI18N
@@ -269,7 +291,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(IntFrame_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 423, 0, 0));
+        getContentPane().add(IntFrame_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 440));
         try {
             IntFrame_PasswordChange.setMaximum(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -297,7 +319,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(IntFrame_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 423, 0, 0));
+        getContentPane().add(IntFrame_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 440));
         try {
             IntFrame_ClientView.setMaximum(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -325,7 +347,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(IntFrame_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 423, 0, 0));
+        getContentPane().add(IntFrame_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 440));
         try {
             IntFrame_AdminView.setMaximum(true);
         } catch (java.beans.PropertyVetoException e1) {
@@ -380,6 +402,15 @@ public class MainFrame extends javax.swing.JFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void Button_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_SalirActionPerformed
+        IntFrame_AdminLogin.setVisible(false);
+        IntFrame_ClientView.setVisible(true);
+    }//GEN-LAST:event_Button_SalirActionPerformed
+
+    private void IntFrame_AdminLoginInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_AdminLoginInternalFrameClosed
+        IntFrame_ClientView.setVisible(true);
+    }//GEN-LAST:event_IntFrame_AdminLoginInternalFrameClosed
 
     /**
      * @param args the command line arguments
