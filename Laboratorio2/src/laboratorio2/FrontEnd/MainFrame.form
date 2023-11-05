@@ -220,7 +220,7 @@
         <Component class="javax.swing.JLabel" name="Fondo1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/laboratorio2/FrontEnd/1.png"/>
+              <Image iconType="3" name="/laboratorio2/FrontEnd/media/1.png"/>
             </Property>
           </Properties>
           <Constraints>

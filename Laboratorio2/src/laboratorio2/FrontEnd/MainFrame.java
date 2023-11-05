@@ -170,7 +170,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
 
-        Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/1.png"))); // NOI18N
+        Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/1.png"))); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Fondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 720, 420));
 
         jMenu1.setText("CarCrafter");
