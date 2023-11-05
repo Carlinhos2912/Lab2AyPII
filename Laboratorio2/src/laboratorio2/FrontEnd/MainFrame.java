@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package laboratorio2.FrontEnd;
 
 import laboratorio2.BackEnd.Admin;
 import laboratorio2.BackEnd.TheMagic;
 
-/**
- *
- * @author carlo
- */
 public class MainFrame extends javax.swing.JFrame {
 
     public MainFrame() {
@@ -45,7 +38,7 @@ public class MainFrame extends javax.swing.JFrame {
         Tfield_AdminUser = new javax.swing.JTextField();
         Btn_ConfirmAdminLogin = new javax.swing.JButton();
         Lbl_PasswordChange = new javax.swing.JLabel();
-        Button_Salir = new javax.swing.JButton();
+        Button_ExitAdminLogin = new javax.swing.JButton();
         Lbl_Bg_AdminLogin = new javax.swing.JLabel();
         IntFrame_ClientView = new javax.swing.JInternalFrame();
         IntFrame_BuyACar = new javax.swing.JInternalFrame();
@@ -215,16 +208,16 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 157, 190, 30));
 
-        Button_Salir.setBackground(new java.awt.Color(149, 227, 244));
-        Button_Salir.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
-        Button_Salir.setForeground(new java.awt.Color(255, 255, 255));
-        Button_Salir.setText("Salir");
-        Button_Salir.addActionListener(new java.awt.event.ActionListener() {
+        Button_ExitAdminLogin.setBackground(new java.awt.Color(149, 227, 244));
+        Button_ExitAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        Button_ExitAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
+        Button_ExitAdminLogin.setText("Salir");
+        Button_ExitAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button_SalirActionPerformed(evt);
+                Button_ExitAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Button_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
+        IntFrame_AdminLogin.getContentPane().add(Button_ExitAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
 
         Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Fondo-Login.png"))); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Lbl_Bg_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
@@ -594,16 +587,18 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    /*
-    Eventos de formulario
+    /**
+    * Eventos de formulario
     */
+    //Evento de Btn_ConfirmPasswordChange para Autenticar cambio de contraseña
     private void Btn_ConfirmPasswordChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ConfirmPasswordChangeActionPerformed
         String Last = String.valueOf(Pfield_LastPassword.getPassword());
         String New = String.valueOf(Pfield_NewPassword.getPassword());
         String Confirm = String.valueOf(Pfield_ConfirmNewPassword.getPassword());
         TheMagic.AutenticatePasswordChange(Last, New, Confirm);
     }//GEN-LAST:event_Btn_ConfirmPasswordChangeActionPerformed
-
+    
+    //Evento de Btn_BackChangePassword para regresar a AdminLogin
     private void Btn_BackChangePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_BackChangePasswordActionPerformed
         //Borrar los campos del cambio
         Pfield_LastPassword.setText("");
@@ -614,12 +609,14 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminLogin.setVisible(true);
     }//GEN-LAST:event_Btn_BackChangePasswordActionPerformed
 
+    //Evento de Lbl_PasswordChange para llegar al menu de cambio de contraseña
     private void Lbl_PasswordChangeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_PasswordChangeMouseClicked
         Pfield_AdminPassword.setText("");
         IntFrame_AdminLogin.setVisible(false);
         IntFrame_PasswordChange.setVisible(true);
     }//GEN-LAST:event_Lbl_PasswordChangeMouseClicked
 
+    //Evento de Btn_ConfirmAdminLogin para autenticar inicio de sesion
     private void Btn_ConfirmAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ConfirmAdminLoginActionPerformed
         Admin GenCredentials = new Admin();
         GenCredentials.setUser(Tfield_AdminUser.getText());
@@ -627,48 +624,58 @@ public class MainFrame extends javax.swing.JFrame {
         TheMagic.Autentication(GenCredentials);
     }//GEN-LAST:event_Btn_ConfirmAdminLoginActionPerformed
 
-    private void Button_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_SalirActionPerformed
+    //Evento de Btn_ExitAdminLogin para regresar a ClientView 
+    private void Button_ExitAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ExitAdminLoginActionPerformed
         IntFrame_AdminLogin.setVisible(false);
         IntFrame_ClientView.setVisible(true);
-    }//GEN-LAST:event_Button_SalirActionPerformed
+    }//GEN-LAST:event_Button_ExitAdminLoginActionPerformed
 
+    //Evento al cerrar IntFrame_AdminLogin para volver a ClientView
     private void IntFrame_AdminLoginInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_AdminLoginInternalFrameClosed
         IntFrame_AdminView.setVisible(false);
         IntFrame_ClientView.setVisible(true);
     }//GEN-LAST:event_IntFrame_AdminLoginInternalFrameClosed
 
+    //Evento al cerrar IntFrame_CarsAdminConfig para volver a AdminView
     private void IntFrame_CarsAdminConfigInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_CarsAdminConfigInternalFrameClosed
         IntFrame_ClientView.setVisible(false);
         IntFrame_AdminView.setVisible(true);
     }//GEN-LAST:event_IntFrame_CarsAdminConfigInternalFrameClosed
 
+    //Evento al cerrar IntFrame_ClientsAdminConfig para volver a AdminView
     private void IntFrame_ClientsAdminConfigInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_ClientsAdminConfigInternalFrameClosed
         IntFrame_ClientView.setVisible(false);
         IntFrame_AdminView.setVisible(true);
     }//GEN-LAST:event_IntFrame_ClientsAdminConfigInternalFrameClosed
 
+    //Evento al cerrar IntFrame_SalesAdminConfig para volver a AdminView
     private void IntFrame_SalesAdminConfigInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_SalesAdminConfigInternalFrameClosed
         IntFrame_ClientView.setVisible(false);
         IntFrame_AdminView.setVisible(true);
     }//GEN-LAST:event_IntFrame_SalesAdminConfigInternalFrameClosed
 
+    //Evento de Btn_SalesAdminConfig para entrar a administrador de ventas
     private void Btn_SalesAdminConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_SalesAdminConfigActionPerformed
         IntFrame_SalesAdminConfig.setVisible(true);
     }//GEN-LAST:event_Btn_SalesAdminConfigActionPerformed
 
+    //Evento de Lbl_AdminEntry para entrar al Admin Login
     private void Lbl_AdminEntryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_AdminEntryMouseClicked
         IntFrame_AdminLogin.setVisible(true);
     }//GEN-LAST:event_Lbl_AdminEntryMouseClicked
 
+    //Evento de Btn_CarsAdminConfig para entrar al administrador de autos
     private void Btn_CarsAdminConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarsAdminConfigActionPerformed
         IntFrame_CarsAdminConfig.setVisible(true);
     }//GEN-LAST:event_Btn_CarsAdminConfigActionPerformed
 
+    //Evento de Btn_Back_AdminView para volver a la vista de cliente
     private void Btn_Back_AdminViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_Back_AdminViewActionPerformed
         IntFrame_ClientView.setVisible(true);
         IntFrame_AdminView.setVisible(false);
     }//GEN-LAST:event_Btn_Back_AdminViewActionPerformed
 
+    //Evento de Btn_ClientsAdminConfig para entrar al admiistrador de clientes
     private void Btn_ClientsAdminConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ClientsAdminConfigActionPerformed
         IntFrame_ClientsAdminConfig.setVisible(true);
     }//GEN-LAST:event_Btn_ClientsAdminConfigActionPerformed
@@ -717,7 +724,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_ConfirmAdminLogin;
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Btn_SalesAdminConfig;
-    private javax.swing.JButton Button_Salir;
+    private javax.swing.JButton Button_ExitAdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_BuyACar;

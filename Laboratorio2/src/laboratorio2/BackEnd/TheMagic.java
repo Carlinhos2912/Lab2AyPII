@@ -4,11 +4,12 @@ import laboratorio2.FrontEnd.MainFrame;
 public class TheMagic {
     public static Admin CorrectCredentials = new Admin();
     
+    //Procedimiento para autenticar el login de administrador
     public static void Autentication (Admin TryCrendentials){
         if ((TryCrendentials.getUser().equalsIgnoreCase(CorrectCredentials.getUser())) && (TryCrendentials.getPassword().equals(CorrectCredentials.getPassword()))) {
             //PopUp con diciendo que inició sesión correctamente
             MainFrame.PopUp_AdminLogin.setTitle("Login Correcto");
-            MainFrame.Lbl_PopUp_Base.setText("Ingresaste correctamente.");
+            //>>>>>>Cambiar el icono por la imagen correspondiente (Pendiente)
             MainFrame.PopUp_AdminLogin.setVisible(true);
             //Borrar los campos del login
             MainFrame.Pfield_AdminPassword.setText("");
@@ -20,20 +21,21 @@ public class TheMagic {
         }else{
             //PopUp con error al incio de sesión
             MainFrame.PopUp_AdminLogin.setTitle("Login Incorrecto");
-            MainFrame.Lbl_PopUp_Base.setText("El usuario o la contraseña tan mal.");
+            //>>>>>>Cambiar el icono por la imagen correspondiente (Pendiente)
             MainFrame.PopUp_AdminLogin.setVisible(true);
             //Borrar el campo de contraseña
             MainFrame.Pfield_AdminPassword.setText("");
         }
     }
     
+    //Procedimiento para autenticar cambio de contraseña
     public static void AutenticatePasswordChange (String LastPassword, String NewPassword, String ConfirmPassword){
         if ((LastPassword.equals(CorrectCredentials.getPassword())) && (NewPassword.equals(ConfirmPassword)) && !(NewPassword.equals(""))) {
             //Cambiar credenciales
             CorrectCredentials.setPassword(NewPassword);
             //PopUp con diciendo que se cambió la contraseña correctamente
             MainFrame.PopUp_AdminLogin.setTitle("Cambio Correcto");
-            MainFrame.Lbl_PopUp_Base.setText("Cambiaste correctamente la contraseña.");
+            //>>>>>>Cambiar el icono por la imagen correspondiente
             MainFrame.PopUp_AdminLogin.setVisible(true);
             //Borrar los campos del cambio
             MainFrame.Pfield_LastPassword.setText("");
@@ -45,7 +47,7 @@ public class TheMagic {
         }else{
             //PopUp con error al incio de sesión
             MainFrame.PopUp_AdminLogin.setTitle("Cambio Incorrecto");
-            MainFrame.Lbl_PopUp_Base.setText("Alguna de las tres contraseñas esta mal...");
+            //>>>>>>Cambiar el icono por la imagen correspondiente
             MainFrame.PopUp_AdminLogin.setVisible(true);
             //Borrar el campo de contraseña
             MainFrame.Pfield_LastPassword.setText("");
