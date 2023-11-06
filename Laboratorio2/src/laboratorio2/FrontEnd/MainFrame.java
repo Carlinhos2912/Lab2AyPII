@@ -45,12 +45,17 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_Bg_ClientView = new javax.swing.JLabel();
         IntFrame_AdminView = new javax.swing.JInternalFrame();
         IntFrame_CarsAdminConfig = new javax.swing.JInternalFrame();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
+        jButtonModificar = new javax.swing.JButton();
+        jButtonListar = new javax.swing.JButton();
+        jButtonRegistrar = new javax.swing.JButton();
+        jButtonEliminar = new javax.swing.JButton();
+        jTextFieldPrecioVenta = new javax.swing.JTextField();
+        Btn_BackChangePassword1 = new javax.swing.JButton();
+        jTextFieldPrecioCompra = new javax.swing.JTextField();
+        jTextFieldPlaca1 = new javax.swing.JTextField();
+        jTextFieldColor1 = new javax.swing.JTextField();
+        jTextFieldModelo1 = new javax.swing.JTextField();
+        jLabelFindo = new javax.swing.JLabel();
         IntFrame_ClientsAdminConfig = new javax.swing.JInternalFrame();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -215,7 +220,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_ConfirmAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 110, -1));
+        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, -1, 30));
 
         Lbl_PasswordChange.setFont(new java.awt.Font("Arial Narrow", 0, 16)); // NOI18N
         Lbl_PasswordChange.setForeground(new java.awt.Color(44, 131, 218));
@@ -280,7 +285,7 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_BuyACar.getContentPane().setLayout(IntFrame_BuyACarLayout);
         IntFrame_BuyACarLayout.setHorizontalGroup(
             IntFrame_BuyACarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 698, Short.MAX_VALUE)
         );
         IntFrame_BuyACarLayout.setVerticalGroup(
             IntFrame_BuyACarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -387,53 +392,88 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("jButton1");
-        IntFrame_CarsAdminConfig.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 190, 60));
+        jButtonModificar.setBackground(new java.awt.Color(108, 169, 230));
+        jButtonModificar.setFont(new java.awt.Font("Arial Narrow", 0, 36)); // NOI18N
+        jButtonModificar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonModificar.setText("Modificar");
+        jButtonModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificarActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jButtonModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 190, 60));
 
-        jButton2.setText("jButton1");
-        IntFrame_CarsAdminConfig.getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 190, 60));
+        jButtonListar.setBackground(new java.awt.Color(108, 169, 230));
+        jButtonListar.setFont(new java.awt.Font("Arial Narrow", 0, 36)); // NOI18N
+        jButtonListar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonListar.setText("Listar");
+        IntFrame_CarsAdminConfig.getContentPane().add(jButtonListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 190, 70));
 
-        jButton3.setText("jButton1");
-        IntFrame_CarsAdminConfig.getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 190, 60));
+        jButtonRegistrar.setBackground(new java.awt.Color(108, 169, 230));
+        jButtonRegistrar.setFont(new java.awt.Font("Arial Narrow", 0, 36)); // NOI18N
+        jButtonRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRegistrar.setText("Registrar");
+        jButtonRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jButtonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 190, 60));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
+        jButtonEliminar.setBackground(new java.awt.Color(108, 169, 230));
+        jButtonEliminar.setFont(new java.awt.Font("Arial Narrow", 0, 36)); // NOI18N
+        jButtonEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonEliminar.setText("Eliminar");
+        IntFrame_CarsAdminConfig.getContentPane().add(jButtonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 190, 60));
 
-        IntFrame_CarsAdminConfig.getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 340, 310));
+        jTextFieldPrecioVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPrecioVentaActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, 310, 30));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
+        Btn_BackChangePassword1.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_BackChangePassword1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        Btn_BackChangePassword1.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_BackChangePassword1.setText("Atras");
+        Btn_BackChangePassword1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_BackChangePassword1ActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(Btn_BackChangePassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 450, 120, 40));
 
-        IntFrame_CarsAdminConfig.getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 340, 310));
+        jTextFieldPrecioCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPrecioCompraActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 310, 30));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
+        jTextFieldPlaca1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPlaca1ActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 310, 30));
 
-        IntFrame_CarsAdminConfig.getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 340, 310));
+        jTextFieldColor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldColor1ActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldColor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 310, 30));
+
+        jTextFieldModelo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldModelo1ActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldModelo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 310, 30));
+
+        jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Registrarauto.png"))); // NOI18N
+        IntFrame_CarsAdminConfig.getContentPane().add(jLabelFindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 490));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -718,6 +758,38 @@ public class MainFrame extends javax.swing.JFrame {
        IntFrame_SalesAdminConfig.setVisible(true);
     }//GEN-LAST:event_jLabelVentasMouseClicked
 
+    private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonModificarActionPerformed
+
+    private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRegistrarActionPerformed
+
+    private void jTextFieldPrecioCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecioCompraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPrecioCompraActionPerformed
+
+    private void jTextFieldPlaca1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPlaca1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPlaca1ActionPerformed
+
+    private void jTextFieldColor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldColor1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldColor1ActionPerformed
+
+    private void jTextFieldModelo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldModelo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldModelo1ActionPerformed
+
+    private void jTextFieldPrecioVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecioVentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPrecioVentaActionPerformed
+
+    private void Btn_BackChangePassword1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_BackChangePassword1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_BackChangePassword1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -756,6 +828,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_BackChangePassword;
+    private javax.swing.JButton Btn_BackChangePassword1;
     private javax.swing.JButton Btn_Back_AdminView;
     private javax.swing.JButton Btn_ConfirmAdminLogin;
     private javax.swing.JButton Btn_ConfirmPasswordChange;
@@ -782,22 +855,26 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane Scroll_Table_CarsList;
     private javax.swing.JTable Table_CarsList;
     private javax.swing.JTextField Tfield_AdminUser;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButtonEliminar;
+    private javax.swing.JButton jButtonListar;
+    private javax.swing.JButton jButtonModificar;
+    private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JLabel jLabelAutos;
     private javax.swing.JLabel jLabelClientes;
+    private javax.swing.JLabel jLabelFindo;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelVentas;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JTextField jTextFieldColor1;
+    private javax.swing.JTextField jTextFieldModelo1;
+    private javax.swing.JTextField jTextFieldPlaca1;
+    private javax.swing.JTextField jTextFieldPrecioCompra;
+    private javax.swing.JTextField jTextFieldPrecioVenta;
     // End of variables declaration//GEN-END:variables
 
 }
