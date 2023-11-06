@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * @author maxtr
  */
 public class RegistroFrame extends javax.swing.JFrame {
-
+    // Lista que almacena registros de automóviles
     private ArrayList<Autos> automobileRecords = new ArrayList<>();
 
     /**
@@ -346,13 +346,18 @@ public class RegistroFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    // Método para manejar el evento del botón "Listar"
     private void ListarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarbtnActionPerformed
-        updateListTextArea();
-
+        updateListTextArea();// Llama a la función para actualizar el área de texto de listado
     }//GEN-LAST:event_ListarbtnActionPerformed
-
+     // Método para verificar si una cadena contiene caracteres especiales
+    private boolean containsSpecialCharacters(String str) {
+        String regex = ".*[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜ].*"; 
+        return Pattern.matches(regex, str);
+    }
+     // Método para manejar el evento del botón "Registrar"
     private void RegistrarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarbtnActionPerformed
+        // leer los datos de los fields y pasarlos a minuscula
         String placa = Placatxt.getText().toLowerCase();
         String color = Colortxt.getText().toLowerCase();
         String marca = Marcatxt.getText().toLowerCase();
@@ -360,7 +365,7 @@ public class RegistroFrame extends javax.swing.JFrame {
         String añoLanzamientoStr = AñoDeLaznamientotxt.getText();
         String precioCompraStr = PrecioDeCompratxt.getText().replace(',', '.');;
         String precioVentaStr = PrecioDeVentatxt.getText().replace(',', '.');;
-
+        // Realiza validaciones de campos
         if (placa.isEmpty() || color.isEmpty() || marca.isEmpty() || nombreModelo.isEmpty() || añoLanzamientoStr.isEmpty() || precioCompraStr.isEmpty() || precioVentaStr.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Todos los campos deben estar completos.");
             return;
@@ -384,7 +389,9 @@ public class RegistroFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Año de Lanzamiento, Precio de Compra y Precio de Venta deben ser válidos.");
             return;
         }
-
+        
+        
+        // Verifica si ya existe un automóvil con la misma placa
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
                 JOptionPane.showMessageDialog(this, "Ya existe un auto con la misma placa.");
@@ -392,17 +399,22 @@ public class RegistroFrame extends javax.swing.JFrame {
             }
         }
 
+        //concatena la info de los fields para dejarlo unico en modelo
         String modelostr = marca + "," + nombreModelo + "," + añoLanzamiento;
 
+         // Crea un objeto de tipo Autos con la info
         Autos registro = new Autos();
         registro.setPlaca(placa);
         registro.setColor(color);
         registro.setModelo(modelostr);
         registro.setPrecioDeCompra(precioCompra);
         registro.setPrecioDeVenta(precioVenta);
-
+    
+        // Agrega el registro a la lista de automóviles
         automobileRecords.add(registro);
 
+        
+        // Limpia los campos de entrada y muestra un mensaje de éxito
         Placatxt.setText("");
         Colortxt.setText("");
         Marcatxt.setText("");
@@ -414,27 +426,28 @@ public class RegistroFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Registro exitoso");
 
     }//GEN-LAST:event_RegistrarbtnActionPerformed
-
+    // Método para manejar el evento del botón "Eliminar"
     private void EliminarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarbtnActionPerformed
         String placa = Placatxt.getText();
         deleteAutoByPlaca(placa);
         Placatxt.setText("");
     }//GEN-LAST:event_EliminarbtnActionPerformed
-
+    // Método para manejar el evento del botón "Modificar"
     private void ModificatxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificatxtActionPerformed
         String placa = Placatxt.getText();
-
+        
+          // Realiza la validación de si esta vacia el field de la placa
         if (placa.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Ingrese una placa válida para modificar un auto.");
             return;
         }
-
+        // Bucle para buscar el carro con la placa
         boolean carroEncontrado = false;
         for (Autos auto : automobileRecords) {
             if (auto.getPlaca().equalsIgnoreCase(placa)) {
                 carroEncontrado = true;
 
-                // Update the fields with user input
+             
                 String color = Colortxt.getText();
                 String marca = Marcatxt.getText();
                 String nombreModelo = NombreModelotxt.getText();
@@ -442,7 +455,7 @@ public class RegistroFrame extends javax.swing.JFrame {
                 String precioCompraStr = PrecioDeCompratxt.getText().replace(',', '.');
                 String precioVentaStr = PrecioDeVentatxt.getText().replace(',', '.');
 
-                // Update only if fields are not empty
+               
                 if (!color.isEmpty()) {
                     auto.setColor(color);
                 }
@@ -549,10 +562,6 @@ public class RegistroFrame extends javax.swing.JFrame {
         }
     }
 
-    private boolean containsSpecialCharacters(String str) {
-        String regex = ".*[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜ].*"; // Adjust the regex as needed
-        return Pattern.matches(regex, str);
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AñoDeLaznamientotxt;
