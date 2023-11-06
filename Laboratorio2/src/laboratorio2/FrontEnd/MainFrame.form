@@ -1053,96 +1053,151 @@
             <Property name="useNullLayout" type="boolean" value="false"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="jButtonModificarClient">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jButton1"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e6" green="a9" red="6c" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="24" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Modificar"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="80" y="140" width="190" height="60"/>
+                  <AbsoluteConstraints x="410" y="250" width="160" height="50"/>
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton5">
+            <Component class="javax.swing.JButton" name="jButtonEliminarClient">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jButton1"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e6" green="a9" red="6c" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="24" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEliminarClientActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="410" y="180" width="160" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonRegistrarClient">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e6" green="a9" red="6c" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="24" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Registrar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRegistrarClientActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="410" y="110" width="160" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldDireccion">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDireccionActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="340" width="180" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldCelular">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldCelularActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="300" width="180" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldEmail">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldEmailActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="250" width="180" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldFechaNac">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldFechaNacActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="210" width="180" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldApellido">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldApellidoActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="170" width="180" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldNombre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNombreActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="130" width="180" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldIdentificacion">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldIdentificacionActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="90" width="180" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelFondoRegisCliente">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/laboratorio2/FrontEnd/media/Registrarcliente.png"/>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="80" y="230" width="190" height="60"/>
+                  <AbsoluteConstraints x="0" y="0" width="700" height="370"/>
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton6">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jButton1"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="80" y="50" width="190" height="60"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Container class="javax.swing.JPanel" name="jPanel8">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="320" y="30" width="340" height="310"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="340" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="310" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-            </Container>
-            <Container class="javax.swing.JPanel" name="jPanel9">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="320" y="30" width="340" height="310"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="340" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="310" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-            </Container>
-            <Container class="javax.swing.JPanel" name="jPanel10">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="320" y="30" width="340" height="310"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="340" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="310" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JInternalFrame" name="IntFrame_SalesAdminConfig">

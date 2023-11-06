@@ -57,12 +57,17 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldPlaca1 = new javax.swing.JTextField();
         jLabelFindo = new javax.swing.JLabel();
         IntFrame_ClientsAdminConfig = new javax.swing.JInternalFrame();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
+        jButtonModificarClient = new javax.swing.JButton();
+        jButtonEliminarClient = new javax.swing.JButton();
+        jButtonRegistrarClient = new javax.swing.JButton();
+        jTextFieldDireccion = new javax.swing.JTextField();
+        jTextFieldCelular = new javax.swing.JTextField();
+        jTextFieldEmail = new javax.swing.JTextField();
+        jTextFieldFechaNac = new javax.swing.JTextField();
+        jTextFieldApellido = new javax.swing.JTextField();
+        jTextFieldNombre = new javax.swing.JTextField();
+        jTextFieldIdentificacion = new javax.swing.JTextField();
+        jLabelFondoRegisCliente = new javax.swing.JLabel();
         IntFrame_SalesAdminConfig = new javax.swing.JInternalFrame();
         Btn_Back_AdminView = new javax.swing.JButton();
         jLabelAutos = new javax.swing.JLabel();
@@ -516,53 +521,85 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setText("jButton1");
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 190, 60));
+        jButtonModificarClient.setBackground(new java.awt.Color(108, 169, 230));
+        jButtonModificarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        jButtonModificarClient.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonModificarClient.setText("Modificar");
+        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonModificarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 160, 50));
 
-        jButton5.setText("jButton1");
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 190, 60));
+        jButtonEliminarClient.setBackground(new java.awt.Color(108, 169, 230));
+        jButtonEliminarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        jButtonEliminarClient.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonEliminarClient.setText("Eliminar");
+        jButtonEliminarClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarClientActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonEliminarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 160, 50));
 
-        jButton6.setText("jButton1");
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 190, 60));
+        jButtonRegistrarClient.setBackground(new java.awt.Color(108, 169, 230));
+        jButtonRegistrarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        jButtonRegistrarClient.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRegistrarClient.setText("Registrar");
+        jButtonRegistrarClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarClientActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonRegistrarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 160, 50));
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
+        jTextFieldDireccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDireccionActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 180, 20));
 
-        IntFrame_ClientsAdminConfig.getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 340, 310));
+        jTextFieldCelular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCelularActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 180, 20));
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
+        jTextFieldEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldEmailActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 180, 20));
 
-        IntFrame_ClientsAdminConfig.getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 340, 310));
+        jTextFieldFechaNac.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldFechaNacActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 180, 20));
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
-        );
+        jTextFieldApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldApellidoActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 180, 20));
 
-        IntFrame_ClientsAdminConfig.getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 340, 310));
+        jTextFieldNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
+
+        jTextFieldIdentificacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldIdentificacionActionPerformed(evt);
+            }
+        });
+        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
+
+        jLabelFondoRegisCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Registrarcliente.png"))); // NOI18N
+        IntFrame_ClientsAdminConfig.getContentPane().add(jLabelFondoRegisCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_ClientsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -796,6 +833,42 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldPrecioVentaActionPerformed
 
+    private void jButtonEliminarClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEliminarClientActionPerformed
+
+    private void jTextFieldIdentificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdentificacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldIdentificacionActionPerformed
+
+    private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNombreActionPerformed
+
+    private void jTextFieldApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldApellidoActionPerformed
+
+    private void jTextFieldFechaNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFechaNacActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFechaNacActionPerformed
+
+    private void jTextFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldEmailActionPerformed
+
+    private void jTextFieldCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCelularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCelularActionPerformed
+
+    private void jTextFieldDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDireccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDireccionActionPerformed
+
+    private void jButtonRegistrarClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRegistrarClientActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -861,23 +934,28 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane Scroll_Table_CarsList;
     private javax.swing.JTable Table_CarsList;
     private javax.swing.JTextField Tfield_AdminUser;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButtonEliminar;
+    private javax.swing.JButton jButtonEliminarClient;
     private javax.swing.JButton jButtonListar;
     private javax.swing.JButton jButtonModificar;
+    private javax.swing.JButton jButtonModificarClient;
     private javax.swing.JButton jButtonRegistrar;
+    private javax.swing.JButton jButtonRegistrarClient;
     private javax.swing.JLabel jLabelAutos;
     private javax.swing.JLabel jLabelClientes;
     private javax.swing.JLabel jLabelFindo;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelFondoRegisCliente;
     private javax.swing.JLabel jLabelVentas;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JTextField jTextFieldApellido;
+    private javax.swing.JTextField jTextFieldCelular;
     private javax.swing.JTextField jTextFieldColor;
+    private javax.swing.JTextField jTextFieldDireccion;
+    private javax.swing.JTextField jTextFieldEmail;
+    private javax.swing.JTextField jTextFieldFechaNac;
+    private javax.swing.JTextField jTextFieldIdentificacion;
     private javax.swing.JTextField jTextFieldModelo;
+    private javax.swing.JTextField jTextFieldNombre;
     private javax.swing.JTextField jTextFieldPlaca1;
     private javax.swing.JTextField jTextFieldPrecioCompra;
     private javax.swing.JTextField jTextFieldPrecioVenta;
