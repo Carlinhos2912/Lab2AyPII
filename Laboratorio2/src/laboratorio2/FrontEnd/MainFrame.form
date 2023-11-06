@@ -330,7 +330,7 @@
               <Color blue="da" green="83" red="2c" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Cambiar contrase&#xf1;a"/>
+            <Property name="text" type="java.lang.String" value="CAMBIAR CONTRASE&#xd1;A"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
@@ -339,7 +339,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="157" width="190" height="30"/>
+              <AbsoluteConstraints x="100" y="160" width="190" height="30"/>
             </Constraint>
           </Constraints>
         </Component>

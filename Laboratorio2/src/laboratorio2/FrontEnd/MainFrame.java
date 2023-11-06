@@ -193,12 +193,12 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_ConfirmAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 110, 30));
+        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 110, -1));
 
-        Lbl_PasswordChange.setFont(new java.awt.Font("Toony Sans PERSONAL USE", 0, 14)); // NOI18N
+        Lbl_PasswordChange.setFont(new java.awt.Font("Arial Narrow", 0, 16)); // NOI18N
         Lbl_PasswordChange.setForeground(new java.awt.Color(44, 131, 218));
         Lbl_PasswordChange.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Lbl_PasswordChange.setText("Cambiar contraseña");
+        Lbl_PasswordChange.setText("CAMBIAR CONTRASEÑA");
         Lbl_PasswordChange.setToolTipText("");
         Lbl_PasswordChange.setAlignmentY(0.0F);
         Lbl_PasswordChange.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -206,6 +206,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Lbl_PasswordChangeMouseClicked(evt);
             }
         });
+        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 190, 30));
 
         Button_ExitAdminLogin.setBackground(new java.awt.Color(149, 227, 244));
         Button_ExitAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
@@ -216,7 +217,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Button_ExitAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 157, 190, 30));
+        IntFrame_AdminLogin.getContentPane().add(Button_ExitAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
+
+        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Fondo-Login.png"))); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Lbl_Bg_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         getContentPane().add(IntFrame_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
