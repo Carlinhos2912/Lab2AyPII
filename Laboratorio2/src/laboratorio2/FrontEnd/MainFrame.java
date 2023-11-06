@@ -63,6 +63,8 @@ public class MainFrame extends javax.swing.JFrame {
         Btn_ClientsAdminConfig = new javax.swing.JButton();
         Btn_SalesAdminConfig = new javax.swing.JButton();
         Btn_Back_AdminView = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabelFondo = new javax.swing.JLabel();
 
         PopUp_AdminLogin.setAlwaysOnTop(true);
         PopUp_AdminLogin.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -566,12 +568,13 @@ public class MainFrame extends javax.swing.JFrame {
         }
 
         Btn_CarsAdminConfig.setText("Autos");
+        Btn_CarsAdminConfig.setBorder(null);
         Btn_CarsAdminConfig.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_CarsAdminConfigActionPerformed(evt);
             }
         });
-        IntFrame_AdminView.getContentPane().add(Btn_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 260, 60));
+        IntFrame_AdminView.getContentPane().add(Btn_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 130, 30));
 
         Btn_ClientsAdminConfig.setText("Clientes");
         Btn_ClientsAdminConfig.addActionListener(new java.awt.event.ActionListener() {
@@ -579,7 +582,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_ClientsAdminConfigActionPerformed(evt);
             }
         });
-        IntFrame_AdminView.getContentPane().add(Btn_ClientsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 260, 60));
+        IntFrame_AdminView.getContentPane().add(Btn_ClientsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, 90, 20));
 
         Btn_SalesAdminConfig.setText("Ventas");
         Btn_SalesAdminConfig.addActionListener(new java.awt.event.ActionListener() {
@@ -587,7 +590,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_SalesAdminConfigActionPerformed(evt);
             }
         });
-        IntFrame_AdminView.getContentPane().add(Btn_SalesAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 260, 60));
+        IntFrame_AdminView.getContentPane().add(Btn_SalesAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 420, 80, 20));
 
         Btn_Back_AdminView.setText("Regresar a cliente");
         Btn_Back_AdminView.addActionListener(new java.awt.event.ActionListener() {
@@ -595,7 +598,17 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_Back_AdminViewActionPerformed(evt);
             }
         });
-        IntFrame_AdminView.getContentPane().add(Btn_Back_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 250, 50));
+        IntFrame_AdminView.getContentPane().add(Btn_Back_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 450, 140, 40));
+
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        IntFrame_AdminView.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 230, 260));
+
+        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Servicios.png"))); // NOI18N
+        IntFrame_AdminView.getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 510));
 
         getContentPane().add(IntFrame_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
         try {
@@ -687,7 +700,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     //Evento de Btn_CarsAdminConfig para entrar al administrador de autos
     private void Btn_CarsAdminConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarsAdminConfigActionPerformed
-        IntFrame_CarsAdminConfig.setVisible(true);
+        
     }//GEN-LAST:event_Btn_CarsAdminConfigActionPerformed
 
     //Evento de Btn_Back_AdminView para volver a la vista de cliente
@@ -716,6 +729,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void Pfield_AdminPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pfield_AdminPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Pfield_AdminPasswordActionPerformed
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -790,6 +807,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelFondo;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
