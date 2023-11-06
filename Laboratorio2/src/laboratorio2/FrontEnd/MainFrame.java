@@ -24,11 +24,8 @@ public class MainFrame extends javax.swing.JFrame {
         PopUp_AdminLogin = new javax.swing.JDialog();
         Lbl_PopUp_Base = new javax.swing.JLabel();
         IntFrame_PasswordChange = new javax.swing.JInternalFrame();
-        Lbl_LastPassword = new javax.swing.JLabel();
         Pfield_LastPassword = new javax.swing.JPasswordField();
-        Lbl_NewPassword = new javax.swing.JLabel();
         Pfield_NewPassword = new javax.swing.JPasswordField();
-        Lbl_ConfirmNewPassword = new javax.swing.JLabel();
         Pfield_ConfirmNewPassword = new javax.swing.JPasswordField();
         Btn_ConfirmPasswordChange = new javax.swing.JButton();
         Btn_BackChangePassword = new javax.swing.JButton();
@@ -104,38 +101,57 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_PasswordChange.setVisible(false);
         IntFrame_PasswordChange.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Lbl_LastPassword.setText("Anterior contraseña: ");
-        IntFrame_PasswordChange.getContentPane().add(Lbl_LastPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 71, 182, -1));
-        IntFrame_PasswordChange.getContentPane().add(Pfield_LastPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(206, 68, 486, -1));
+        Pfield_LastPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pfield_LastPasswordActionPerformed(evt);
+            }
+        });
+        IntFrame_PasswordChange.getContentPane().add(Pfield_LastPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 210, -1));
 
-        Lbl_NewPassword.setText("Nueva contraseña: ");
-        IntFrame_PasswordChange.getContentPane().add(Lbl_NewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 120, 182, -1));
-        IntFrame_PasswordChange.getContentPane().add(Pfield_NewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(206, 117, 486, -1));
+        Pfield_NewPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pfield_NewPasswordActionPerformed(evt);
+            }
+        });
+        IntFrame_PasswordChange.getContentPane().add(Pfield_NewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 210, -1));
 
-        Lbl_ConfirmNewPassword.setText("Confirmar nueva contraseña: ");
-        IntFrame_PasswordChange.getContentPane().add(Lbl_ConfirmNewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 169, 182, -1));
-        IntFrame_PasswordChange.getContentPane().add(Pfield_ConfirmNewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(206, 166, 486, -1));
+        Pfield_ConfirmNewPassword.setAlignmentX(0.2F);
+        Pfield_ConfirmNewPassword.setAlignmentY(0.1F);
+        Pfield_ConfirmNewPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pfield_ConfirmNewPasswordActionPerformed(evt);
+            }
+        });
+        IntFrame_PasswordChange.getContentPane().add(Pfield_ConfirmNewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 210, -1));
 
+        Btn_ConfirmPasswordChange.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_ConfirmPasswordChange.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        Btn_ConfirmPasswordChange.setForeground(new java.awt.Color(255, 255, 255));
         Btn_ConfirmPasswordChange.setText("Confirmar");
+        Btn_ConfirmPasswordChange.setToolTipText("");
         Btn_ConfirmPasswordChange.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_ConfirmPasswordChangeActionPerformed(evt);
             }
         });
-        IntFrame_PasswordChange.getContentPane().add(Btn_ConfirmPasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(206, 242, -1, -1));
+        IntFrame_PasswordChange.getContentPane().add(Btn_ConfirmPasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 100, -1));
 
+        Btn_BackChangePassword.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_BackChangePassword.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        Btn_BackChangePassword.setForeground(new java.awt.Color(255, 255, 255));
         Btn_BackChangePassword.setText("Atras");
         Btn_BackChangePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_BackChangePasswordActionPerformed(evt);
             }
         });
-        IntFrame_PasswordChange.getContentPane().add(Btn_BackChangePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 242, -1, -1));
+        IntFrame_PasswordChange.getContentPane().add(Btn_BackChangePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 100, 30));
 
+        Lbl_Bg_PasswordChange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/CambiarContraseña.png"))); // NOI18N
         Lbl_Bg_PasswordChange.setMaximumSize(new java.awt.Dimension(700, 370));
         Lbl_Bg_PasswordChange.setMinimumSize(new java.awt.Dimension(700, 370));
         Lbl_Bg_PasswordChange.setPreferredSize(new java.awt.Dimension(700, 370));
-        IntFrame_PasswordChange.getContentPane().add(Lbl_Bg_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
+        IntFrame_PasswordChange.getContentPane().add(Lbl_Bg_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 380));
 
         getContentPane().add(IntFrame_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -178,15 +194,20 @@ public class MainFrame extends javax.swing.JFrame {
 
         Pfield_AdminPassword.setBackground(new java.awt.Color(199, 227, 255));
         Pfield_AdminPassword.setFont(new java.awt.Font("Arial Narrow", 0, 12)); // NOI18N
+        Pfield_AdminPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pfield_AdminPasswordActionPerformed(evt);
+            }
+        });
         IntFrame_AdminLogin.getContentPane().add(Pfield_AdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 185, 180, 25));
 
         Tfield_AdminUser.setBackground(new java.awt.Color(199, 227, 255));
         Tfield_AdminUser.setFont(new java.awt.Font("Arial Narrow", 0, 12)); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Tfield_AdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 141, 180, 25));
 
-        Btn_ConfirmAdminLogin.setBackground(new java.awt.Color(44, 131, 218));
+        Btn_ConfirmAdminLogin.setBackground(new java.awt.Color(108, 169, 230));
         Btn_ConfirmAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
-        Btn_ConfirmAdminLogin.setForeground(new java.awt.Color(199, 227, 255));
+        Btn_ConfirmAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
         Btn_ConfirmAdminLogin.setText("Ingresar");
         Btn_ConfirmAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,9 +227,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Lbl_PasswordChangeMouseClicked(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 190, 30));
+        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 200, 30));
 
-        Button_ExitAdminLogin.setBackground(new java.awt.Color(149, 227, 244));
+        Button_ExitAdminLogin.setBackground(new java.awt.Color(108, 169, 230));
         Button_ExitAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         Button_ExitAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
         Button_ExitAdminLogin.setText("Salir");
@@ -307,7 +328,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Lbl_AdminEntryMouseClicked(evt);
             }
         });
-        IntFrame_ClientView.getContentPane().add(Lbl_AdminEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 220, -1));
+        IntFrame_ClientView.getContentPane().add(Lbl_AdminEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 310, -1));
 
         Lbl_Bg_ClientView.setMaximumSize(new java.awt.Dimension(960, 510));
         Lbl_Bg_ClientView.setMinimumSize(new java.awt.Dimension(960, 510));
@@ -680,6 +701,22 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_ClientsAdminConfig.setVisible(true);
     }//GEN-LAST:event_Btn_ClientsAdminConfigActionPerformed
 
+    private void Pfield_ConfirmNewPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pfield_ConfirmNewPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pfield_ConfirmNewPasswordActionPerformed
+
+    private void Pfield_NewPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pfield_NewPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pfield_NewPasswordActionPerformed
+
+    private void Pfield_LastPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pfield_LastPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pfield_LastPasswordActionPerformed
+
+    private void Pfield_AdminPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pfield_AdminPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pfield_AdminPasswordActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -737,9 +774,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Bg_AdminLogin;
     private javax.swing.JLabel Lbl_Bg_ClientView;
     private javax.swing.JLabel Lbl_Bg_PasswordChange;
-    private javax.swing.JLabel Lbl_ConfirmNewPassword;
-    private javax.swing.JLabel Lbl_LastPassword;
-    private javax.swing.JLabel Lbl_NewPassword;
     private javax.swing.JLabel Lbl_PasswordChange;
     public static javax.swing.JLabel Lbl_PopUp_Base;
     public static javax.swing.JPasswordField Pfield_AdminPassword;
