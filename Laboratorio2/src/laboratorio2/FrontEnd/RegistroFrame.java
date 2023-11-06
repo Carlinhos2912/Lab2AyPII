@@ -16,6 +16,7 @@ import java.util.regex.Pattern;
  * @author maxtr
  */
 public class RegistroFrame extends javax.swing.JFrame {
+
     // Lista que almacena registros de automóviles
     private ArrayList<Autos> automobileRecords = new ArrayList<>();
 
@@ -350,12 +351,14 @@ public class RegistroFrame extends javax.swing.JFrame {
     private void ListarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarbtnActionPerformed
         updateListTextArea();// Llama a la función para actualizar el área de texto de listado
     }//GEN-LAST:event_ListarbtnActionPerformed
-     // Método para verificar si una cadena contiene caracteres especiales
+    // Método para verificar si una cadena contiene caracteres especiales
+
     private boolean containsSpecialCharacters(String str) {
-        String regex = ".*[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜ].*"; 
+        String regex = ".*[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜ].*";
         return Pattern.matches(regex, str);
     }
-     // Método para manejar el evento del botón "Registrar"
+
+    // Método para manejar el evento del botón "Registrar"
     private void RegistrarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarbtnActionPerformed
         // leer los datos de los fields y pasarlos a minuscula
         String placa = Placatxt.getText().toLowerCase();
@@ -389,8 +392,7 @@ public class RegistroFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Año de Lanzamiento, Precio de Compra y Precio de Venta deben ser válidos.");
             return;
         }
-        
-        
+
         // Verifica si ya existe un automóvil con la misma placa
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
@@ -402,18 +404,17 @@ public class RegistroFrame extends javax.swing.JFrame {
         //concatena la info de los fields para dejarlo unico en modelo
         String modelostr = marca + "," + nombreModelo + "," + añoLanzamiento;
 
-         // Crea un objeto de tipo Autos con la info
+        // Crea un objeto de tipo Autos con la info
         Autos registro = new Autos();
         registro.setPlaca(placa);
         registro.setColor(color);
         registro.setModelo(modelostr);
         registro.setPrecioDeCompra(precioCompra);
         registro.setPrecioDeVenta(precioVenta);
-    
+
         // Agrega el registro a la lista de automóviles
         automobileRecords.add(registro);
 
-        
         // Limpia los campos de entrada y muestra un mensaje de éxito
         Placatxt.setText("");
         Colortxt.setText("");
@@ -435,8 +436,8 @@ public class RegistroFrame extends javax.swing.JFrame {
     // Método para manejar el evento del botón "Modificar"
     private void ModificatxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificatxtActionPerformed
         String placa = Placatxt.getText();
-        
-          // Realiza la validación de si esta vacia el field de la placa
+
+        // Realiza la validación de si esta vacia el field de la placa
         if (placa.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Ingrese una placa válida para modificar un auto.");
             return;
@@ -447,7 +448,7 @@ public class RegistroFrame extends javax.swing.JFrame {
             if (auto.getPlaca().equalsIgnoreCase(placa)) {
                 carroEncontrado = true;
 
-             
+                // leee valores de campos de entrada
                 String color = Colortxt.getText();
                 String marca = Marcatxt.getText();
                 String nombreModelo = NombreModelotxt.getText();
@@ -455,7 +456,7 @@ public class RegistroFrame extends javax.swing.JFrame {
                 String precioCompraStr = PrecioDeCompratxt.getText().replace(',', '.');
                 String precioVentaStr = PrecioDeVentatxt.getText().replace(',', '.');
 
-               
+                // Actualiza los campos del automóvil solo si no están vacíos
                 if (!color.isEmpty()) {
                     auto.setColor(color);
                 }
@@ -494,10 +495,10 @@ public class RegistroFrame extends javax.swing.JFrame {
                 }
 
                 JOptionPane.showMessageDialog(this, "Datos del auto con placa " + placa + " modificados con éxito.");
-                break; // Exit the loop after modifying the car
+                break; // Salir del bucle después de modificar el automóvil
             }
         }
-
+        // Si no se encontró el automóvil
         if (!carroEncontrado) {
             JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
         }
@@ -537,7 +538,7 @@ public class RegistroFrame extends javax.swing.JFrame {
             }
         });
     }
-
+    //eliminar un automóvil por placa
     private void deleteAutoByPlaca(String placa) {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
@@ -548,7 +549,8 @@ public class RegistroFrame extends javax.swing.JFrame {
         }
         JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
     }
-
+    
+    //actualizar el área de texto de listado de automóviles
     private void updateListTextArea() {
         Listartxt.setText("");
 
