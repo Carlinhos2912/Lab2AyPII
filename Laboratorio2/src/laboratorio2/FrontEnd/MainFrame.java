@@ -206,7 +206,7 @@ public class MainFrame extends javax.swing.JFrame {
                 Lbl_PasswordChangeMouseClicked(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 190, 30));
+        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 190, 30));
 
         Button_ExitAdminLogin.setBackground(new java.awt.Color(149, 227, 244));
         Button_ExitAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
