@@ -525,7 +525,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonModificarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         jButtonModificarClient.setForeground(new java.awt.Color(255, 255, 255));
         jButtonModificarClient.setText("Modificar");
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonModificarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 160, 50));
+        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonModificarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 180, 60));
 
         jButtonEliminarClient.setBackground(new java.awt.Color(108, 169, 230));
         jButtonEliminarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
@@ -536,7 +536,7 @@ public class MainFrame extends javax.swing.JFrame {
                 jButtonEliminarClientActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonEliminarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 160, 50));
+        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonEliminarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 180, 60));
 
         jButtonRegistrarClient.setBackground(new java.awt.Color(108, 169, 230));
         jButtonRegistrarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
@@ -547,7 +547,7 @@ public class MainFrame extends javax.swing.JFrame {
                 jButtonRegistrarClientActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonRegistrarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 160, 50));
+        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonRegistrarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 180, 60));
 
         jTextFieldDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
