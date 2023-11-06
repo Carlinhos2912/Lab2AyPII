@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import laboratorio2.BackEnd.Autos;
+import java.awt.event.ActionEvent;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -363,7 +365,13 @@ public class RegistroFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Todos los campos deben estar completos.");
             return;
         }
-
+        if (containsSpecialCharacters(placa) || containsSpecialCharacters(color)
+                || containsSpecialCharacters(marca) || containsSpecialCharacters(nombreModelo)
+                || containsSpecialCharacters(añoLanzamientoStr) || containsSpecialCharacters(precioCompraStr)
+                || containsSpecialCharacters(precioVentaStr)) {
+            JOptionPane.showMessageDialog(this, "Campos contienen caracteres especiales.");
+            return;
+        }
         int añoLanzamiento;
         double precioCompra;
         double precioVenta;
@@ -541,6 +549,10 @@ public class RegistroFrame extends javax.swing.JFrame {
         }
     }
 
+    private boolean containsSpecialCharacters(String str) {
+        String regex = ".*[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜ].*"; // Adjust the regex as needed
+        return Pattern.matches(regex, str);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AñoDeLaznamientotxt;
