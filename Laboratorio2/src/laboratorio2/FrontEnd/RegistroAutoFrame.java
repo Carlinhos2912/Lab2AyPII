@@ -28,10 +28,6 @@ public class RegistroAutoFrame extends javax.swing.JFrame {
 
         IntFrame_ClientView = new javax.swing.JInternalFrame();
         IntFrame_AdminLogin = new javax.swing.JInternalFrame();
-        Pfield_AdminPassword = new javax.swing.JPasswordField();
-        Tfield_AdminUser = new javax.swing.JTextField();
-        Btn_ConfirmAdminLogin = new javax.swing.JButton();
-        Lbl_PasswordChange = new javax.swing.JLabel();
         Button_ExitAdminLogin = new javax.swing.JButton();
         Lbl_Bg_AdminLogin = new javax.swing.JLabel();
         IntFrame_BuyACar = new javax.swing.JInternalFrame();
@@ -87,38 +83,6 @@ public class RegistroAutoFrame extends javax.swing.JFrame {
         });
         IntFrame_AdminLogin.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Pfield_AdminPassword.setBackground(new java.awt.Color(199, 227, 255));
-        Pfield_AdminPassword.setFont(new java.awt.Font("Arial Narrow", 0, 12)); // NOI18N
-        IntFrame_AdminLogin.getContentPane().add(Pfield_AdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 185, 180, 25));
-
-        Tfield_AdminUser.setBackground(new java.awt.Color(199, 227, 255));
-        Tfield_AdminUser.setFont(new java.awt.Font("Arial Narrow", 0, 12)); // NOI18N
-        IntFrame_AdminLogin.getContentPane().add(Tfield_AdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 141, 180, 25));
-
-        Btn_ConfirmAdminLogin.setBackground(new java.awt.Color(44, 131, 218));
-        Btn_ConfirmAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
-        Btn_ConfirmAdminLogin.setForeground(new java.awt.Color(199, 227, 255));
-        Btn_ConfirmAdminLogin.setText("Ingresar");
-        Btn_ConfirmAdminLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_ConfirmAdminLoginActionPerformed(evt);
-            }
-        });
-        IntFrame_AdminLogin.getContentPane().add(Btn_ConfirmAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 110, -1));
-
-        Lbl_PasswordChange.setFont(new java.awt.Font("Arial Narrow", 0, 16)); // NOI18N
-        Lbl_PasswordChange.setForeground(new java.awt.Color(44, 131, 218));
-        Lbl_PasswordChange.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Lbl_PasswordChange.setText("CAMBIAR CONTRASEÑA");
-        Lbl_PasswordChange.setToolTipText("");
-        Lbl_PasswordChange.setAlignmentY(0.0F);
-        Lbl_PasswordChange.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Lbl_PasswordChangeMouseClicked(evt);
-            }
-        });
-        IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 190, 30));
-
         Button_ExitAdminLogin.setBackground(new java.awt.Color(149, 227, 244));
         Button_ExitAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         Button_ExitAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,9 +92,9 @@ public class RegistroAutoFrame extends javax.swing.JFrame {
                 Button_ExitAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Button_ExitAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
+        IntFrame_AdminLogin.getContentPane().add(Button_ExitAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 100, 30));
 
-        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Fondo-Login.png"))); // NOI18N
+        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistrarAuto.png"))); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Lbl_Bg_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_ClientView.getContentPane().add(IntFrame_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -234,27 +198,13 @@ public class RegistroAutoFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Btn_ConfirmAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ConfirmAdminLoginActionPerformed
-        Admin GenCredentials = new Admin();
-        GenCredentials.setUser(Tfield_AdminUser.getText());
-        GenCredentials.setPassword(String.valueOf(Pfield_AdminPassword.getPassword()));
-        TheMagic.Autentication(GenCredentials);
-    }//GEN-LAST:event_Btn_ConfirmAdminLoginActionPerformed
-
-    private void Lbl_PasswordChangeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_PasswordChangeMouseClicked
-        Pfield_AdminPassword.setText("");
-        IntFrame_AdminLogin.setVisible(false);
-        IntFrame_PasswordChange.setVisible(true);
-    }//GEN-LAST:event_Lbl_PasswordChangeMouseClicked
-
     private void Button_ExitAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ExitAdminLoginActionPerformed
         IntFrame_AdminLogin.setVisible(false);
         IntFrame_ClientView.setVisible(true);
     }//GEN-LAST:event_Button_ExitAdminLoginActionPerformed
 
     private void IntFrame_AdminLoginInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_AdminLoginInternalFrameClosed
-        IntFrame_AdminView.setVisible(false);
-        IntFrame_ClientView.setVisible(true);
+       
     }//GEN-LAST:event_IntFrame_AdminLoginInternalFrameClosed
 
     /**
@@ -293,17 +243,13 @@ public class RegistroAutoFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Btn_ConfirmAdminLogin;
     private javax.swing.JButton Button_ExitAdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     private javax.swing.JInternalFrame IntFrame_BuyACar;
     public static javax.swing.JInternalFrame IntFrame_ClientView;
     private javax.swing.JLabel Lbl_Bg_AdminLogin;
     private javax.swing.JLabel Lbl_Bg_ClientView;
-    private javax.swing.JLabel Lbl_PasswordChange;
-    public static javax.swing.JPasswordField Pfield_AdminPassword;
     private javax.swing.JScrollPane Scroll_Table_CarsList;
     private javax.swing.JTable Table_CarsList;
-    private javax.swing.JTextField Tfield_AdminUser;
     // End of variables declaration//GEN-END:variables
 }
