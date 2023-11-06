@@ -762,6 +762,3 @@ public class MainFrame extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 }
-        IntFrame_AdminLogin.getContentPane().add(Button_ExitAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
-
-        Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Fondo-Login.png"))); // NOI18N
