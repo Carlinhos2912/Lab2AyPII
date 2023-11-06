@@ -64,10 +64,10 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="Registrarbtn" pref="122" max="32767" attributes="0"/>
+              <Component id="Registrarbtn" pref="138" max="32767" attributes="0"/>
               <Component id="Eliminarbtn" alignment="0" max="32767" attributes="0"/>
               <Component id="Listarbtn" alignment="1" max="32767" attributes="0"/>
-              <Component id="Modificarbtn" alignment="1" max="32767" attributes="0"/>
+              <Component id="Modificatxt" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -78,7 +78,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="Eliminarbtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="Modificarbtn" min="-2" max="-2" attributes="0"/>
+                  <Component id="Modificatxt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Component id="Listarbtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="26" max="32767" attributes="0"/>
@@ -111,10 +111,13 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ListarbtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Modificarbtn">
+        <Component class="javax.swing.JButton" name="Modificatxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Modificar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificatxtActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

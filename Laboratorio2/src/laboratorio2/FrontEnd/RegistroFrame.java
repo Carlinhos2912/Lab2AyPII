@@ -37,7 +37,7 @@ public class RegistroFrame extends javax.swing.JFrame {
         Registrarbtn = new javax.swing.JButton();
         Eliminarbtn = new javax.swing.JButton();
         Listarbtn = new javax.swing.JButton();
-        Modificarbtn = new javax.swing.JButton();
+        Modificatxt = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -86,16 +86,21 @@ public class RegistroFrame extends javax.swing.JFrame {
             }
         });
 
-        Modificarbtn.setText("Modificar");
+        Modificatxt.setText("Modificar");
+        Modificatxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificatxtActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Registrarbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+            .addComponent(Registrarbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
             .addComponent(Eliminarbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Listarbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Modificarbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Modificatxt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,7 +110,7 @@ public class RegistroFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Eliminarbtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Modificarbtn)
+                .addComponent(Modificatxt)
                 .addGap(12, 12, 12)
                 .addComponent(Listarbtn)
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -408,6 +413,75 @@ public class RegistroFrame extends javax.swing.JFrame {
         Placatxt.setText("");
     }//GEN-LAST:event_EliminarbtnActionPerformed
 
+    private void ModificatxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificatxtActionPerformed
+        String placa = Placatxt.getText();
+
+        if (placa.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese una placa válida para modificar un auto.");
+            return;
+        }
+
+        boolean carroEncontrado = false;
+        for (Autos auto : automobileRecords) {
+            if (auto.getPlaca().equalsIgnoreCase(placa)) {
+                carroEncontrado = true;
+
+                // Update the fields with user input
+                String color = Colortxt.getText();
+                String marca = Marcatxt.getText();
+                String nombreModelo = NombreModelotxt.getText();
+                String añoLanzamientoStr = AñoDeLaznamientotxt.getText();
+                String precioCompraStr = PrecioDeCompratxt.getText().replace(',', '.');
+                String precioVentaStr = PrecioDeVentatxt.getText().replace(',', '.');
+
+                // Update only if fields are not empty
+                if (!color.isEmpty()) {
+                    auto.setColor(color);
+                }
+                if (!marca.isEmpty()) {
+                    String[] modeloParts = auto.getModelo().split(",");
+                    auto.setModelo(marca + "," + modeloParts[1] + "," + modeloParts[2]);
+                }
+                if (!nombreModelo.isEmpty()) {
+                    String[] modeloParts = auto.getModelo().split(",");
+                    auto.setModelo(modeloParts[0] + "," + nombreModelo + "," + modeloParts[2]);
+                }
+                if (!añoLanzamientoStr.isEmpty()) {
+                    try {
+                        int añoLanzamiento = Integer.parseInt(añoLanzamientoStr);
+                        String[] modeloParts = auto.getModelo().split(",");
+                        auto.setModelo(modeloParts[0] + "," + modeloParts[1] + "," + añoLanzamiento);
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(this, "Año de Lanzamiento debe ser válido.");
+                    }
+                }
+                if (!precioCompraStr.isEmpty()) {
+                    try {
+                        double precioCompra = Double.parseDouble(precioCompraStr);
+                        auto.setPrecioDeCompra(precioCompra);
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(this, "Precio de Compra debe ser válido.");
+                    }
+                }
+                if (!precioVentaStr.isEmpty()) {
+                    try {
+                        double precioVenta = Double.parseDouble(precioVentaStr);
+                        auto.setPrecioDeVenta(precioVenta);
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(this, "Precio de Venta debe ser válido.");
+                    }
+                }
+
+                JOptionPane.showMessageDialog(this, "Datos del auto con placa " + placa + " modificados con éxito.");
+                break; // Exit the loop after modifying the car
+            }
+        }
+
+        if (!carroEncontrado) {
+            JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
+        }
+    }//GEN-LAST:event_ModificatxtActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -443,10 +517,6 @@ public class RegistroFrame extends javax.swing.JFrame {
         });
     }
 
-    private void ModificarbtnActionPerformed(java.awt.event.ActionEvent evt) {
-
-    }
-
     private void deleteAutoByPlaca(String placa) {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
@@ -479,7 +549,7 @@ public class RegistroFrame extends javax.swing.JFrame {
     private javax.swing.JButton Listarbtn;
     private javax.swing.JTextArea Listartxt;
     private javax.swing.JTextField Marcatxt;
-    private javax.swing.JButton Modificarbtn;
+    private javax.swing.JButton Modificatxt;
     private javax.swing.JTextField NombreModelotxt;
     private javax.swing.JTextField Placatxt;
     private javax.swing.JTextField PrecioDeCompratxt;
