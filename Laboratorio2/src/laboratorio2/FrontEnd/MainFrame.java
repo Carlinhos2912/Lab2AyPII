@@ -40,15 +40,15 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         IntFrame_ClientView = new javax.swing.JInternalFrame();
         IntFrame_BuyACar = new javax.swing.JInternalFrame();
+        TField_ClientIdentification_Buy = new javax.swing.JTextField();
+        TField_ClientName_Buy = new javax.swing.JTextField();
+        TField_ClientLastname_Buy = new javax.swing.JTextField();
+        TField_ClientBirthday_Buy = new javax.swing.JTextField();
+        TField_ClientEmail_Buy = new javax.swing.JTextField();
+        TField_ClientPhoneNumber_Buy = new javax.swing.JTextField();
+        TField_ClientAdress_Buy = new javax.swing.JTextField();
         Btn_Buy = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jTextFieldDireccion1 = new javax.swing.JTextField();
-        jTextFieldCelular1 = new javax.swing.JTextField();
-        jTextFieldEmail1 = new javax.swing.JTextField();
-        jTextFieldFechaNac1 = new javax.swing.JTextField();
-        jTextFieldApellido1 = new javax.swing.JTextField();
-        jTextFieldNombre1 = new javax.swing.JTextField();
-        jTextFieldIdentificacion1 = new javax.swing.JTextField();
+        Lbl_CarInfo = new javax.swing.JLabel();
         Lbl_Bg_BuyACar = new javax.swing.JLabel();
         Scroll_Table_CarsList = new javax.swing.JScrollPane();
         Table_CarsList = new javax.swing.JTable();
@@ -69,24 +69,24 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldPrecioCompra = new javax.swing.JTextField();
         jTextFieldColor = new javax.swing.JTextField();
         jTextFieldPlaca1 = new javax.swing.JTextField();
-        jLabelFindo = new javax.swing.JLabel();
+        Lbl_Bg_CarsAdminConfig = new javax.swing.JLabel();
         IntFrame_ClientsAdminConfig = new javax.swing.JInternalFrame();
-        jButtonModificarClient = new javax.swing.JButton();
-        jButtonEliminarClient = new javax.swing.JButton();
-        jTextFieldDireccion = new javax.swing.JTextField();
-        jTextFieldCelular = new javax.swing.JTextField();
-        jTextFieldEmail = new javax.swing.JTextField();
-        jTextFieldFechaNac = new javax.swing.JTextField();
-        jTextFieldApellido = new javax.swing.JTextField();
-        jTextFieldNombre = new javax.swing.JTextField();
-        jTextFieldIdentificacion = new javax.swing.JTextField();
-        jLabelFondoRegisCliente = new javax.swing.JLabel();
+        TField_ClientIdentification = new javax.swing.JTextField();
+        TField_ClientName = new javax.swing.JTextField();
+        TField_ClientLastname = new javax.swing.JTextField();
+        TField_ClientBirthday = new javax.swing.JTextField();
+        TField_CLientEmail = new javax.swing.JTextField();
+        TField_ClientPhoneNumber = new javax.swing.JTextField();
+        TField_ClientAdress = new javax.swing.JTextField();
+        Btn_ModifyClient = new javax.swing.JButton();
+        Btn_DeleteClient = new javax.swing.JButton();
+        Lbl_Bg_ClientsAdminConfig = new javax.swing.JLabel();
         IntFrame_SalesAdminConfig = new javax.swing.JInternalFrame();
         Btn_Back_AdminView = new javax.swing.JButton();
-        jLabelAutos = new javax.swing.JLabel();
-        jLabelVentas = new javax.swing.JLabel();
-        jLabelClientes = new javax.swing.JLabel();
-        jLabelFondo = new javax.swing.JLabel();
+        Lbl_Entry_CarsAdminConfig = new javax.swing.JLabel();
+        Lbl_Entry_ClientsAdminConfig = new javax.swing.JLabel();
+        Lbl_Entry_SalesAdminConfig = new javax.swing.JLabel();
+        Lbl_Bg_AdminView = new javax.swing.JLabel();
 
         PopUp_AdminLogin.setAlwaysOnTop(true);
         PopUp_AdminLogin.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -309,6 +309,55 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_BuyACar.setVisible(false);
         IntFrame_BuyACar.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        TField_ClientIdentification_Buy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TField_ClientIdentification_BuyActionPerformed(evt);
+            }
+        });
+        IntFrame_BuyACar.getContentPane().add(TField_ClientIdentification_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
+
+        TField_ClientName_Buy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TField_ClientName_BuyActionPerformed(evt);
+            }
+        });
+        IntFrame_BuyACar.getContentPane().add(TField_ClientName_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
+
+        TField_ClientLastname_Buy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TField_ClientLastname_BuyActionPerformed(evt);
+            }
+        });
+        IntFrame_BuyACar.getContentPane().add(TField_ClientLastname_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 180, 20));
+
+        TField_ClientBirthday_Buy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TField_ClientBirthday_BuyActionPerformed(evt);
+            }
+        });
+        IntFrame_BuyACar.getContentPane().add(TField_ClientBirthday_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 213, 180, 20));
+
+        TField_ClientEmail_Buy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TField_ClientEmail_BuyActionPerformed(evt);
+            }
+        });
+        IntFrame_BuyACar.getContentPane().add(TField_ClientEmail_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 255, 180, 20));
+
+        TField_ClientPhoneNumber_Buy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TField_ClientPhoneNumber_BuyActionPerformed(evt);
+            }
+        });
+        IntFrame_BuyACar.getContentPane().add(TField_ClientPhoneNumber_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 295, 180, 20));
+
+        TField_ClientAdress_Buy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TField_ClientAdress_BuyActionPerformed(evt);
+            }
+        });
+        IntFrame_BuyACar.getContentPane().add(TField_ClientAdress_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 333, 180, 20));
+
         Btn_Buy.setBackground(new java.awt.Color(108, 169, 230));
         Btn_Buy.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         Btn_Buy.setForeground(new java.awt.Color(255, 255, 255));
@@ -320,58 +369,9 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_BuyACar.getContentPane().add(Btn_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 170, 50));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("*Aqui se muetran los datos del auto que se va a comprar*");
-        IntFrame_BuyACar.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 270, 200));
-
-        jTextFieldDireccion1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldDireccion1ActionPerformed(evt);
-            }
-        });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldDireccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 180, 20));
-
-        jTextFieldCelular1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCelular1ActionPerformed(evt);
-            }
-        });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldCelular1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 180, 20));
-
-        jTextFieldEmail1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEmail1ActionPerformed(evt);
-            }
-        });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 180, 20));
-
-        jTextFieldFechaNac1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFechaNac1ActionPerformed(evt);
-            }
-        });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldFechaNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 180, 20));
-
-        jTextFieldApellido1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldApellido1ActionPerformed(evt);
-            }
-        });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 180, 20));
-
-        jTextFieldNombre1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombre1ActionPerformed(evt);
-            }
-        });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
-
-        jTextFieldIdentificacion1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldIdentificacion1ActionPerformed(evt);
-            }
-        });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldIdentificacion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
+        Lbl_CarInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Lbl_CarInfo.setText("*Aqui se muetran los datos del auto que se va a comprar*");
+        IntFrame_BuyACar.getContentPane().add(Lbl_CarInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 300, 170));
 
         Lbl_Bg_BuyACar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistrarClientes.png"))); // NOI18N
         IntFrame_BuyACar.getContentPane().add(Lbl_Bg_BuyACar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
@@ -564,8 +564,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 210, -1));
 
-        jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoFin.png"))); // NOI18N
-        IntFrame_CarsAdminConfig.getContentPane().add(jLabelFindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 360));
+        Lbl_Bg_CarsAdminConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoFin.png"))); // NOI18N
+        IntFrame_CarsAdminConfig.getContentPane().add(Lbl_Bg_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 360));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -607,74 +607,74 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonModificarClient.setBackground(new java.awt.Color(108, 169, 230));
-        jButtonModificarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
-        jButtonModificarClient.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonModificarClient.setText("Modificar");
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonModificarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 210, 70));
-
-        jButtonEliminarClient.setBackground(new java.awt.Color(108, 169, 230));
-        jButtonEliminarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
-        jButtonEliminarClient.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonEliminarClient.setText("Eliminar");
-        jButtonEliminarClient.addActionListener(new java.awt.event.ActionListener() {
+        TField_ClientIdentification.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEliminarClientActionPerformed(evt);
+                TField_ClientIdentificationActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonEliminarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 210, 70));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientIdentification, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
 
-        jTextFieldDireccion.addActionListener(new java.awt.event.ActionListener() {
+        TField_ClientName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldDireccionActionPerformed(evt);
+                TField_ClientNameActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
 
-        jTextFieldCelular.addActionListener(new java.awt.event.ActionListener() {
+        TField_ClientLastname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCelularActionPerformed(evt);
+                TField_ClientLastnameActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 172, 180, 20));
 
-        jTextFieldEmail.addActionListener(new java.awt.event.ActionListener() {
+        TField_ClientBirthday.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEmailActionPerformed(evt);
+                TField_ClientBirthdayActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientBirthday, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 213, 180, 20));
 
-        jTextFieldFechaNac.addActionListener(new java.awt.event.ActionListener() {
+        TField_CLientEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFechaNacActionPerformed(evt);
+                TField_CLientEmailActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_CLientEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 255, 180, 20));
 
-        jTextFieldApellido.addActionListener(new java.awt.event.ActionListener() {
+        TField_ClientPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldApellidoActionPerformed(evt);
+                TField_ClientPhoneNumberActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 295, 180, 20));
 
-        jTextFieldNombre.addActionListener(new java.awt.event.ActionListener() {
+        TField_ClientAdress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreActionPerformed(evt);
+                TField_ClientAdressActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientAdress, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 337, 180, 20));
 
-        jTextFieldIdentificacion.addActionListener(new java.awt.event.ActionListener() {
+        Btn_ModifyClient.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_ModifyClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Btn_ModifyClient.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_ModifyClient.setText("Modificar");
+        IntFrame_ClientsAdminConfig.getContentPane().add(Btn_ModifyClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 210, 70));
+
+        Btn_DeleteClient.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_DeleteClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Btn_DeleteClient.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_DeleteClient.setText("Eliminar");
+        Btn_DeleteClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldIdentificacionActionPerformed(evt);
+                Btn_DeleteClientActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(Btn_DeleteClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 210, 70));
 
-        jLabelFondoRegisCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Eliminar:Modificarcliente.png"))); // NOI18N
-        IntFrame_ClientsAdminConfig.getContentPane().add(jLabelFondoRegisCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
+        Lbl_Bg_ClientsAdminConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Modificarcliente.png"))); // NOI18N
+        IntFrame_ClientsAdminConfig.getContentPane().add(Lbl_Bg_ClientsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_ClientsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -732,29 +732,29 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_AdminView.getContentPane().add(Btn_Back_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 450, 150, 40));
 
-        jLabelAutos.addMouseListener(new java.awt.event.MouseAdapter() {
+        Lbl_Entry_CarsAdminConfig.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelAutosMouseClicked(evt);
+                Lbl_Entry_CarsAdminConfigMouseClicked(evt);
             }
         });
-        IntFrame_AdminView.getContentPane().add(jLabelAutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 230, 270));
+        IntFrame_AdminView.getContentPane().add(Lbl_Entry_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 230, 270));
 
-        jLabelVentas.addMouseListener(new java.awt.event.MouseAdapter() {
+        Lbl_Entry_ClientsAdminConfig.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelVentasMouseClicked(evt);
+                Lbl_Entry_ClientsAdminConfigMouseClicked(evt);
             }
         });
-        IntFrame_AdminView.getContentPane().add(jLabelVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 220, 260));
+        IntFrame_AdminView.getContentPane().add(Lbl_Entry_ClientsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 230, 270));
 
-        jLabelClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+        Lbl_Entry_SalesAdminConfig.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelClientesMouseClicked(evt);
+                Lbl_Entry_SalesAdminConfigMouseClicked(evt);
             }
         });
-        IntFrame_AdminView.getContentPane().add(jLabelClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 230, 270));
+        IntFrame_AdminView.getContentPane().add(Lbl_Entry_SalesAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 220, 260));
 
-        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Servicios.png"))); // NOI18N
-        IntFrame_AdminView.getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 510));
+        Lbl_Bg_AdminView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Servicios.png"))); // NOI18N
+        IntFrame_AdminView.getContentPane().add(Lbl_Bg_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 510));
 
         getContentPane().add(IntFrame_AdminView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
         try {
@@ -829,17 +829,17 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Pfield_LastPasswordActionPerformed
 
-    private void jLabelAutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelAutosMouseClicked
+    private void Lbl_Entry_CarsAdminConfigMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_Entry_CarsAdminConfigMouseClicked
         IntFrame_CarsAdminConfig.setVisible(true);
-    }//GEN-LAST:event_jLabelAutosMouseClicked
+    }//GEN-LAST:event_Lbl_Entry_CarsAdminConfigMouseClicked
 
-    private void jLabelClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClientesMouseClicked
+    private void Lbl_Entry_ClientsAdminConfigMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_Entry_ClientsAdminConfigMouseClicked
         IntFrame_ClientsAdminConfig.setVisible(true);
-    }//GEN-LAST:event_jLabelClientesMouseClicked
+    }//GEN-LAST:event_Lbl_Entry_ClientsAdminConfigMouseClicked
 
-    private void jLabelVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelVentasMouseClicked
+    private void Lbl_Entry_SalesAdminConfigMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_Entry_SalesAdminConfigMouseClicked
         IntFrame_SalesAdminConfig.setVisible(true);
-    }//GEN-LAST:event_jLabelVentasMouseClicked
+    }//GEN-LAST:event_Lbl_Entry_SalesAdminConfigMouseClicked
 
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
         // TODO add your handling code here:
@@ -861,37 +861,37 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldPrecioCompraActionPerformed
 
-    private void jButtonEliminarClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarClientActionPerformed
+    private void Btn_DeleteClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_DeleteClientActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonEliminarClientActionPerformed
+    }//GEN-LAST:event_Btn_DeleteClientActionPerformed
 
-    private void jTextFieldIdentificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdentificacionActionPerformed
+    private void TField_ClientIdentificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientIdentificationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldIdentificacionActionPerformed
+    }//GEN-LAST:event_TField_ClientIdentificationActionPerformed
 
-    private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
+    private void TField_ClientNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreActionPerformed
+    }//GEN-LAST:event_TField_ClientNameActionPerformed
 
-    private void jTextFieldApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldApellidoActionPerformed
+    private void TField_ClientLastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientLastnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldApellidoActionPerformed
+    }//GEN-LAST:event_TField_ClientLastnameActionPerformed
 
-    private void jTextFieldFechaNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFechaNacActionPerformed
+    private void TField_ClientBirthdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientBirthdayActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFechaNacActionPerformed
+    }//GEN-LAST:event_TField_ClientBirthdayActionPerformed
 
-    private void jTextFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmailActionPerformed
+    private void TField_CLientEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_CLientEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEmailActionPerformed
+    }//GEN-LAST:event_TField_CLientEmailActionPerformed
 
-    private void jTextFieldCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCelularActionPerformed
+    private void TField_ClientPhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientPhoneNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldCelularActionPerformed
+    }//GEN-LAST:event_TField_ClientPhoneNumberActionPerformed
 
-    private void jTextFieldDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDireccionActionPerformed
+    private void TField_ClientAdressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientAdressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldDireccionActionPerformed
+    }//GEN-LAST:event_TField_ClientAdressActionPerformed
 
     private void jTextFieldMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMarcaActionPerformed
         // TODO add your handling code here:
@@ -909,33 +909,33 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldPreciodeVentaActionPerformed
 
-    private void jTextFieldDireccion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDireccion1ActionPerformed
+    private void TField_ClientAdress_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientAdress_BuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldDireccion1ActionPerformed
+    }//GEN-LAST:event_TField_ClientAdress_BuyActionPerformed
 
-    private void jTextFieldCelular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCelular1ActionPerformed
+    private void TField_ClientPhoneNumber_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientPhoneNumber_BuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldCelular1ActionPerformed
+    }//GEN-LAST:event_TField_ClientPhoneNumber_BuyActionPerformed
 
-    private void jTextFieldEmail1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmail1ActionPerformed
+    private void TField_ClientEmail_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientEmail_BuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEmail1ActionPerformed
+    }//GEN-LAST:event_TField_ClientEmail_BuyActionPerformed
 
-    private void jTextFieldFechaNac1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFechaNac1ActionPerformed
+    private void TField_ClientBirthday_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientBirthday_BuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFechaNac1ActionPerformed
+    }//GEN-LAST:event_TField_ClientBirthday_BuyActionPerformed
 
-    private void jTextFieldApellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldApellido1ActionPerformed
+    private void TField_ClientLastname_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientLastname_BuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldApellido1ActionPerformed
+    }//GEN-LAST:event_TField_ClientLastname_BuyActionPerformed
 
-    private void jTextFieldNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombre1ActionPerformed
+    private void TField_ClientName_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientName_BuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombre1ActionPerformed
+    }//GEN-LAST:event_TField_ClientName_BuyActionPerformed
 
-    private void jTextFieldIdentificacion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdentificacion1ActionPerformed
+    private void TField_ClientIdentification_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientIdentification_BuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldIdentificacion1ActionPerformed
+    }//GEN-LAST:event_TField_ClientIdentification_BuyActionPerformed
 
     private void Btn_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_BuyActionPerformed
         // TODO add your handling code here:
@@ -1018,8 +1018,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_Buy;
     private javax.swing.JButton Btn_ConfirmAdminLogin;
     private javax.swing.JButton Btn_ConfirmPasswordChange;
+    private javax.swing.JButton Btn_DeleteClient;
+    private javax.swing.JButton Btn_ModifyClient;
     private javax.swing.JButton Button_ExitAdminLogin;
-    private javax.swing.JInternalFrame IntFrame_AdminLogin;
+    public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_BuyACar;
     public static javax.swing.JInternalFrame IntFrame_CarsAdminConfig;
@@ -1029,53 +1031,51 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JInternalFrame IntFrame_SalesAdminConfig;
     private javax.swing.JLabel Lbl_AdminEntry;
     private javax.swing.JLabel Lbl_Bg_AdminLogin;
+    private javax.swing.JLabel Lbl_Bg_AdminView;
     private javax.swing.JLabel Lbl_Bg_BuyACar;
+    private javax.swing.JLabel Lbl_Bg_CarsAdminConfig;
     private javax.swing.JLabel Lbl_Bg_ClientView;
+    private javax.swing.JLabel Lbl_Bg_ClientsAdminConfig;
     private javax.swing.JLabel Lbl_Bg_PasswordChange;
+    private javax.swing.JLabel Lbl_CarInfo;
+    private javax.swing.JLabel Lbl_Entry_CarsAdminConfig;
+    private javax.swing.JLabel Lbl_Entry_ClientsAdminConfig;
+    private javax.swing.JLabel Lbl_Entry_SalesAdminConfig;
     private javax.swing.JLabel Lbl_PasswordChange;
     public static javax.swing.JLabel Lbl_PopUp_Base;
-    private javax.swing.JPasswordField Pfield_AdminPassword;
+    public static javax.swing.JPasswordField Pfield_AdminPassword;
     public static javax.swing.JPasswordField Pfield_ConfirmNewPassword;
     public static javax.swing.JPasswordField Pfield_LastPassword;
     public static javax.swing.JPasswordField Pfield_NewPassword;
     public static javax.swing.JDialog PopUp_AdminLogin;
     private javax.swing.JScrollPane Scroll_Table_CarsList;
+    private javax.swing.JTextField TField_CLientEmail;
+    private javax.swing.JTextField TField_ClientAdress;
+    private javax.swing.JTextField TField_ClientAdress_Buy;
+    private javax.swing.JTextField TField_ClientBirthday;
+    private javax.swing.JTextField TField_ClientBirthday_Buy;
+    private javax.swing.JTextField TField_ClientEmail_Buy;
+    private javax.swing.JTextField TField_ClientIdentification;
+    private javax.swing.JTextField TField_ClientIdentification_Buy;
+    private javax.swing.JTextField TField_ClientLastname;
+    private javax.swing.JTextField TField_ClientLastname_Buy;
+    private javax.swing.JTextField TField_ClientName;
+    private javax.swing.JTextField TField_ClientName_Buy;
+    private javax.swing.JTextField TField_ClientPhoneNumber;
+    private javax.swing.JTextField TField_ClientPhoneNumber_Buy;
     private javax.swing.JTable Table_CarsList;
     private javax.swing.JTextField Tfield_AdminUser;
     private javax.swing.JButton jButtonEliminar;
-    private javax.swing.JButton jButtonEliminarClient;
     private javax.swing.JButton jButtonModificar;
-    private javax.swing.JButton jButtonModificarClient;
     private javax.swing.JButton jButtonRegistrar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabelAutos;
-    private javax.swing.JLabel jLabelClientes;
-    private javax.swing.JLabel jLabelFindo;
-    private javax.swing.JLabel jLabelFondo;
-    private javax.swing.JLabel jLabelFondoRegisCliente;
-    private javax.swing.JLabel jLabelVentas;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JTextField jTextFieldApellido;
-    private javax.swing.JTextField jTextFieldApellido1;
     private javax.swing.JTextField jTextFieldAño;
-    private javax.swing.JTextField jTextFieldCelular;
-    private javax.swing.JTextField jTextFieldCelular1;
     private javax.swing.JTextField jTextFieldColor;
-    private javax.swing.JTextField jTextFieldDireccion;
-    private javax.swing.JTextField jTextFieldDireccion1;
-    private javax.swing.JTextField jTextFieldEmail;
-    private javax.swing.JTextField jTextFieldEmail1;
-    private javax.swing.JTextField jTextFieldFechaNac;
-    private javax.swing.JTextField jTextFieldFechaNac1;
-    private javax.swing.JTextField jTextFieldIdentificacion;
-    private javax.swing.JTextField jTextFieldIdentificacion1;
     private javax.swing.JTextField jTextFieldMarca;
-    private javax.swing.JTextField jTextFieldNombre;
-    private javax.swing.JTextField jTextFieldNombre1;
     private javax.swing.JTextField jTextFieldPlaca1;
     private javax.swing.JTextField jTextFieldPrecioCompra;
     private javax.swing.JTextField jTextFieldPrecioModelo;
