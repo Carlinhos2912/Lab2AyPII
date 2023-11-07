@@ -448,35 +448,35 @@ public class MainFrame extends javax.swing.JFrame {
                 jTextFieldPrecioVentaActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 210, -1));
 
         jTextFieldPrecioCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPrecioCompraActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 210, -1));
 
         jTextFieldModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldModeloActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 210, -1));
 
         jTextFieldColor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldColorActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 210, 30));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 210, 30));
 
         jTextFieldPlaca1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPlaca1ActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 210, -1));
 
         jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoCorregido.png"))); // NOI18N
         IntFrame_CarsAdminConfig.getContentPane().add(jLabelFindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
