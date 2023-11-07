@@ -1,4 +1,3 @@
-
 package laboratorio2.FrontEnd;
 
 import laboratorio2.BackEnd.Admin;
@@ -465,21 +464,21 @@ public class MainFrame extends javax.swing.JFrame {
                 jTextFieldPrecioVentaActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 210, 20));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 210, -1));
 
         jTextFieldPrecioCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPrecioCompraActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 210, -1));
 
         jTextFieldModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldModeloActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 207, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 210, -1));
 
         jTextFieldColor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -706,10 +705,9 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
     /**
-    * Eventos de formulario
-    */
+     * Eventos de formulario
+     */
     //Evento de Btn_ConfirmPasswordChange para Autenticar cambio de contraseña
     private void Btn_ConfirmPasswordChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ConfirmPasswordChangeActionPerformed
         String Last = String.valueOf(Pfield_LastPassword.getPassword());
@@ -717,7 +715,7 @@ public class MainFrame extends javax.swing.JFrame {
         String Confirm = String.valueOf(Pfield_ConfirmNewPassword.getPassword());
         TheMagic.AutenticatePasswordChange(Last, New, Confirm);
     }//GEN-LAST:event_Btn_ConfirmPasswordChangeActionPerformed
-    
+
     //Evento de Btn_BackChangePassword para regresar a AdminLogin
     private void Btn_BackChangePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_BackChangePasswordActionPerformed
         //Borrar los campos del cambio
@@ -810,7 +808,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelClientesMouseClicked
 
     private void jLabelVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelVentasMouseClicked
-       IntFrame_SalesAdminConfig.setVisible(true);
+        IntFrame_SalesAdminConfig.setVisible(true);
     }//GEN-LAST:event_jLabelVentasMouseClicked
 
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
