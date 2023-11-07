@@ -667,8 +667,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
-
-        jLabelFondoRegisCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Registrarcliente.png"))); // NOI18N
         IntFrame_ClientsAdminConfig.getContentPane().add(jLabelFondoRegisCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_ClientsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
