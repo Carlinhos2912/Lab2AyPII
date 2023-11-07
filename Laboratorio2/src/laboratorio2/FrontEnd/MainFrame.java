@@ -443,6 +443,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         IntFrame_AdminView.setTitle("Vista de administrador");
         IntFrame_AdminView.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        IntFrame_AdminView.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/logo carcrafter 40x40.png"))); // NOI18N
         IntFrame_AdminView.setMaximumSize(new java.awt.Dimension(960, 540));
         IntFrame_AdminView.setMinimumSize(new java.awt.Dimension(960, 540));
         IntFrame_AdminView.setPreferredSize(new java.awt.Dimension(960, 540));
@@ -576,6 +577,7 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_ClientsAdminConfig.setClosable(true);
         IntFrame_ClientsAdminConfig.setTitle("Administrador de Clientes");
         IntFrame_ClientsAdminConfig.setToolTipText("");
+        IntFrame_ClientsAdminConfig.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/logo carcrafter 40x40.png"))); // NOI18N
         IntFrame_ClientsAdminConfig.setLayer(1);
         IntFrame_ClientsAdminConfig.setMaximumSize(new java.awt.Dimension(700, 400));
         IntFrame_ClientsAdminConfig.setMinimumSize(new java.awt.Dimension(700, 400));
@@ -683,6 +685,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         IntFrame_SalesAdminConfig.setClosable(true);
         IntFrame_SalesAdminConfig.setTitle("Administrador de ventas");
+        IntFrame_SalesAdminConfig.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/logo carcrafter 40x40.png"))); // NOI18N
         IntFrame_SalesAdminConfig.setLayer(1);
         IntFrame_SalesAdminConfig.setMaximumSize(new java.awt.Dimension(700, 400));
         IntFrame_SalesAdminConfig.setMinimumSize(new java.awt.Dimension(700, 400));
