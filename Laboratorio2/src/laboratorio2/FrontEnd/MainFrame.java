@@ -61,9 +61,6 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_AdminEntry = new javax.swing.JLabel();
         Lbl_Bg_ClientView = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItemAcercade = new javax.swing.JMenuItem();
-        jMenuItemInstrucciones = new javax.swing.JMenuItem();
         IntFrame_AdminView = new javax.swing.JInternalFrame();
         IntFrame_CarsAdminConfig = new javax.swing.JInternalFrame();
         jButtonModificar = new javax.swing.JButton();
@@ -431,24 +428,6 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_Bg_ClientView.setMinimumSize(new java.awt.Dimension(960, 510));
         Lbl_Bg_ClientView.setPreferredSize(new java.awt.Dimension(960, 510));
         IntFrame_ClientView.getContentPane().add(Lbl_Bg_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 510));
-
-        jMenu4.setText("CarCrafter");
-
-        jMenuItemAcercade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItemAcercade.setText("Acerca de");
-        jMenu4.add(jMenuItemAcercade);
-
-        jMenuItemInstrucciones.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        jMenuItemInstrucciones.setText("Instrucciones");
-        jMenuItemInstrucciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemInstruccionesActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItemInstrucciones);
-
-        jMenuBar2.add(jMenu4);
-
         IntFrame_ClientView.setJMenuBar(jMenuBar2);
 
         getContentPane().add(IntFrame_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
@@ -1152,11 +1131,7 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Pfield_AdminPasswordActionPerformed
 
-<<<<<<< HEAD
-    private void jMenuItemInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInstruccionesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemInstruccionesActionPerformed
-=======
+
     private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
         String placa = jTextFieldPlaca1.getText();
         EliminarPorPlaca(placa);
@@ -1172,7 +1147,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
         JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
     }
->>>>>>> b80d540b5b36c3f5d8f47c6018d1316910850a92
 
     /**
      * @param args the command line arguments
@@ -1267,17 +1241,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonModificar;
     private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-<<<<<<< HEAD
-    private javax.swing.JMenuItem jMenuItemAcercade;
-    private javax.swing.JMenuItem jMenuItemInstrucciones;
-    private javax.swing.JTextField jTextFieldApellido;
-    private javax.swing.JTextField jTextFieldApellido1;
-=======
-    private javax.swing.JMenuItem jMenuItem1;
->>>>>>> b80d540b5b36c3f5d8f47c6018d1316910850a92
     private javax.swing.JTextField jTextFieldAño;
     private javax.swing.JTextField jTextFieldColor;
     private javax.swing.JTextField jTextFieldMarca;
