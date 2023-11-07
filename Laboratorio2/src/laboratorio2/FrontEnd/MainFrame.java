@@ -70,7 +70,6 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_ClientsAdminConfig = new javax.swing.JInternalFrame();
         jButtonModificarClient = new javax.swing.JButton();
         jButtonEliminarClient = new javax.swing.JButton();
-        jButtonRegistrarClient = new javax.swing.JButton();
         jTextFieldDireccion = new javax.swing.JTextField();
         jTextFieldCelular = new javax.swing.JTextField();
         jTextFieldEmail = new javax.swing.JTextField();
@@ -595,7 +594,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonModificarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         jButtonModificarClient.setForeground(new java.awt.Color(255, 255, 255));
         jButtonModificarClient.setText("Modificar");
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonModificarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 180, 60));
+        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonModificarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 210, 70));
 
         jButtonEliminarClient.setBackground(new java.awt.Color(108, 169, 230));
         jButtonEliminarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
@@ -606,18 +605,7 @@ public class MainFrame extends javax.swing.JFrame {
                 jButtonEliminarClientActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonEliminarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 180, 60));
-
-        jButtonRegistrarClient.setBackground(new java.awt.Color(108, 169, 230));
-        jButtonRegistrarClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
-        jButtonRegistrarClient.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRegistrarClient.setText("Registrar");
-        jButtonRegistrarClient.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegistrarClientActionPerformed(evt);
-            }
-        });
-        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonRegistrarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 180, 60));
+        IntFrame_ClientsAdminConfig.getContentPane().add(jButtonEliminarClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 210, 70));
 
         jTextFieldDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -667,6 +655,8 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(jTextFieldIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
+
+        jLabelFondoRegisCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Eliminar:Modificarcliente.png"))); // NOI18N
         IntFrame_ClientsAdminConfig.getContentPane().add(jLabelFondoRegisCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_ClientsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -924,10 +914,6 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDireccionActionPerformed
 
-    private void jButtonRegistrarClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarClientActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonRegistrarClientActionPerformed
-
     private void jTextFieldMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMarcaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldMarcaActionPerformed
@@ -1047,7 +1033,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonModificar;
     private javax.swing.JButton jButtonModificarClient;
     private javax.swing.JButton jButtonRegistrar;
-    private javax.swing.JButton jButtonRegistrarClient;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAutos;
     private javax.swing.JLabel jLabelClientes;
