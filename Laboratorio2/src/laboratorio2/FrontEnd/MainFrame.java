@@ -50,6 +50,8 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonRegistrar = new javax.swing.JButton();
         jButtonEliminar = new javax.swing.JButton();
         Btn_BackChangePassword1 = new javax.swing.JButton();
+        jTextFieldAño = new javax.swing.JTextField();
+        jTextFieldMarca = new javax.swing.JTextField();
         jTextFieldPrecioVenta = new javax.swing.JTextField();
         jTextFieldPrecioCompra = new javax.swing.JTextField();
         jTextFieldModelo = new javax.swing.JTextField();
@@ -442,44 +444,58 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_BackChangePassword1ActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(Btn_BackChangePassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, 100, 40));
+        IntFrame_CarsAdminConfig.getContentPane().add(Btn_BackChangePassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 90, 30));
+
+        jTextFieldAño.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldAñoActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 210, -1));
+
+        jTextFieldMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldMarcaActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 210, -1));
 
         jTextFieldPrecioVenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPrecioVentaActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 210, 20));
 
         jTextFieldPrecioCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPrecioCompraActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 210, -1));
 
         jTextFieldModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldModeloActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 207, 210, -1));
 
         jTextFieldColor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldColorActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 210, 30));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 210, 30));
 
         jTextFieldPlaca1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPlaca1ActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 210, -1));
 
-        jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAuto.png"))); // NOI18N
+        jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoCorregido.png"))); // NOI18N
         IntFrame_CarsAdminConfig.getContentPane().add(jLabelFindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -869,6 +885,14 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonRegistrarClientActionPerformed
 
+    private void jTextFieldMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMarcaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldMarcaActionPerformed
+
+    private void jTextFieldAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAñoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldAñoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -948,12 +972,14 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFondoRegisCliente;
     private javax.swing.JLabel jLabelVentas;
     private javax.swing.JTextField jTextFieldApellido;
+    private javax.swing.JTextField jTextFieldAño;
     private javax.swing.JTextField jTextFieldCelular;
     private javax.swing.JTextField jTextFieldColor;
     private javax.swing.JTextField jTextFieldDireccion;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldFechaNac;
     private javax.swing.JTextField jTextFieldIdentificacion;
+    private javax.swing.JTextField jTextFieldMarca;
     private javax.swing.JTextField jTextFieldModelo;
     private javax.swing.JTextField jTextFieldNombre;
     private javax.swing.JTextField jTextFieldPlaca1;
