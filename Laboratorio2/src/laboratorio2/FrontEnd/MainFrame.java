@@ -49,9 +49,11 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonRegistrar = new javax.swing.JButton();
         jButtonEliminar = new javax.swing.JButton();
         Btn_BackChangePassword1 = new javax.swing.JButton();
+        jTextFieldPrecioModelo = new javax.swing.JTextField();
+        jTextFieldPreciodeVenta = new javax.swing.JTextField();
         jTextFieldAño = new javax.swing.JTextField();
         jTextFieldMarca = new javax.swing.JTextField();
-        jTextFieldPrecioVenta = new javax.swing.JTextField();
+        jTextFieldPrecioAño = new javax.swing.JTextField();
         jTextFieldPrecioCompra = new javax.swing.JTextField();
         jTextFieldModelo = new javax.swing.JTextField();
         jTextFieldColor = new javax.swing.JTextField();
@@ -212,6 +214,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         Tfield_AdminUser.setBackground(new java.awt.Color(199, 227, 255));
         Tfield_AdminUser.setFont(new java.awt.Font("Arial Narrow", 0, 12)); // NOI18N
+        Tfield_AdminUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tfield_AdminUserActionPerformed(evt);
+            }
+        });
         IntFrame_AdminLogin.getContentPane().add(Tfield_AdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 141, 180, 25));
 
         Btn_ConfirmAdminLogin.setBackground(new java.awt.Color(108, 169, 230));
@@ -445,6 +452,20 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(Btn_BackChangePassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 90, 30));
 
+        jTextFieldPrecioModelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPrecioModeloActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 210, -1));
+
+        jTextFieldPreciodeVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPreciodeVentaActionPerformed(evt);
+            }
+        });
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPreciodeVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 210, -1));
+
         jTextFieldAño.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAñoActionPerformed(evt);
@@ -459,19 +480,19 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 210, -1));
 
-        jTextFieldPrecioVenta.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldPrecioAño.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPrecioVentaActionPerformed(evt);
+                jTextFieldPrecioAñoActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 210, -1));
 
         jTextFieldPrecioCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPrecioCompraActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 210, -1));
 
         jTextFieldModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -843,9 +864,9 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldPrecioCompraActionPerformed
 
-    private void jTextFieldPrecioVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecioVentaActionPerformed
+    private void jTextFieldPrecioAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecioAñoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPrecioVentaActionPerformed
+    }//GEN-LAST:event_jTextFieldPrecioAñoActionPerformed
 
     private void jButtonEliminarClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarClientActionPerformed
         // TODO add your handling code here:
@@ -890,6 +911,18 @@ public class MainFrame extends javax.swing.JFrame {
     private void jTextFieldAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAñoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldAñoActionPerformed
+
+    private void Tfield_AdminUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tfield_AdminUserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Tfield_AdminUserActionPerformed
+
+    private void jTextFieldPrecioModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecioModeloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPrecioModeloActionPerformed
+
+    private void jTextFieldPreciodeVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPreciodeVentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPreciodeVentaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -981,8 +1014,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldModelo;
     private javax.swing.JTextField jTextFieldNombre;
     private javax.swing.JTextField jTextFieldPlaca1;
+    private javax.swing.JTextField jTextFieldPrecioAño;
     private javax.swing.JTextField jTextFieldPrecioCompra;
-    private javax.swing.JTextField jTextFieldPrecioVenta;
+    private javax.swing.JTextField jTextFieldPrecioModelo;
+    private javax.swing.JTextField jTextFieldPreciodeVenta;
     // End of variables declaration//GEN-END:variables
 
 }
