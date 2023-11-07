@@ -28,7 +28,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         PopUp_AdminLogin = new javax.swing.JDialog();
         Lbl_PopUp_Base = new javax.swing.JLabel();
-        jMenu1 = new javax.swing.JMenu();
         IntFrame_PasswordChange = new javax.swing.JInternalFrame();
         Pfield_LastPassword = new javax.swing.JPasswordField();
         Pfield_NewPassword = new javax.swing.JPasswordField();
@@ -43,7 +42,6 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_PasswordChange = new javax.swing.JLabel();
         Button_ExitAdminLogin = new javax.swing.JButton();
         Lbl_Bg_AdminLogin = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
         IntFrame_ClientView = new javax.swing.JInternalFrame();
         IntFrame_BuyACar = new javax.swing.JInternalFrame();
         TField_ClientIdentification_Buy = new javax.swing.JTextField();
@@ -91,6 +89,10 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_Entry_ClientsAdminConfig = new javax.swing.JLabel();
         Lbl_Entry_SalesAdminConfig = new javax.swing.JLabel();
         Lbl_Bg_AdminView = new javax.swing.JLabel();
+        jMenuBarAcercade = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItemAcercade = new javax.swing.JMenuItem();
+        jMenuItemInstrucciones = new javax.swing.JMenuItem();
 
         PopUp_AdminLogin.setAlwaysOnTop(true);
         PopUp_AdminLogin.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -105,8 +107,6 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 300));
         Lbl_PopUp_Base.setPreferredSize(new java.awt.Dimension(300, 300));
         PopUp_AdminLogin.getContentPane().add(Lbl_PopUp_Base, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-
-        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototype 1");
@@ -132,6 +132,7 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_PasswordChange.setVisible(false);
         IntFrame_PasswordChange.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Pfield_LastPassword.setBackground(new java.awt.Color(199, 227, 255));
         Pfield_LastPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pfield_LastPasswordActionPerformed(evt);
@@ -139,6 +140,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_PasswordChange.getContentPane().add(Pfield_LastPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 210, -1));
 
+        Pfield_NewPassword.setBackground(new java.awt.Color(199, 227, 255));
         Pfield_NewPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pfield_NewPasswordActionPerformed(evt);
@@ -146,6 +148,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_PasswordChange.getContentPane().add(Pfield_NewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 210, -1));
 
+        Pfield_ConfirmNewPassword.setBackground(new java.awt.Color(199, 227, 255));
         Pfield_ConfirmNewPassword.setAlignmentX(0.2F);
         Pfield_ConfirmNewPassword.setAlignmentY(0.1F);
         Pfield_ConfirmNewPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -276,7 +279,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Fondo-Login.png"))); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Lbl_Bg_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
-        IntFrame_AdminLogin.setJMenuBar(jMenuBar1);
 
         getContentPane().add(IntFrame_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -516,6 +518,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(jButtonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 180, 60));
 
+        jTextFieldPrecioModelo.setEditable(false);
+        jTextFieldPrecioModelo.setBackground(new java.awt.Color(199, 227, 255));
         jTextFieldPrecioModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPrecioModeloActionPerformed(evt);
@@ -523,6 +527,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 210, -1));
 
+        jTextFieldPreciodeVenta.setEditable(false);
+        jTextFieldPreciodeVenta.setBackground(new java.awt.Color(199, 227, 255));
         jTextFieldPreciodeVenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPreciodeVentaActionPerformed(evt);
@@ -530,13 +536,15 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPreciodeVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 210, -1));
 
+        jTextFieldAño.setBackground(new java.awt.Color(199, 227, 255));
         jTextFieldAño.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAñoActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 247, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 247, 210, 20));
 
+        jTextFieldMarca.setBackground(new java.awt.Color(199, 227, 255));
         jTextFieldMarca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldMarcaActionPerformed(evt);
@@ -544,26 +552,29 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 210, -1));
 
+        jTextFieldPrecioCompra.setBackground(new java.awt.Color(199, 227, 255));
         jTextFieldPrecioCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPrecioCompraActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 283, 210, 30));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 210, -1));
 
+        jTextFieldColor.setBackground(new java.awt.Color(199, 227, 255));
         jTextFieldColor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldColorActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 210, 30));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 210, 20));
 
+        jTextFieldPlaca1.setBackground(new java.awt.Color(199, 227, 255));
         jTextFieldPlaca1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPlaca1ActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 63, 210, 20));
 
         Lbl_Bg_CarsAdminConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoFin.png"))); // NOI18N
         IntFrame_CarsAdminConfig.getContentPane().add(Lbl_Bg_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 360));
@@ -763,6 +774,25 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (java.beans.PropertyVetoException e1) {
             e1.printStackTrace();
         }
+
+        jMenu2.setText("CarCrafter");
+
+        jMenuItemAcercade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemAcercade.setText("Acerca de");
+        jMenuItemAcercade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAcercadeActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItemAcercade);
+
+        jMenuItemInstrucciones.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuItemInstrucciones.setText("Instrucciones");
+        jMenu2.add(jMenuItemInstrucciones);
+
+        jMenuBarAcercade.add(jMenu2);
+
+        setJMenuBar(jMenuBarAcercade);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1137,6 +1167,10 @@ public class MainFrame extends javax.swing.JFrame {
         EliminarPorPlaca(placa);
         jTextFieldPlaca1.setText("");
     }//GEN-LAST:event_jButtonEliminarActionPerformed
+
+    private void jMenuItemAcercadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAcercadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemAcercadeActionPerformed
     private void EliminarPorPlaca(String placa) {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
@@ -1240,9 +1274,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEliminar;
     private javax.swing.JButton jButtonModificar;
     private javax.swing.JButton jButtonRegistrar;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuBar jMenuBarAcercade;
+    private javax.swing.JMenuItem jMenuItemAcercade;
+    private javax.swing.JMenuItem jMenuItemInstrucciones;
     private javax.swing.JTextField jTextFieldAño;
     private javax.swing.JTextField jTextFieldColor;
     private javax.swing.JTextField jTextFieldMarca;
