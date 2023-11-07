@@ -1007,7 +1007,7 @@
             <Component class="javax.swing.JLabel" name="jLabelFindo">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/laboratorio2/FrontEnd/media/RegistroAuto.png"/>
+                  <Image iconType="3" name="/laboratorio2/FrontEnd/media/RegistroAutoCorregido.png"/>
                 </Property>
               </Properties>
               <Constraints>

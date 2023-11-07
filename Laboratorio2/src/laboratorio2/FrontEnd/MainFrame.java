@@ -1,4 +1,3 @@
-
 package laboratorio2.FrontEnd;
 
 import laboratorio2.BackEnd.Admin;
@@ -479,7 +478,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 210, -1));
 
-        jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAuto.png"))); // NOI18N
+        jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoCorregido.png"))); // NOI18N
         IntFrame_CarsAdminConfig.getContentPane().add(jLabelFindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -690,10 +689,9 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
     /**
-    * Eventos de formulario
-    */
+     * Eventos de formulario
+     */
     //Evento de Btn_ConfirmPasswordChange para Autenticar cambio de contraseña
     private void Btn_ConfirmPasswordChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ConfirmPasswordChangeActionPerformed
         String Last = String.valueOf(Pfield_LastPassword.getPassword());
@@ -701,7 +699,7 @@ public class MainFrame extends javax.swing.JFrame {
         String Confirm = String.valueOf(Pfield_ConfirmNewPassword.getPassword());
         TheMagic.AutenticatePasswordChange(Last, New, Confirm);
     }//GEN-LAST:event_Btn_ConfirmPasswordChangeActionPerformed
-    
+
     //Evento de Btn_BackChangePassword para regresar a AdminLogin
     private void Btn_BackChangePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_BackChangePasswordActionPerformed
         //Borrar los campos del cambio
@@ -794,7 +792,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelClientesMouseClicked
 
     private void jLabelVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelVentasMouseClicked
-       IntFrame_SalesAdminConfig.setVisible(true);
+        IntFrame_SalesAdminConfig.setVisible(true);
     }//GEN-LAST:event_jLabelVentasMouseClicked
 
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
