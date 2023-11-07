@@ -55,10 +55,8 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_AdminView = new javax.swing.JInternalFrame();
         IntFrame_CarsAdminConfig = new javax.swing.JInternalFrame();
         jButtonModificar = new javax.swing.JButton();
-        jButtonListar = new javax.swing.JButton();
         jButtonRegistrar = new javax.swing.JButton();
         jButtonEliminar = new javax.swing.JButton();
-        Btn_BackChangePassword1 = new javax.swing.JButton();
         jTextFieldPrecioModelo = new javax.swing.JTextField();
         jTextFieldPreciodeVenta = new javax.swing.JTextField();
         jTextFieldAño = new javax.swing.JTextField();
@@ -469,18 +467,7 @@ public class MainFrame extends javax.swing.JFrame {
                 jButtonModificarActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jButtonModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 140, 40));
-
-        jButtonListar.setBackground(new java.awt.Color(108, 169, 230));
-        jButtonListar.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
-        jButtonListar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonListar.setText("Listar");
-        jButtonListar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonListarActionPerformed(evt);
-            }
-        });
-        IntFrame_CarsAdminConfig.getContentPane().add(jButtonListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 255, 140, 40));
+        IntFrame_CarsAdminConfig.getContentPane().add(jButtonModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 180, 60));
 
         jButtonRegistrar.setBackground(new java.awt.Color(108, 169, 230));
         jButtonRegistrar.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
@@ -491,24 +478,13 @@ public class MainFrame extends javax.swing.JFrame {
                 jButtonRegistrarActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jButtonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 140, 40));
+        IntFrame_CarsAdminConfig.getContentPane().add(jButtonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 180, 50));
 
         jButtonEliminar.setBackground(new java.awt.Color(108, 169, 230));
         jButtonEliminar.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         jButtonEliminar.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEliminar.setText("Eliminar");
-        IntFrame_CarsAdminConfig.getContentPane().add(jButtonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 140, 40));
-
-        Btn_BackChangePassword1.setBackground(new java.awt.Color(108, 169, 230));
-        Btn_BackChangePassword1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
-        Btn_BackChangePassword1.setForeground(new java.awt.Color(255, 255, 255));
-        Btn_BackChangePassword1.setText("Atras");
-        Btn_BackChangePassword1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_BackChangePassword1ActionPerformed(evt);
-            }
-        });
-        IntFrame_CarsAdminConfig.getContentPane().add(Btn_BackChangePassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 90, 30));
+        IntFrame_CarsAdminConfig.getContentPane().add(jButtonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 180, 60));
 
         jTextFieldPrecioModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -573,7 +549,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 210, -1));
 
-        jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoCorregido.png"))); // NOI18N
+        jLabelFindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoFin.png"))); // NOI18N
         IntFrame_CarsAdminConfig.getContentPane().add(jLabelFindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -902,14 +878,6 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldPlaca1ActionPerformed
 
-    private void Btn_BackChangePassword1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_BackChangePassword1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Btn_BackChangePassword1ActionPerformed
-
-    private void jButtonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonListarActionPerformed
-
     private void jTextFieldColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldColorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldColorActionPerformed
@@ -1048,7 +1016,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_BackChangePassword;
-    private javax.swing.JButton Btn_BackChangePassword1;
     private javax.swing.JButton Btn_Back_AdminView;
     private javax.swing.JButton Btn_Buy;
     private javax.swing.JButton Btn_ConfirmAdminLogin;
@@ -1079,7 +1046,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField Tfield_AdminUser;
     private javax.swing.JButton jButtonEliminar;
     private javax.swing.JButton jButtonEliminarClient;
-    private javax.swing.JButton jButtonListar;
     private javax.swing.JButton jButtonModificar;
     private javax.swing.JButton jButtonModificarClient;
     private javax.swing.JButton jButtonRegistrar;
