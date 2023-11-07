@@ -56,7 +56,8 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_Bg_ClientView = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItemAcercade = new javax.swing.JMenuItem();
+        jMenuItemInstrucciones = new javax.swing.JMenuItem();
         IntFrame_AdminView = new javax.swing.JInternalFrame();
         IntFrame_CarsAdminConfig = new javax.swing.JInternalFrame();
         jButtonModificar = new javax.swing.JButton();
@@ -427,8 +428,18 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenu4.setText("CarCrafter");
 
-        jMenuItem1.setText("jMenuItem1");
-        jMenu4.add(jMenuItem1);
+        jMenuItemAcercade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemAcercade.setText("Acerca de");
+        jMenu4.add(jMenuItemAcercade);
+
+        jMenuItemInstrucciones.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuItemInstrucciones.setText("Instrucciones");
+        jMenuItemInstrucciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemInstruccionesActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItemInstrucciones);
 
         jMenuBar2.add(jMenu4);
 
@@ -976,6 +987,10 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Pfield_AdminPasswordActionPerformed
 
+    private void jMenuItemInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInstruccionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemInstruccionesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1019,7 +1034,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_ConfirmAdminLogin;
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Button_ExitAdminLogin;
-    private javax.swing.JInternalFrame IntFrame_AdminLogin;
+    public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_BuyACar;
     public static javax.swing.JInternalFrame IntFrame_CarsAdminConfig;
@@ -1034,7 +1049,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Bg_PasswordChange;
     private javax.swing.JLabel Lbl_PasswordChange;
     public static javax.swing.JLabel Lbl_PopUp_Base;
-    private javax.swing.JPasswordField Pfield_AdminPassword;
+    public static javax.swing.JPasswordField Pfield_AdminPassword;
     public static javax.swing.JPasswordField Pfield_ConfirmNewPassword;
     public static javax.swing.JPasswordField Pfield_LastPassword;
     public static javax.swing.JPasswordField Pfield_NewPassword;
@@ -1058,7 +1073,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItemAcercade;
+    private javax.swing.JMenuItem jMenuItemInstrucciones;
     private javax.swing.JTextField jTextFieldApellido;
     private javax.swing.JTextField jTextFieldApellido1;
     private javax.swing.JTextField jTextFieldAño;
