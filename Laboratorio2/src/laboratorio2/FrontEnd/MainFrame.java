@@ -1,9 +1,15 @@
 package laboratorio2.FrontEnd;
 
+import java.util.ArrayList;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
 import laboratorio2.BackEnd.Admin;
+import laboratorio2.BackEnd.Autos;
 import laboratorio2.BackEnd.TheMagic;
 
 public class MainFrame extends javax.swing.JFrame {
+
+    private ArrayList<Autos> automobileRecords = new ArrayList<>();
 
     public MainFrame() {
 
@@ -844,9 +850,96 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonModificarActionPerformed
+    private boolean containsSpecialCharacters(String str) {
+        String regex = ".*[^a-zA-Z0-9áéíóúÁÉÍÓÚüÜ].*";
+        return Pattern.matches(regex, str);
+    }
 
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
-        // TODO add your handling code here:
+        String placa = jTextFieldPlaca1.getText().toLowerCase();
+        String color = jTextFieldColor.getText().toLowerCase();
+        String marca = jTextFieldMarca.getText().toLowerCase();
+        String nombreModelo = jTextFieldPrecioModelo.getText().toLowerCase();
+        String añoLanzamientoStr = jTextFieldAño.getText();
+        String precioCompraStr = jTextFieldPrecioCompra.getText().replace(',', '.');
+        String precioVentaStr = jTextFieldPreciodeVenta.getText().replace(',', '.');
+
+        String incompleteField = null; // Variable to store the name of the incomplete field
+
+        if (placa.isEmpty()) {
+            incompleteField = "Placa";
+        } else if (color.isEmpty()) {
+            incompleteField = "Color";
+        } else if (marca.isEmpty()) {
+            incompleteField = "Marca";
+        } else if (nombreModelo.isEmpty()) {
+            incompleteField = "Nombre del Modelo";
+        } else if (añoLanzamientoStr.isEmpty()) {
+            incompleteField = "Año de Lanzamiento";
+        } else if (precioCompraStr.isEmpty()) {
+            incompleteField = "Precio de Compra";
+        } else if (precioVentaStr.isEmpty()) {
+            incompleteField = "Precio de Venta";
+        }
+
+        if (incompleteField != null) {
+            JOptionPane.showMessageDialog(this, "El campo '" + incompleteField + "' está incompleto.");
+            return;
+        }
+
+        if (containsSpecialCharacters(placa) || containsSpecialCharacters(color)
+                || containsSpecialCharacters(marca) || containsSpecialCharacters(nombreModelo)
+                || containsSpecialCharacters(añoLanzamientoStr) || containsSpecialCharacters(precioCompraStr)
+                || containsSpecialCharacters(precioVentaStr)) {
+            JOptionPane.showMessageDialog(this, "Campos contienen caracteres especiales.");
+            return;
+        }
+
+        int añoLanzamiento;
+        double precioCompra;
+        double precioVenta;
+
+        try {
+            añoLanzamiento = Integer.parseInt(añoLanzamientoStr);
+            precioCompra = Double.parseDouble(precioCompraStr);
+            precioVenta = Double.parseDouble(precioVentaStr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Año de Lanzamiento, Precio de Compra y Precio de Venta deben ser válidos.");
+            return;
+        }
+
+        // Verificar si ya existe un automóvil con la misma placa
+        for (Autos registro : automobileRecords) {
+            if (registro.getPlaca().equals(placa)) {
+                JOptionPane.showMessageDialog(this, "Ya existe un auto con la misma placa.");
+                return;
+            }
+        }
+
+        // Concatenar la información de los campos para dejarlo único en el modelo
+        String modelostr = marca + "," + nombreModelo + "," + añoLanzamiento;
+
+        // Crear un objeto de tipo Autos con la información
+        Autos registro = new Autos();
+        registro.setPlaca(placa);
+        registro.setColor(color);
+        registro.setModelo(modelostr);
+        registro.setPrecioDeCompra(precioCompra);
+        registro.setPrecioDeVenta(precioVenta);
+
+        // Agregar el registro a la lista de automóviles
+        automobileRecords.add(registro);
+
+        // Limpiar los campos de entrada y mostrar un mensaje de éxito
+        jTextFieldPlaca1.setText("");
+        jTextFieldColor.setText("");
+        jTextFieldMarca.setText("");
+        jTextFieldPrecioModelo.setText("");
+        jTextFieldAño.setText("");
+        jTextFieldPrecioCompra.setText("");
+        jTextFieldPreciodeVenta.setText("");
+
+        JOptionPane.showMessageDialog(this, "Registro exitoso");
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
     private void jTextFieldPlaca1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPlaca1ActionPerformed
