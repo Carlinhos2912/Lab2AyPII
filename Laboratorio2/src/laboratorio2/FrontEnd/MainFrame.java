@@ -519,6 +519,11 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonEliminar.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         jButtonEliminar.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEliminar.setText("Eliminar");
+        jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarActionPerformed(evt);
+            }
+        });
         IntFrame_CarsAdminConfig.getContentPane().add(jButtonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 180, 60));
 
         jTextFieldPrecioModelo.addActionListener(new java.awt.event.ActionListener() {
@@ -848,7 +853,73 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_Lbl_Entry_SalesAdminConfigMouseClicked
 
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
-        // TODO add your handling code here:
+        String placa = jTextFieldPlaca1.getText();
+
+        // Realiza la validación de si esta vacia el field de la placa
+        if (placa.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese una placa válida para modificar un auto.");
+            return;
+        }
+        // Bucle para buscar el carro con la placa
+        boolean carroEncontrado = false;
+        for (Autos auto : automobileRecords) {
+            if (auto.getPlaca().equalsIgnoreCase(placa)) {
+                carroEncontrado = true;
+
+                // leee valores de campos de entrada
+                String color = jTextFieldColor.getText().toLowerCase();
+                String marca = jTextFieldMarca.getText().toLowerCase();
+                String nombreModelo = jTextFieldPrecioModelo.getText().toLowerCase();
+                String añoLanzamientoStr = jTextFieldAño.getText();
+                String precioCompraStr = jTextFieldPrecioCompra.getText().replace(',', '.');
+                String precioVentaStr = jTextFieldPreciodeVenta.getText().replace(',', '.');
+
+                // Actualiza los campos del automóvil solo si no están vacíos
+                if (!color.isEmpty()) {
+                    auto.setColor(color);
+                }
+                if (!marca.isEmpty()) {
+                    String[] modeloParts = auto.getModelo().split(",");
+                    auto.setModelo(marca + "," + modeloParts[1] + "," + modeloParts[2]);
+                }
+                if (!nombreModelo.isEmpty()) {
+                    String[] modeloParts = auto.getModelo().split(",");
+                    auto.setModelo(modeloParts[0] + "," + nombreModelo + "," + modeloParts[2]);
+                }
+                if (!añoLanzamientoStr.isEmpty()) {
+                    try {
+                        int añoLanzamiento = Integer.parseInt(añoLanzamientoStr);
+                        String[] modeloParts = auto.getModelo().split(",");
+                        auto.setModelo(modeloParts[0] + "," + modeloParts[1] + "," + añoLanzamiento);
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(this, "Año de Lanzamiento debe ser válido.");
+                    }
+                }
+                if (!precioCompraStr.isEmpty()) {
+                    try {
+                        double precioCompra = Double.parseDouble(precioCompraStr);
+                        auto.setPrecioDeCompra(precioCompra);
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(this, "Precio de Compra debe ser válido.");
+                    }
+                }
+                if (!precioVentaStr.isEmpty()) {
+                    try {
+                        double precioVenta = Double.parseDouble(precioVentaStr);
+                        auto.setPrecioDeVenta(precioVenta);
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(this, "Precio de Venta debe ser válido.");
+                    }
+                }
+
+                JOptionPane.showMessageDialog(this, "Datos del auto con placa " + placa + " modificados con éxito.");
+                break; // Salir del bucle después de modificar el automóvil
+            }
+        }
+        // Si no se encontró el automóvil
+        if (!carroEncontrado) {
+            JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
+        }
     }//GEN-LAST:event_jButtonModificarActionPerformed
     private boolean containsSpecialCharacters(String str) {
         String regex = "^[a-zA-Z0-9.,]+$";
@@ -1069,6 +1140,22 @@ public class MainFrame extends javax.swing.JFrame {
     private void Pfield_AdminPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pfield_AdminPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Pfield_AdminPasswordActionPerformed
+
+    private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
+        String placa = jTextFieldPlaca1.getText();
+        EliminarPorPlaca(placa);
+        jTextFieldPlaca1.setText("");
+    }//GEN-LAST:event_jButtonEliminarActionPerformed
+    private void EliminarPorPlaca(String placa) {
+        for (Autos registro : automobileRecords) {
+            if (registro.getPlaca().equals(placa)) {
+                automobileRecords.remove(registro);
+                JOptionPane.showMessageDialog(this, "Auto con placa " + placa + " eliminado.");
+                return;
+            }
+        }
+        JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
+    }
 
     /**
      * @param args the command line arguments
