@@ -300,61 +300,71 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_BuyACar.setVisible(false);
         IntFrame_BuyACar.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Btn_Buy.setText("COMPRAR");
-        IntFrame_BuyACar.getContentPane().add(Btn_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 150, 70));
+        Btn_Buy.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_Buy.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Btn_Buy.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_Buy.setText("Comprar");
+        Btn_Buy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_BuyActionPerformed(evt);
+            }
+        });
+        IntFrame_BuyACar.getContentPane().add(Btn_Buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 170, 50));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("*Aqui se muetran los datos del auto que se va a comprar*");
-        IntFrame_BuyACar.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 270, 200));
+        IntFrame_BuyACar.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 270, 200));
 
         jTextFieldDireccion1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldDireccion1ActionPerformed(evt);
             }
         });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldDireccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 180, 20));
+        IntFrame_BuyACar.getContentPane().add(jTextFieldDireccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 180, 20));
 
         jTextFieldCelular1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCelular1ActionPerformed(evt);
             }
         });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldCelular1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 180, 20));
+        IntFrame_BuyACar.getContentPane().add(jTextFieldCelular1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 180, 20));
 
         jTextFieldEmail1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldEmail1ActionPerformed(evt);
             }
         });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 180, 20));
+        IntFrame_BuyACar.getContentPane().add(jTextFieldEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 180, 20));
 
         jTextFieldFechaNac1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldFechaNac1ActionPerformed(evt);
             }
         });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldFechaNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 180, 20));
+        IntFrame_BuyACar.getContentPane().add(jTextFieldFechaNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 180, 20));
 
         jTextFieldApellido1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldApellido1ActionPerformed(evt);
             }
         });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 180, 20));
+        IntFrame_BuyACar.getContentPane().add(jTextFieldApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 180, 20));
 
         jTextFieldNombre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldNombre1ActionPerformed(evt);
             }
         });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 180, 20));
+        IntFrame_BuyACar.getContentPane().add(jTextFieldNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
 
         jTextFieldIdentificacion1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldIdentificacion1ActionPerformed(evt);
             }
         });
-        IntFrame_BuyACar.getContentPane().add(jTextFieldIdentificacion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 180, 20));
+        IntFrame_BuyACar.getContentPane().add(jTextFieldIdentificacion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
+
+        Lbl_Bg_BuyACar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistrarClientes.png"))); // NOI18N
         IntFrame_BuyACar.getContentPane().add(Lbl_Bg_BuyACar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_ClientView.getContentPane().add(IntFrame_BuyACar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -961,6 +971,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void jTextFieldIdentificacion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdentificacion1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIdentificacion1ActionPerformed
+
+    private void Btn_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_BuyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_BuyActionPerformed
 
     /**
      * @param args the command line arguments
