@@ -936,7 +936,15 @@ public class MainFrame extends javax.swing.JFrame {
         String precioCompraStr = jTextFieldPrecioCompra.getText().replace(',', '.');
         String precioVentaStr = jTextFieldPreciodeVenta.getText().replace(',', '.');
 
-        String incompleteField = null; // Variable to store the name of the incomplete field
+        // Verificar si ya existe un automóvil con la misma placa
+        for (Autos registro : automobileRecords) {
+            if (registro.getPlaca().equals(placa)) {
+                JOptionPane.showMessageDialog(this, "Ya existe un auto con la misma placa.");
+                return;
+            }
+        }
+
+        String incompleteField = null;
 
         if (placa.isEmpty()) {
             incompleteField = "Placa";
@@ -978,14 +986,6 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Año de Lanzamiento, Precio de Compra y Precio de Venta deben ser válidos.");
             return;
-        }
-
-        // Verificar si ya existe un automóvil con la misma placa
-        for (Autos registro : automobileRecords) {
-            if (registro.getPlaca().equals(placa)) {
-                JOptionPane.showMessageDialog(this, "Ya existe un auto con la misma placa.");
-                return;
-            }
         }
 
         // Concatenar la información de los campos para dejarlo único en el modelo
