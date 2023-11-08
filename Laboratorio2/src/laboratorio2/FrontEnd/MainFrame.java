@@ -9,7 +9,7 @@ import laboratorio2.BackEnd.TheMagic;
 
 public class MainFrame extends javax.swing.JFrame {
 
-    private ArrayList<Autos> automobileRecords = new ArrayList<>();
+    public static ArrayList<Autos> automobileRecords = new ArrayList<>();
 
     public MainFrame() {
 
@@ -94,6 +94,7 @@ public class MainFrame extends javax.swing.JFrame {
         Btn_DeleteClient = new javax.swing.JButton();
         Lbl_Bg_ClientsAdminConfig = new javax.swing.JLabel();
         IntFrame_SalesAdminConfig = new javax.swing.JInternalFrame();
+        Lbl_Bg_SalesAdminCofig = new javax.swing.JLabel();
         Btn_Back_AdminView = new javax.swing.JButton();
         Lbl_Entry_CarsAdminConfig = new javax.swing.JLabel();
         Lbl_Entry_ClientsAdminConfig = new javax.swing.JLabel();
@@ -511,15 +512,22 @@ public class MainFrame extends javax.swing.JFrame {
 
         Table_CarsList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null}
+
             },
             new String [] {
-                "", ""
+                "Autos", "Autos"
             }
         ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
             boolean[] canEdit = new boolean [] {
                 false, false
             };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -529,6 +537,7 @@ public class MainFrame extends javax.swing.JFrame {
         Table_CarsList.setMaximumSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setMinimumSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setPreferredSize(new java.awt.Dimension(400, 400));
+        Table_CarsList.setRowHeight(100);
         Table_CarsList.setShowGrid(false);
         Scroll_Table_CarsList.setViewportView(Table_CarsList);
 
@@ -788,6 +797,7 @@ public class MainFrame extends javax.swing.JFrame {
             e1.printStackTrace();
         }
 
+        TField_ClientIdentification.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientIdentification.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientIdentificationActionPerformed(evt);
@@ -795,6 +805,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientIdentification, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
 
+        TField_ClientName.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientNameActionPerformed(evt);
@@ -802,6 +813,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
 
+        TField_ClientLastname.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientLastname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientLastnameActionPerformed(evt);
@@ -809,6 +821,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 172, 180, 20));
 
+        TField_ClientBirthday.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientBirthday.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientBirthdayActionPerformed(evt);
@@ -816,6 +829,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientBirthday, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 213, 180, 20));
 
+        TField_CLientEmail.setBackground(new java.awt.Color(199, 227, 255));
         TField_CLientEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_CLientEmailActionPerformed(evt);
@@ -823,6 +837,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_CLientEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 255, 180, 20));
 
+        TField_ClientPhoneNumber.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientPhoneNumberActionPerformed(evt);
@@ -830,6 +845,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 295, 180, 20));
 
+        TField_ClientAdress.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientAdress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientAdressActionPerformed(evt);
@@ -895,6 +911,8 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_SalesAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        IntFrame_SalesAdminConfig.getContentPane().add(Lbl_Bg_SalesAdminCofig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
+
         IntFrame_AdminView.getContentPane().add(IntFrame_SalesAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
             IntFrame_SalesAdminConfig.setMaximum(true);
@@ -1015,6 +1033,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void Btn_Back_AdminViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_Back_AdminViewActionPerformed
         IntFrame_ClientView.setVisible(true);
         IntFrame_AdminView.setVisible(false);
+        TheMagic.UpdateCarsList(automobileRecords, Table_CarsList);
     }//GEN-LAST:event_Btn_Back_AdminViewActionPerformed
 
     private void Pfield_ConfirmNewPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pfield_ConfirmNewPasswordActionPerformed
@@ -1305,6 +1324,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void Button_ExitAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ExitAdminLoginActionPerformed
         IntFrame_AdminLogin.setVisible(false);
         IntFrame_ClientView.setVisible(true);
+        TheMagic.UpdateCarsList(automobileRecords, Table_CarsList);
     }//GEN-LAST:event_Button_ExitAdminLoginActionPerformed
 
     //Evento de Lbl_PasswordChange para llegar al menu de cambio de contraseña
@@ -1443,6 +1463,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Bg_DevelopersInfo;
     private javax.swing.JLabel Lbl_Bg_DevelopersInfo1;
     private javax.swing.JLabel Lbl_Bg_PasswordChange;
+    private javax.swing.JLabel Lbl_Bg_SalesAdminCofig;
     private javax.swing.JLabel Lbl_CarInfo;
     private javax.swing.JLabel Lbl_Entry_CarsAdminConfig;
     private javax.swing.JLabel Lbl_Entry_ClientsAdminConfig;
@@ -1477,7 +1498,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField TField_Placa;
     private javax.swing.JTextField TField_PrecioCompra;
     private javax.swing.JTextField TField_PreciodeVenta;
-    private javax.swing.JTable Table_CarsList;
+    public static javax.swing.JTable Table_CarsList;
     private javax.swing.JTable Table_ClientsList;
     private javax.swing.JTextField Tfield_AdminUser;
     private javax.swing.JMenu jMenu2;
