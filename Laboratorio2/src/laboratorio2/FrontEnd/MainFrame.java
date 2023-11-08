@@ -514,6 +514,7 @@ public class MainFrame extends javax.swing.JFrame {
         Scroll_Table_CarsList.setMinimumSize(new java.awt.Dimension(560, 400));
         Scroll_Table_CarsList.setPreferredSize(new java.awt.Dimension(560, 400));
 
+        Table_CarsList.setBackground(new java.awt.Color(199, 227, 255));
         Table_CarsList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -538,10 +539,12 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         Table_CarsList.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_NEXT_COLUMN);
+        Table_CarsList.setGridColor(new java.awt.Color(199, 227, 255));
         Table_CarsList.setMaximumSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setMinimumSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setPreferredSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setRowHeight(100);
+        Table_CarsList.setSelectionBackground(new java.awt.Color(199, 227, 255));
         Table_CarsList.setShowGrid(false);
         Scroll_Table_CarsList.setViewportView(Table_CarsList);
 
