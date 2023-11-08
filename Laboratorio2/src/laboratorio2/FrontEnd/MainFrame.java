@@ -28,6 +28,13 @@ public class MainFrame extends javax.swing.JFrame {
 
         PopUp_AdminLogin = new javax.swing.JDialog();
         Lbl_PopUp_Base = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        IntFrame_DevelopersInfo = new javax.swing.JInternalFrame();
+        Button_ExitDevelopersInfo = new javax.swing.JButton();
+        Lbl_Bg_DevelopersInfo = new javax.swing.JLabel();
+        IntFrame_Instructions = new javax.swing.JInternalFrame();
+        Button_ExitDevelopersInfo1 = new javax.swing.JButton();
+        Lbl_Bg_DevelopersInfo1 = new javax.swing.JLabel();
         IntFrame_PasswordChange = new javax.swing.JInternalFrame();
         Pfield_LastPassword = new javax.swing.JPasswordField();
         Pfield_NewPassword = new javax.swing.JPasswordField();
@@ -58,21 +65,24 @@ public class MainFrame extends javax.swing.JFrame {
         Table_CarsList = new javax.swing.JTable();
         Lbl_AdminEntry = new javax.swing.JLabel();
         Lbl_Bg_ClientView = new javax.swing.JLabel();
-        jMenuBar2 = new javax.swing.JMenuBar();
         IntFrame_AdminView = new javax.swing.JInternalFrame();
         IntFrame_CarsAdminConfig = new javax.swing.JInternalFrame();
-        jButtonModificar = new javax.swing.JButton();
-        jButtonRegistrar = new javax.swing.JButton();
-        jButtonEliminar = new javax.swing.JButton();
-        jTextFieldPrecioModelo = new javax.swing.JTextField();
-        jTextFieldPreciodeVenta = new javax.swing.JTextField();
-        jTextFieldAño = new javax.swing.JTextField();
-        jTextFieldMarca = new javax.swing.JTextField();
-        jTextFieldPrecioCompra = new javax.swing.JTextField();
-        jTextFieldColor = new javax.swing.JTextField();
-        jTextFieldPlaca1 = new javax.swing.JTextField();
+        TField_Placa = new javax.swing.JTextField();
+        TField_Color = new javax.swing.JTextField();
+        TField_Marca = new javax.swing.JTextField();
+        TField_NombreModelo = new javax.swing.JTextField();
+        TField_AñoAuto = new javax.swing.JTextField();
+        TField_PrecioCompra = new javax.swing.JTextField();
+        TField_PreciodeVenta = new javax.swing.JTextField();
+        Btn_CarRegister = new javax.swing.JButton();
+        Btn_CarModify = new javax.swing.JButton();
+        Btn_CarDelete = new javax.swing.JButton();
         Lbl_Bg_CarsAdminConfig = new javax.swing.JLabel();
         IntFrame_ClientsAdminConfig = new javax.swing.JInternalFrame();
+        IntFrame_ClientsList = new javax.swing.JInternalFrame();
+        Scroll_Table_ClientsList = new javax.swing.JScrollPane();
+        Table_ClientsList = new javax.swing.JTable();
+        Lbl_Bg_ClientsList = new javax.swing.JLabel();
         TField_ClientIdentification = new javax.swing.JTextField();
         TField_ClientName = new javax.swing.JTextField();
         TField_ClientLastname = new javax.swing.JTextField();
@@ -108,6 +118,8 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_PopUp_Base.setPreferredSize(new java.awt.Dimension(300, 300));
         PopUp_AdminLogin.getContentPane().add(Lbl_PopUp_Base, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
 
+        jTextField1.setText("jTextField1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototype 1");
         setAlwaysOnTop(true);
@@ -115,6 +127,110 @@ public class MainFrame extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(720, 440));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        IntFrame_DevelopersInfo.setClosable(true);
+        IntFrame_DevelopersInfo.setTitle("Acerca de");
+        IntFrame_DevelopersInfo.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        IntFrame_DevelopersInfo.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/logo carcrafter 40x40.png"))); // NOI18N
+        IntFrame_DevelopersInfo.setLayer(1);
+        IntFrame_DevelopersInfo.setMaximumSize(new java.awt.Dimension(700, 400));
+        IntFrame_DevelopersInfo.setMinimumSize(new java.awt.Dimension(700, 400));
+        IntFrame_DevelopersInfo.setPreferredSize(new java.awt.Dimension(700, 400));
+        try {
+            IntFrame_DevelopersInfo.setSelected(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+        IntFrame_DevelopersInfo.setVisible(false);
+        IntFrame_DevelopersInfo.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                IntFrame_DevelopersInfoInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+        IntFrame_DevelopersInfo.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Button_ExitDevelopersInfo.setBackground(new java.awt.Color(108, 169, 230));
+        Button_ExitDevelopersInfo.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        Button_ExitDevelopersInfo.setForeground(new java.awt.Color(255, 255, 255));
+        Button_ExitDevelopersInfo.setText("Atras");
+        Button_ExitDevelopersInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_ExitDevelopersInfoActionPerformed(evt);
+            }
+        });
+        IntFrame_DevelopersInfo.getContentPane().add(Button_ExitDevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 100, 30));
+        IntFrame_DevelopersInfo.getContentPane().add(Lbl_Bg_DevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
+
+        getContentPane().add(IntFrame_DevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
+        try {
+            IntFrame_DevelopersInfo.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+
+        IntFrame_Instructions.setClosable(true);
+        IntFrame_Instructions.setTitle("Instrucciones");
+        IntFrame_Instructions.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        IntFrame_Instructions.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/logo carcrafter 40x40.png"))); // NOI18N
+        IntFrame_Instructions.setLayer(1);
+        IntFrame_Instructions.setMaximumSize(new java.awt.Dimension(700, 400));
+        IntFrame_Instructions.setMinimumSize(new java.awt.Dimension(700, 400));
+        IntFrame_Instructions.setPreferredSize(new java.awt.Dimension(700, 400));
+        try {
+            IntFrame_Instructions.setSelected(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+        IntFrame_Instructions.setVisible(false);
+        IntFrame_Instructions.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                IntFrame_InstructionsInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+        IntFrame_Instructions.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Button_ExitDevelopersInfo1.setBackground(new java.awt.Color(108, 169, 230));
+        Button_ExitDevelopersInfo1.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        Button_ExitDevelopersInfo1.setForeground(new java.awt.Color(255, 255, 255));
+        Button_ExitDevelopersInfo1.setText("Atras");
+        Button_ExitDevelopersInfo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_ExitDevelopersInfo1ActionPerformed(evt);
+            }
+        });
+        IntFrame_Instructions.getContentPane().add(Button_ExitDevelopersInfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 100, 30));
+        IntFrame_Instructions.getContentPane().add(Lbl_Bg_DevelopersInfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
+
+        getContentPane().add(IntFrame_Instructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
+        try {
+            IntFrame_Instructions.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
 
         IntFrame_PasswordChange.setClosable(true);
         IntFrame_PasswordChange.setTitle("Cambio de contraseña");
@@ -269,7 +385,7 @@ public class MainFrame extends javax.swing.JFrame {
         Button_ExitAdminLogin.setBackground(new java.awt.Color(108, 169, 230));
         Button_ExitAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         Button_ExitAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
-        Button_ExitAdminLogin.setText("Salir");
+        Button_ExitAdminLogin.setText("Atras");
         Button_ExitAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button_ExitAdminLoginActionPerformed(evt);
@@ -430,7 +546,6 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_Bg_ClientView.setMinimumSize(new java.awt.Dimension(960, 510));
         Lbl_Bg_ClientView.setPreferredSize(new java.awt.Dimension(960, 510));
         IntFrame_ClientView.getContentPane().add(Lbl_Bg_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 510));
-        IntFrame_ClientView.setJMenuBar(jMenuBar2);
 
         getContentPane().add(IntFrame_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
         try {
@@ -485,99 +600,97 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_CarsAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonModificar.setBackground(new java.awt.Color(108, 169, 230));
-        jButtonModificar.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
-        jButtonModificar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonModificar.setText("Modificar");
-        jButtonModificar.addActionListener(new java.awt.event.ActionListener() {
+        TField_Placa.setBackground(new java.awt.Color(199, 227, 255));
+        TField_Placa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonModificarActionPerformed(evt);
+                TField_PlacaActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jButtonModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 180, 60));
+        IntFrame_CarsAdminConfig.getContentPane().add(TField_Placa, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 210, 25));
 
-        jButtonRegistrar.setBackground(new java.awt.Color(108, 169, 230));
-        jButtonRegistrar.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
-        jButtonRegistrar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRegistrar.setText("Registrar");
-        jButtonRegistrar.addActionListener(new java.awt.event.ActionListener() {
+        TField_Color.setBackground(new java.awt.Color(199, 227, 255));
+        TField_Color.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegistrarActionPerformed(evt);
+                TField_ColorActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jButtonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 180, 60));
+        IntFrame_CarsAdminConfig.getContentPane().add(TField_Color, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 113, 210, 25));
 
-        jButtonEliminar.setBackground(new java.awt.Color(108, 169, 230));
-        jButtonEliminar.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
-        jButtonEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonEliminar.setText("Eliminar");
-        jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
+        TField_Marca.setBackground(new java.awt.Color(199, 227, 255));
+        TField_Marca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEliminarActionPerformed(evt);
+                TField_MarcaActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jButtonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 180, 60));
+        IntFrame_CarsAdminConfig.getContentPane().add(TField_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 210, 25));
 
-        jTextFieldPrecioModelo.setEditable(false);
-        jTextFieldPrecioModelo.setBackground(new java.awt.Color(199, 227, 255));
-        jTextFieldPrecioModelo.addActionListener(new java.awt.event.ActionListener() {
+        TField_NombreModelo.setBackground(new java.awt.Color(199, 227, 255));
+        TField_NombreModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPrecioModeloActionPerformed(evt);
+                TField_NombreModeloActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(TField_NombreModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 205, 210, 25));
 
-        jTextFieldPreciodeVenta.setEditable(false);
-        jTextFieldPreciodeVenta.setBackground(new java.awt.Color(199, 227, 255));
-        jTextFieldPreciodeVenta.addActionListener(new java.awt.event.ActionListener() {
+        TField_AñoAuto.setBackground(new java.awt.Color(199, 227, 255));
+        TField_AñoAuto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPreciodeVentaActionPerformed(evt);
+                TField_AñoAutoActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPreciodeVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(TField_AñoAuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 210, 25));
 
-        jTextFieldAño.setBackground(new java.awt.Color(199, 227, 255));
-        jTextFieldAño.addActionListener(new java.awt.event.ActionListener() {
+        TField_PrecioCompra.setBackground(new java.awt.Color(199, 227, 255));
+        TField_PrecioCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldAñoActionPerformed(evt);
+                TField_PrecioCompraActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 247, 210, 20));
+        IntFrame_CarsAdminConfig.getContentPane().add(TField_PrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 210, 25));
 
-        jTextFieldMarca.setBackground(new java.awt.Color(199, 227, 255));
-        jTextFieldMarca.addActionListener(new java.awt.event.ActionListener() {
+        TField_PreciodeVenta.setBackground(new java.awt.Color(199, 227, 255));
+        TField_PreciodeVenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMarcaActionPerformed(evt);
+                TField_PreciodeVentaActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(TField_PreciodeVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 333, 210, 25));
 
-        jTextFieldPrecioCompra.setBackground(new java.awt.Color(199, 227, 255));
-        jTextFieldPrecioCompra.addActionListener(new java.awt.event.ActionListener() {
+        Btn_CarRegister.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_CarRegister.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Btn_CarRegister.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_CarRegister.setText("Registrar");
+        Btn_CarRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPrecioCompraActionPerformed(evt);
+                Btn_CarRegisterActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPrecioCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 210, -1));
+        IntFrame_CarsAdminConfig.getContentPane().add(Btn_CarRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 180, 60));
 
-        jTextFieldColor.setBackground(new java.awt.Color(199, 227, 255));
-        jTextFieldColor.addActionListener(new java.awt.event.ActionListener() {
+        Btn_CarModify.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_CarModify.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Btn_CarModify.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_CarModify.setText("Modificar");
+        Btn_CarModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldColorActionPerformed(evt);
+                Btn_CarModifyActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 210, 20));
+        IntFrame_CarsAdminConfig.getContentPane().add(Btn_CarModify, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 180, 60));
 
-        jTextFieldPlaca1.setBackground(new java.awt.Color(199, 227, 255));
-        jTextFieldPlaca1.addActionListener(new java.awt.event.ActionListener() {
+        Btn_CarDelete.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_CarDelete.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Btn_CarDelete.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_CarDelete.setText("Eliminar");
+        Btn_CarDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPlaca1ActionPerformed(evt);
+                Btn_CarDeleteActionPerformed(evt);
             }
         });
-        IntFrame_CarsAdminConfig.getContentPane().add(jTextFieldPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 63, 210, 20));
+        IntFrame_CarsAdminConfig.getContentPane().add(Btn_CarDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 180, 60));
 
         Lbl_Bg_CarsAdminConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/RegistroAutoFin.png"))); // NOI18N
-        IntFrame_CarsAdminConfig.getContentPane().add(Lbl_Bg_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 360));
+        IntFrame_CarsAdminConfig.getContentPane().add(Lbl_Bg_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_CarsAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
         try {
@@ -618,6 +731,62 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_ClientsAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        IntFrame_ClientsList.setClosable(true);
+        IntFrame_ClientsList.setTitle("Lista de Clientes");
+        IntFrame_ClientsList.setToolTipText("");
+        IntFrame_ClientsList.setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/logo carcrafter 40x40.png"))); // NOI18N
+        IntFrame_ClientsList.setLayer(1);
+        IntFrame_ClientsList.setMaximumSize(new java.awt.Dimension(700, 400));
+        IntFrame_ClientsList.setMinimumSize(new java.awt.Dimension(700, 400));
+        IntFrame_ClientsList.setPreferredSize(new java.awt.Dimension(700, 400));
+        try {
+            IntFrame_ClientsList.setSelected(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+        IntFrame_ClientsList.setVisible(false);
+        IntFrame_ClientsList.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                IntFrame_ClientsListInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+        IntFrame_ClientsList.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Table_ClientsList.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        Scroll_Table_ClientsList.setViewportView(Table_ClientsList);
+
+        IntFrame_ClientsList.getContentPane().add(Scroll_Table_ClientsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 20, 550, 220));
+        IntFrame_ClientsList.getContentPane().add(Lbl_Bg_ClientsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 260));
+
+        IntFrame_ClientsAdminConfig.getContentPane().add(IntFrame_ClientsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 600, 300));
+        try {
+            IntFrame_ClientsList.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
 
         TField_ClientIdentification.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -872,8 +1041,8 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_SalesAdminConfig.setVisible(true);
     }//GEN-LAST:event_Lbl_Entry_SalesAdminConfigMouseClicked
 
-    private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
-        String placa = jTextFieldPlaca1.getText();
+    private void Btn_CarModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarModifyActionPerformed
+        String placa = TField_Placa.getText();
 
         // Realiza la validación de si esta vacia el field de la placa
         if (placa.isEmpty()) {
@@ -887,12 +1056,12 @@ public class MainFrame extends javax.swing.JFrame {
                 carroEncontrado = true;
 
                 // leee valores de campos de entrada
-                String color = jTextFieldColor.getText().toLowerCase();
-                String marca = jTextFieldMarca.getText().toLowerCase();
-                String nombreModelo = jTextFieldPrecioModelo.getText().toLowerCase();
-                String añoLanzamientoStr = jTextFieldAño.getText();
-                String precioCompraStr = jTextFieldPrecioCompra.getText().replace(',', '.');
-                String precioVentaStr = jTextFieldPreciodeVenta.getText().replace(',', '.');
+                String color = TField_Color.getText().toLowerCase();
+                String marca = TField_Marca.getText().toLowerCase();
+                String nombreModelo = TField_NombreModelo.getText().toLowerCase();
+                String añoLanzamientoStr = TField_AñoAuto.getText();
+                String precioCompraStr = TField_PrecioCompra.getText().replace(',', '.');
+                String precioVentaStr = TField_PreciodeVenta.getText().replace(',', '.');
 
                 // Actualiza los campos del automóvil solo si no están vacíos
                 if (!color.isEmpty()) {
@@ -940,21 +1109,21 @@ public class MainFrame extends javax.swing.JFrame {
         if (!carroEncontrado) {
             JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
         }
-    }//GEN-LAST:event_jButtonModificarActionPerformed
+    }//GEN-LAST:event_Btn_CarModifyActionPerformed
     private boolean containsSpecialCharacters(String str) {
         String regex = "^[a-zA-Z0-9.,]+$";
         return !Pattern.matches(regex, str);
     }
 
-    private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
+    private void Btn_CarRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarRegisterActionPerformed
         // Leer los datos de los campos y convertirlos a minúsculas
-        String placa = jTextFieldPlaca1.getText().toLowerCase();
-        String color = jTextFieldColor.getText().toLowerCase();
-        String marca = jTextFieldMarca.getText().toLowerCase();
-        String nombreModelo = jTextFieldPrecioModelo.getText().toLowerCase();
-        String añoLanzamientoStr = jTextFieldAño.getText();
-        String precioCompraStr = jTextFieldPrecioCompra.getText().replace(',', '.');
-        String precioVentaStr = jTextFieldPreciodeVenta.getText().replace(',', '.');
+        String placa = TField_Placa.getText().toLowerCase();
+        String color = TField_Color.getText().toLowerCase();
+        String marca = TField_Marca.getText().toLowerCase();
+        String nombreModelo = TField_NombreModelo.getText().toLowerCase();
+        String añoLanzamientoStr = TField_AñoAuto.getText();
+        String precioCompraStr = TField_PrecioCompra.getText().replace(',', '.');
+        String precioVentaStr = TField_PreciodeVenta.getText().replace(',', '.');
 
         // Verificar si ya existe un automóvil con la misma placa
         for (Autos registro : automobileRecords) {
@@ -1023,28 +1192,28 @@ public class MainFrame extends javax.swing.JFrame {
         automobileRecords.add(registro);
 
         // Limpiar los campos de entrada y mostrar un mensaje de éxito
-        jTextFieldPlaca1.setText("");
-        jTextFieldColor.setText("");
-        jTextFieldMarca.setText("");
-        jTextFieldPrecioModelo.setText("");
-        jTextFieldAño.setText("");
-        jTextFieldPrecioCompra.setText("");
-        jTextFieldPreciodeVenta.setText("");
+        TField_Placa.setText("");
+        TField_Color.setText("");
+        TField_Marca.setText("");
+        TField_NombreModelo.setText("");
+        TField_AñoAuto.setText("");
+        TField_PrecioCompra.setText("");
+        TField_PreciodeVenta.setText("");
 
         JOptionPane.showMessageDialog(this, "Registro exitoso");
-    }//GEN-LAST:event_jButtonRegistrarActionPerformed
+    }//GEN-LAST:event_Btn_CarRegisterActionPerformed
 
-    private void jTextFieldPlaca1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPlaca1ActionPerformed
+    private void TField_PlacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_PlacaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPlaca1ActionPerformed
+    }//GEN-LAST:event_TField_PlacaActionPerformed
 
-    private void jTextFieldColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldColorActionPerformed
+    private void TField_ColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ColorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldColorActionPerformed
+    }//GEN-LAST:event_TField_ColorActionPerformed
 
-    private void jTextFieldPrecioCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecioCompraActionPerformed
+    private void TField_PrecioCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_PrecioCompraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPrecioCompraActionPerformed
+    }//GEN-LAST:event_TField_PrecioCompraActionPerformed
 
     private void Btn_DeleteClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_DeleteClientActionPerformed
         // TODO add your handling code here:
@@ -1078,21 +1247,21 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TField_ClientAdressActionPerformed
 
-    private void jTextFieldMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMarcaActionPerformed
+    private void TField_MarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_MarcaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMarcaActionPerformed
+    }//GEN-LAST:event_TField_MarcaActionPerformed
 
-    private void jTextFieldAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAñoActionPerformed
+    private void TField_AñoAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_AñoAutoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldAñoActionPerformed
+    }//GEN-LAST:event_TField_AñoAutoActionPerformed
 
-    private void jTextFieldPrecioModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecioModeloActionPerformed
+    private void TField_NombreModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_NombreModeloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPrecioModeloActionPerformed
+    }//GEN-LAST:event_TField_NombreModeloActionPerformed
 
-    private void jTextFieldPreciodeVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPreciodeVentaActionPerformed
+    private void TField_PreciodeVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_PreciodeVentaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPreciodeVentaActionPerformed
+    }//GEN-LAST:event_TField_PreciodeVentaActionPerformed
 
     private void TField_ClientAdress_BuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientAdress_BuyActionPerformed
         // TODO add your handling code here:
@@ -1162,15 +1331,35 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_Pfield_AdminPasswordActionPerformed
 
 
-    private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
-        String placa = jTextFieldPlaca1.getText();
+    private void Btn_CarDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarDeleteActionPerformed
+        String placa = TField_Placa.getText();
         EliminarPorPlaca(placa);
-        jTextFieldPlaca1.setText("");
-    }//GEN-LAST:event_jButtonEliminarActionPerformed
+        TField_Placa.setText("");
+    }//GEN-LAST:event_Btn_CarDeleteActionPerformed
 
     private void jMenuItemAcercadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAcercadeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemAcercadeActionPerformed
+
+    private void IntFrame_ClientsListInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_ClientsListInternalFrameClosed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IntFrame_ClientsListInternalFrameClosed
+
+    private void IntFrame_DevelopersInfoInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_DevelopersInfoInternalFrameClosed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IntFrame_DevelopersInfoInternalFrameClosed
+
+    private void Button_ExitDevelopersInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ExitDevelopersInfoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Button_ExitDevelopersInfoActionPerformed
+
+    private void Button_ExitDevelopersInfo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ExitDevelopersInfo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Button_ExitDevelopersInfo1ActionPerformed
+
+    private void IntFrame_InstructionsInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_InstructionsInternalFrameClosed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IntFrame_InstructionsInternalFrameClosed
     private void EliminarPorPlaca(String placa) {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
@@ -1222,17 +1411,25 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_BackChangePassword;
     private javax.swing.JButton Btn_Back_AdminView;
     private javax.swing.JButton Btn_Buy;
+    private javax.swing.JButton Btn_CarDelete;
+    private javax.swing.JButton Btn_CarModify;
+    private javax.swing.JButton Btn_CarRegister;
     private javax.swing.JButton Btn_ConfirmAdminLogin;
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Btn_DeleteClient;
     private javax.swing.JButton Btn_ModifyClient;
     private javax.swing.JButton Button_ExitAdminLogin;
+    private javax.swing.JButton Button_ExitDevelopersInfo;
+    private javax.swing.JButton Button_ExitDevelopersInfo1;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_BuyACar;
     public static javax.swing.JInternalFrame IntFrame_CarsAdminConfig;
     public static javax.swing.JInternalFrame IntFrame_ClientView;
     public static javax.swing.JInternalFrame IntFrame_ClientsAdminConfig;
+    public static javax.swing.JInternalFrame IntFrame_ClientsList;
+    public static javax.swing.JInternalFrame IntFrame_DevelopersInfo;
+    public static javax.swing.JInternalFrame IntFrame_Instructions;
     public static javax.swing.JInternalFrame IntFrame_PasswordChange;
     public static javax.swing.JInternalFrame IntFrame_SalesAdminConfig;
     private javax.swing.JLabel Lbl_AdminEntry;
@@ -1242,6 +1439,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Bg_CarsAdminConfig;
     private javax.swing.JLabel Lbl_Bg_ClientView;
     private javax.swing.JLabel Lbl_Bg_ClientsAdminConfig;
+    private javax.swing.JLabel Lbl_Bg_ClientsList;
+    private javax.swing.JLabel Lbl_Bg_DevelopersInfo;
+    private javax.swing.JLabel Lbl_Bg_DevelopersInfo1;
     private javax.swing.JLabel Lbl_Bg_PasswordChange;
     private javax.swing.JLabel Lbl_CarInfo;
     private javax.swing.JLabel Lbl_Entry_CarsAdminConfig;
@@ -1255,6 +1455,8 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JPasswordField Pfield_NewPassword;
     public static javax.swing.JDialog PopUp_AdminLogin;
     private javax.swing.JScrollPane Scroll_Table_CarsList;
+    private javax.swing.JScrollPane Scroll_Table_ClientsList;
+    private javax.swing.JTextField TField_AñoAuto;
     private javax.swing.JTextField TField_CLientEmail;
     private javax.swing.JTextField TField_ClientAdress;
     private javax.swing.JTextField TField_ClientAdress_Buy;
@@ -1269,23 +1471,20 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField TField_ClientName_Buy;
     private javax.swing.JTextField TField_ClientPhoneNumber;
     private javax.swing.JTextField TField_ClientPhoneNumber_Buy;
+    private javax.swing.JTextField TField_Color;
+    private javax.swing.JTextField TField_Marca;
+    private javax.swing.JTextField TField_NombreModelo;
+    private javax.swing.JTextField TField_Placa;
+    private javax.swing.JTextField TField_PrecioCompra;
+    private javax.swing.JTextField TField_PreciodeVenta;
     private javax.swing.JTable Table_CarsList;
+    private javax.swing.JTable Table_ClientsList;
     private javax.swing.JTextField Tfield_AdminUser;
-    private javax.swing.JButton jButtonEliminar;
-    private javax.swing.JButton jButtonModificar;
-    private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBarAcercade;
     private javax.swing.JMenuItem jMenuItemAcercade;
     private javax.swing.JMenuItem jMenuItemInstrucciones;
-    private javax.swing.JTextField jTextFieldAño;
-    private javax.swing.JTextField jTextFieldColor;
-    private javax.swing.JTextField jTextFieldMarca;
-    private javax.swing.JTextField jTextFieldPlaca1;
-    private javax.swing.JTextField jTextFieldPrecioCompra;
-    private javax.swing.JTextField jTextFieldPrecioModelo;
-    private javax.swing.JTextField jTextFieldPreciodeVenta;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
 }
