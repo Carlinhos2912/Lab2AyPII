@@ -30,10 +30,10 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_PopUp_Base = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         IntFrame_DevelopersInfo = new javax.swing.JInternalFrame();
-        Button_ExitDevelopersInfo = new javax.swing.JButton();
+        Btn_ExitDevelopersInfo = new javax.swing.JButton();
         Lbl_Bg_DevelopersInfo = new javax.swing.JLabel();
         IntFrame_Instructions = new javax.swing.JInternalFrame();
-        Button_ExitDevelopersInfo1 = new javax.swing.JButton();
+        Btn_ExitInstructions = new javax.swing.JButton();
         Lbl_Bg_DevelopersInfo1 = new javax.swing.JLabel();
         IntFrame_PasswordChange = new javax.swing.JInternalFrame();
         Pfield_LastPassword = new javax.swing.JPasswordField();
@@ -47,7 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
         Tfield_AdminUser = new javax.swing.JTextField();
         Btn_ConfirmAdminLogin = new javax.swing.JButton();
         Lbl_PasswordChange = new javax.swing.JLabel();
-        Button_ExitAdminLogin = new javax.swing.JButton();
+        Btn_ExitAdminLogin = new javax.swing.JButton();
         Lbl_Bg_AdminLogin = new javax.swing.JLabel();
         IntFrame_ClientView = new javax.swing.JInternalFrame();
         IntFrame_BuyACar = new javax.swing.JInternalFrame();
@@ -162,16 +162,16 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_DevelopersInfo.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Button_ExitDevelopersInfo.setBackground(new java.awt.Color(108, 169, 230));
-        Button_ExitDevelopersInfo.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
-        Button_ExitDevelopersInfo.setForeground(new java.awt.Color(255, 255, 255));
-        Button_ExitDevelopersInfo.setText("Atras");
-        Button_ExitDevelopersInfo.addActionListener(new java.awt.event.ActionListener() {
+        Btn_ExitDevelopersInfo.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_ExitDevelopersInfo.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        Btn_ExitDevelopersInfo.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_ExitDevelopersInfo.setText("Atras");
+        Btn_ExitDevelopersInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button_ExitDevelopersInfoActionPerformed(evt);
+                Btn_ExitDevelopersInfoActionPerformed(evt);
             }
         });
-        IntFrame_DevelopersInfo.getContentPane().add(Button_ExitDevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 100, 30));
+        IntFrame_DevelopersInfo.getContentPane().add(Btn_ExitDevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 100, 30));
 
         Lbl_Bg_DevelopersInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Acercade.png"))); // NOI18N
         IntFrame_DevelopersInfo.getContentPane().add(Lbl_Bg_DevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
@@ -216,16 +216,16 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_Instructions.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Button_ExitDevelopersInfo1.setBackground(new java.awt.Color(108, 169, 230));
-        Button_ExitDevelopersInfo1.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
-        Button_ExitDevelopersInfo1.setForeground(new java.awt.Color(255, 255, 255));
-        Button_ExitDevelopersInfo1.setText("Atras");
-        Button_ExitDevelopersInfo1.addActionListener(new java.awt.event.ActionListener() {
+        Btn_ExitInstructions.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_ExitInstructions.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        Btn_ExitInstructions.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_ExitInstructions.setText("Atras");
+        Btn_ExitInstructions.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button_ExitDevelopersInfo1ActionPerformed(evt);
+                Btn_ExitInstructionsActionPerformed(evt);
             }
         });
-        IntFrame_Instructions.getContentPane().add(Button_ExitDevelopersInfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
+        IntFrame_Instructions.getContentPane().add(Btn_ExitInstructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
 
         Lbl_Bg_DevelopersInfo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Instrucciones-2.png"))); // NOI18N
         IntFrame_Instructions.getContentPane().add(Lbl_Bg_DevelopersInfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
@@ -387,16 +387,16 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_AdminLogin.getContentPane().add(Lbl_PasswordChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 200, 30));
 
-        Button_ExitAdminLogin.setBackground(new java.awt.Color(108, 169, 230));
-        Button_ExitAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
-        Button_ExitAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
-        Button_ExitAdminLogin.setText("Atras");
-        Button_ExitAdminLogin.addActionListener(new java.awt.event.ActionListener() {
+        Btn_ExitAdminLogin.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_ExitAdminLogin.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        Btn_ExitAdminLogin.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_ExitAdminLogin.setText("Atras");
+        Btn_ExitAdminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button_ExitAdminLoginActionPerformed(evt);
+                Btn_ExitAdminLoginActionPerformed(evt);
             }
         });
-        IntFrame_AdminLogin.getContentPane().add(Button_ExitAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
+        IntFrame_AdminLogin.getContentPane().add(Btn_ExitAdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 100, 30));
 
         Lbl_Bg_AdminLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Fondo-Login.png"))); // NOI18N
         IntFrame_AdminLogin.getContentPane().add(Lbl_Bg_AdminLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
@@ -1322,14 +1322,15 @@ public class MainFrame extends javax.swing.JFrame {
     private void IntFrame_AdminLoginInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_AdminLoginInternalFrameClosed
         IntFrame_AdminView.setVisible(false);
         IntFrame_ClientView.setVisible(true);
+        TheMagic.UpdateCarsList(automobileRecords, Table_CarsList);
     }//GEN-LAST:event_IntFrame_AdminLoginInternalFrameClosed
 
     //Evento de Btn_ExitAdminLogin para regresar a ClientView 
-    private void Button_ExitAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ExitAdminLoginActionPerformed
+    private void Btn_ExitAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ExitAdminLoginActionPerformed
         IntFrame_AdminLogin.setVisible(false);
         IntFrame_ClientView.setVisible(true);
         TheMagic.UpdateCarsList(automobileRecords, Table_CarsList);
-    }//GEN-LAST:event_Button_ExitAdminLoginActionPerformed
+    }//GEN-LAST:event_Btn_ExitAdminLoginActionPerformed
 
     //Evento de Lbl_PasswordChange para llegar al menu de cambio de contraseña
     private void Lbl_PasswordChangeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_PasswordChangeMouseClicked
@@ -1373,13 +1374,13 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_IntFrame_DevelopersInfoInternalFrameClosed
 
-    private void Button_ExitDevelopersInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ExitDevelopersInfoActionPerformed
+    private void Btn_ExitDevelopersInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ExitDevelopersInfoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Button_ExitDevelopersInfoActionPerformed
+    }//GEN-LAST:event_Btn_ExitDevelopersInfoActionPerformed
 
-    private void Button_ExitDevelopersInfo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ExitDevelopersInfo1ActionPerformed
+    private void Btn_ExitInstructionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ExitInstructionsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Button_ExitDevelopersInfo1ActionPerformed
+    }//GEN-LAST:event_Btn_ExitInstructionsActionPerformed
 
     private void IntFrame_InstructionsInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_InstructionsInternalFrameClosed
         // TODO add your handling code here:
@@ -1441,10 +1442,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_ConfirmAdminLogin;
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Btn_DeleteClient;
+    private javax.swing.JButton Btn_ExitAdminLogin;
+    private javax.swing.JButton Btn_ExitDevelopersInfo;
+    private javax.swing.JButton Btn_ExitInstructions;
     private javax.swing.JButton Btn_ModifyClient;
-    private javax.swing.JButton Button_ExitAdminLogin;
-    private javax.swing.JButton Button_ExitDevelopersInfo;
-    private javax.swing.JButton Button_ExitDevelopersInfo1;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_BuyACar;
