@@ -1,11 +1,16 @@
 package laboratorio2.BackEnd;
+
+import javax.swing.JTable;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 import laboratorio2.FrontEnd.MainFrame;
 
 public class TheMagic {
+
     public static Admin CorrectCredentials = new Admin();
-    
+
     //Procedimiento para autenticar el login de administrador
-    public static void Autentication (Admin TryCrendentials){
+    public static void Autentication(Admin TryCrendentials) {
         if ((TryCrendentials.getUser().equalsIgnoreCase(CorrectCredentials.getUser())) && (TryCrendentials.getPassword().equals(CorrectCredentials.getPassword()))) {
             //PopUp con diciendo que inició sesión correctamente
             MainFrame.PopUp_AdminLogin.setTitle("Login Correcto");
@@ -18,7 +23,7 @@ public class TheMagic {
             //Abrir la vista de administrador
             MainFrame.IntFrame_ClientView.setVisible(false);
             MainFrame.IntFrame_AdminView.setVisible(true);
-        }else{
+        } else {
             //PopUp con error al incio de sesión
             MainFrame.PopUp_AdminLogin.setTitle("Login Incorrecto");
             //>>>>>>Cambiar el icono por la imagen correspondiente (Pendiente)
@@ -27,9 +32,9 @@ public class TheMagic {
             MainFrame.Pfield_AdminPassword.setText("");
         }
     }
-    
+
     //Procedimiento para autenticar cambio de contraseña
-    public static void AutenticatePasswordChange (String LastPassword, String NewPassword, String ConfirmPassword){
+    public static void AutenticatePasswordChange(String LastPassword, String NewPassword, String ConfirmPassword) {
         if ((LastPassword.equals(CorrectCredentials.getPassword())) && (NewPassword.equals(ConfirmPassword)) && !(NewPassword.equals(""))) {
             //Cambiar credenciales
             CorrectCredentials.setPassword(NewPassword);
@@ -44,7 +49,7 @@ public class TheMagic {
             //Volver al login de administrador
             MainFrame.IntFrame_PasswordChange.setVisible(false);
             MainFrame.IntFrame_AdminLogin.setVisible(true);
-        }else{
+        } else {
             //PopUp con error al incio de sesión
             MainFrame.PopUp_AdminLogin.setTitle("Cambio Incorrecto");
             //>>>>>>Cambiar el icono por la imagen correspondiente
@@ -55,5 +60,16 @@ public class TheMagic {
             MainFrame.Pfield_ConfirmNewPassword.setText("");
         }
     }
-    
+
+    public static void UpdateCarsList(ArrayList<Autos> CarsList, JTable View) {
+        DefaultTableModel dtm = new DefaultTableModel();
+        String[] Header = {"Modelo", "Color", "Precio"};
+        dtm.setColumnIdentifiers(Header);
+        View.setModel(dtm);
+        Object[] NewCarsRow = new Object[Header.length];
+        for (int i = 0; i < CarsList.size(); i++) {
+            NewCarsRow = Autos.createTableItem(CarsList.get(i), NewCarsRow);
+            dtm.addRow(NewCarsRow);
+        }
+    }
 }

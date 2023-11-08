@@ -1,12 +1,13 @@
 package laboratorio2.BackEnd;
 
 public class Autos {
-    
+
     private String Placa;   //Formato XXX000
     private String Color;   //Color primario del automovil
     private String Modelo; //Año de salida al mercado del automovil
     private double PrecioDeVenta;  //Precio de venta del automovil
     private double PrecioDeCompra;
+
     public String getPlaca() {
         return Placa;
     }
@@ -47,6 +48,11 @@ public class Autos {
         this.PrecioDeCompra = PrecioDeCompra;
     }
 
-    
+    public static Object[] createTableItem(Autos item, Object[] NewCarsRow) {
+        NewCarsRow[0] = item.getModelo();
+        NewCarsRow[1] = item.getColor();
+        NewCarsRow[2] = item.getPrecioDeVenta();
+        return NewCarsRow;
+    }
 
 }
