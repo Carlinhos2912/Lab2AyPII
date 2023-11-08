@@ -30,7 +30,6 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_PopUp_Base = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         IntFrame_DevelopersInfo = new javax.swing.JInternalFrame();
-        Btn_ExitDevelopersInfo = new javax.swing.JButton();
         Lbl_Bg_DevelopersInfo = new javax.swing.JLabel();
         IntFrame_Instructions = new javax.swing.JInternalFrame();
         Btn_ExitInstructions = new javax.swing.JButton();
@@ -161,17 +160,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_DevelopersInfo.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Btn_ExitDevelopersInfo.setBackground(new java.awt.Color(108, 169, 230));
-        Btn_ExitDevelopersInfo.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
-        Btn_ExitDevelopersInfo.setForeground(new java.awt.Color(255, 255, 255));
-        Btn_ExitDevelopersInfo.setText("Atras");
-        Btn_ExitDevelopersInfo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_ExitDevelopersInfoActionPerformed(evt);
-            }
-        });
-        IntFrame_DevelopersInfo.getContentPane().add(Btn_ExitDevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 100, 30));
 
         Lbl_Bg_DevelopersInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Acercade.png"))); // NOI18N
         IntFrame_DevelopersInfo.getContentPane().add(Lbl_Bg_DevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
@@ -1380,10 +1368,6 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_IntFrame_DevelopersInfoInternalFrameClosed
 
-    private void Btn_ExitDevelopersInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ExitDevelopersInfoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Btn_ExitDevelopersInfoActionPerformed
-
     private void Btn_ExitInstructionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ExitInstructionsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Btn_ExitInstructionsActionPerformed
@@ -1449,7 +1433,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Btn_DeleteClient;
     private javax.swing.JButton Btn_ExitAdminLogin;
-    private javax.swing.JButton Btn_ExitDevelopersInfo;
     private javax.swing.JButton Btn_ExitInstructions;
     private javax.swing.JButton Btn_ModifyClient;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
