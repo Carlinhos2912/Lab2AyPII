@@ -1246,6 +1246,11 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JTextField" name="TField_ClientIdentification">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="e3" red="c7" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TField_ClientIdentificationActionPerformed"/>
               </Events>
@@ -1256,6 +1261,11 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="TField_ClientName">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="e3" red="c7" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TField_ClientNameActionPerformed"/>
               </Events>
@@ -1266,6 +1276,11 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="TField_ClientLastname">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="e3" red="c7" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TField_ClientLastnameActionPerformed"/>
               </Events>
@@ -1276,6 +1291,11 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="TField_ClientBirthday">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="e3" red="c7" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TField_ClientBirthdayActionPerformed"/>
               </Events>
@@ -1286,6 +1306,11 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="TField_CLientEmail">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="e3" red="c7" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TField_CLientEmailActionPerformed"/>
               </Events>
@@ -1296,6 +1321,11 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="TField_ClientPhoneNumber">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="e3" red="c7" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TField_ClientPhoneNumberActionPerformed"/>
               </Events>
@@ -1306,6 +1336,11 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="TField_ClientAdress">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="e3" red="c7" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TField_ClientAdressActionPerformed"/>
               </Events>

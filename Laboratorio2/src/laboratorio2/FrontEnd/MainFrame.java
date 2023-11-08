@@ -619,6 +619,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        TField_ClientIdentification.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientIdentification.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientIdentificationActionPerformed(evt);
@@ -626,6 +627,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientIdentification, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 180, 20));
 
+        TField_ClientName.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientNameActionPerformed(evt);
@@ -633,6 +635,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
 
+        TField_ClientLastname.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientLastname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientLastnameActionPerformed(evt);
@@ -640,6 +643,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 172, 180, 20));
 
+        TField_ClientBirthday.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientBirthday.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientBirthdayActionPerformed(evt);
@@ -647,6 +651,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientBirthday, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 213, 180, 20));
 
+        TField_CLientEmail.setBackground(new java.awt.Color(199, 227, 255));
         TField_CLientEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_CLientEmailActionPerformed(evt);
@@ -654,6 +659,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_CLientEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 255, 180, 20));
 
+        TField_ClientPhoneNumber.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientPhoneNumberActionPerformed(evt);
@@ -661,6 +667,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 295, 180, 20));
 
+        TField_ClientAdress.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientAdress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TField_ClientAdressActionPerformed(evt);
