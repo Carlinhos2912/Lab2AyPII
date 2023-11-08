@@ -1369,7 +1369,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn_CarDeleteActionPerformed
 
     private void jMenuItemAcercadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAcercadeActionPerformed
-        // TODO add your handling code here:
+      IntFrame_DevelopersInfo.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItemAcercadeActionPerformed
 
     private void IntFrame_ClientsListInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_ClientsListInternalFrameClosed
