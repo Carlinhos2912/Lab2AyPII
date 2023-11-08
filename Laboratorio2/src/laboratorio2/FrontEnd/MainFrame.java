@@ -171,7 +171,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Button_ExitDevelopersInfoActionPerformed(evt);
             }
         });
-        IntFrame_DevelopersInfo.getContentPane().add(Button_ExitDevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 100, 30));
+        IntFrame_DevelopersInfo.getContentPane().add(Button_ExitDevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 100, 30));
+
+        Lbl_Bg_DevelopersInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Acercade.png"))); // NOI18N
         IntFrame_DevelopersInfo.getContentPane().add(Lbl_Bg_DevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         getContentPane().add(IntFrame_DevelopersInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -223,7 +225,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Button_ExitDevelopersInfo1ActionPerformed(evt);
             }
         });
-        IntFrame_Instructions.getContentPane().add(Button_ExitDevelopersInfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 100, 30));
+        IntFrame_Instructions.getContentPane().add(Button_ExitDevelopersInfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
+
+        Lbl_Bg_DevelopersInfo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Instrucciones-2.png"))); // NOI18N
         IntFrame_Instructions.getContentPane().add(Lbl_Bg_DevelopersInfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         getContentPane().add(IntFrame_Instructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
