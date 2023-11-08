@@ -549,7 +549,7 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_Bg_ClientView.setMaximumSize(new java.awt.Dimension(960, 510));
         Lbl_Bg_ClientView.setMinimumSize(new java.awt.Dimension(960, 510));
         Lbl_Bg_ClientView.setPreferredSize(new java.awt.Dimension(960, 510));
-        IntFrame_ClientView.getContentPane().add(Lbl_Bg_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 510));
+        IntFrame_ClientView.getContentPane().add(Lbl_Bg_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 480));
 
         getContentPane().add(IntFrame_ClientView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
         try {
