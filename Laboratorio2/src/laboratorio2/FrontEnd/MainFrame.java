@@ -548,17 +548,17 @@ public class MainFrame extends javax.swing.JFrame {
         Table_CarsList.setShowGrid(false);
         Scroll_Table_CarsList.setViewportView(Table_CarsList);
 
-        IntFrame_ClientView.getContentPane().add(Scroll_Table_CarsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 840, 280));
+        IntFrame_ClientView.getContentPane().add(Scroll_Table_CarsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 800, 300));
 
-        Lbl_AdminEntry.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Lbl_AdminEntry.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         Lbl_AdminEntry.setForeground(new java.awt.Color(69, 101, 195));
-        Lbl_AdminEntry.setText("Entrar a las opciones de administrador");
+        Lbl_AdminEntry.setText(" ENTRAR A LAS OPCIONES DE ADMINISTRADOR");
         Lbl_AdminEntry.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_AdminEntryMouseClicked(evt);
             }
         });
-        IntFrame_ClientView.getContentPane().add(Lbl_AdminEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 360, 50));
+        IntFrame_ClientView.getContentPane().add(Lbl_AdminEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 360, 50));
 
         Lbl_Bg_ClientView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Vistadecliente.png"))); // NOI18N
         Lbl_Bg_ClientView.setMaximumSize(new java.awt.Dimension(960, 510));
