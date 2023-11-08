@@ -32,7 +32,6 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_DevelopersInfo = new javax.swing.JInternalFrame();
         Lbl_Bg_DevelopersInfo = new javax.swing.JLabel();
         IntFrame_Instructions = new javax.swing.JInternalFrame();
-        Btn_ExitInstructions = new javax.swing.JButton();
         Lbl_Bg_DevelopersInfo1 = new javax.swing.JLabel();
         IntFrame_PasswordChange = new javax.swing.JInternalFrame();
         Pfield_LastPassword = new javax.swing.JPasswordField();
@@ -203,17 +202,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_Instructions.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Btn_ExitInstructions.setBackground(new java.awt.Color(108, 169, 230));
-        Btn_ExitInstructions.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
-        Btn_ExitInstructions.setForeground(new java.awt.Color(255, 255, 255));
-        Btn_ExitInstructions.setText("Atras");
-        Btn_ExitInstructions.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_ExitInstructionsActionPerformed(evt);
-            }
-        });
-        IntFrame_Instructions.getContentPane().add(Btn_ExitInstructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 100, 30));
 
         Lbl_Bg_DevelopersInfo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Instrucciones-2.png"))); // NOI18N
         IntFrame_Instructions.getContentPane().add(Lbl_Bg_DevelopersInfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
@@ -973,6 +961,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenuItemInstrucciones.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         jMenuItemInstrucciones.setText("Instrucciones");
+        jMenuItemInstrucciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemInstruccionesActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItemInstrucciones);
 
         jMenuBarAcercade.add(jMenu2);
@@ -1369,13 +1362,13 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_IntFrame_DevelopersInfoInternalFrameClosed
 
-    private void Btn_ExitInstructionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ExitInstructionsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Btn_ExitInstructionsActionPerformed
-
     private void IntFrame_InstructionsInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_InstructionsInternalFrameClosed
         // TODO add your handling code here:
     }//GEN-LAST:event_IntFrame_InstructionsInternalFrameClosed
+
+    private void jMenuItemInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInstruccionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemInstruccionesActionPerformed
     private void EliminarPorPlaca(String placa) {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
@@ -1434,7 +1427,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Btn_DeleteClient;
     private javax.swing.JButton Btn_ExitAdminLogin;
-    private javax.swing.JButton Btn_ExitInstructions;
     private javax.swing.JButton Btn_ModifyClient;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
