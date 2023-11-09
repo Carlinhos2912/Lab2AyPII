@@ -1,14 +1,7 @@
 package laboratorio2.FrontEnd;
 
-import java.awt.event.ActionEvent;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Set;
 import java.util.regex.Pattern;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import laboratorio2.BackEnd.Admin;
 import laboratorio2.BackEnd.Autos;
@@ -39,7 +32,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         PopUp_Base = new javax.swing.JDialog();
         Lbl_PopUp_Base = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         IntFrame_DevelopersInfo = new javax.swing.JInternalFrame();
         Lbl_Bg_DevelopersInfo = new javax.swing.JLabel();
         IntFrame_Instructions = new javax.swing.JInternalFrame();
@@ -113,6 +105,23 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_Entry_ClientsAdminConfig = new javax.swing.JLabel();
         Lbl_Entry_SalesAdminConfig = new javax.swing.JLabel();
         Lbl_Bg_AdminView = new javax.swing.JLabel();
+        BackRooms = new javax.swing.JPanel();
+        ImgGetter_LoginCorrecto = new javax.swing.JLabel();
+        ImgGetter_LoginIncorrecto = new javax.swing.JLabel();
+        ImgGetter_CambioContraseñaCorrecto = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         jMenuBarAcercade = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenuItemAcercade = new javax.swing.JMenuItem();
@@ -123,16 +132,16 @@ public class MainFrame extends javax.swing.JFrame {
         PopUp_Base.setIconImage(null);
         PopUp_Base.setIconImages(null);
         PopUp_Base.setLocation(IntFrame_AdminLogin.location());
-        PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 300));
+        PopUp_Base.setMaximumSize(new java.awt.Dimension(300, 330));
+        PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 330));
         PopUp_Base.setModalityType(java.awt.Dialog.ModalityType.DOCUMENT_MODAL);
+        PopUp_Base.setPreferredSize(new java.awt.Dimension(300, 330));
         PopUp_Base.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Lbl_PopUp_Base.setMaximumSize(new java.awt.Dimension(300, 300));
         Lbl_PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 300));
         Lbl_PopUp_Base.setPreferredSize(new java.awt.Dimension(300, 300));
-        PopUp_Base.getContentPane().add(Lbl_PopUp_Base, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
-
-        jButton1.setText("jButton1");
+        PopUp_Base.getContentPane().add(Lbl_PopUp_Base, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototype 1");
@@ -981,6 +990,30 @@ public class MainFrame extends javax.swing.JFrame {
             e1.printStackTrace();
         }
 
+        BackRooms.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ImgGetter_LoginCorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/INGRESOCORRECTO.png"))); // NOI18N
+        BackRooms.add(ImgGetter_LoginCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_LoginIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/INGRESOINCORRECTO.png"))); // NOI18N
+        BackRooms.add(ImgGetter_LoginIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(ImgGetter_CambioContraseñaCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        getContentPane().add(BackRooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 30, 20));
+
         jMenu2.setText("CarCrafter");
 
         jMenuItemAcercade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -1463,6 +1496,7 @@ public class MainFrame extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BackRooms;
     private javax.swing.JButton Btn_BackChangePassword;
     private javax.swing.JButton Btn_Back_AdminView;
     private javax.swing.JButton Btn_Buy;
@@ -1476,6 +1510,9 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JButton Btn_ExitAdminLogin;
     private javax.swing.JButton Btn_FindSale;
     private javax.swing.JButton Btn_ModifyClient;
+    private javax.swing.JLabel ImgGetter_CambioContraseñaCorrecto;
+    public static javax.swing.JLabel ImgGetter_LoginCorrecto;
+    public static javax.swing.JLabel ImgGetter_LoginIncorrecto;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     private javax.swing.JInternalFrame IntFrame_BuyACar;
@@ -1538,7 +1575,19 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JTable Table_CarsList;
     private javax.swing.JTable Table_ClientsList;
     private javax.swing.JTextField Tfield_AdminUser;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBarAcercade;
     private javax.swing.JMenuItem jMenuItemAcercade;
