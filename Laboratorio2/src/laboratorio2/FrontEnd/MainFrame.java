@@ -32,6 +32,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         PopUp_Base = new javax.swing.JDialog();
+        Lbl_PopUp_Txt = new javax.swing.JLabel();
         Lbl_PopUp_Base = new javax.swing.JLabel();
         IntFrame_DevelopersInfo = new javax.swing.JInternalFrame();
         Lbl_Bg_DevelopersInfo = new javax.swing.JLabel();
@@ -137,7 +138,19 @@ public class MainFrame extends javax.swing.JFrame {
         PopUp_Base.setLocation(IntFrame_AdminLogin.location());
         PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 330));
         PopUp_Base.setModalityType(java.awt.Dialog.ModalityType.DOCUMENT_MODAL);
+        PopUp_Base.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                PopUp_BaseWindowClosing(evt);
+            }
+        });
         PopUp_Base.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Lbl_PopUp_Txt.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        Lbl_PopUp_Txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Lbl_PopUp_Txt.setMaximumSize(new java.awt.Dimension(300, 300));
+        Lbl_PopUp_Txt.setMinimumSize(new java.awt.Dimension(300, 300));
+        Lbl_PopUp_Txt.setPreferredSize(new java.awt.Dimension(300, 300));
+        PopUp_Base.getContentPane().add(Lbl_PopUp_Txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
 
         Lbl_PopUp_Base.setMaximumSize(new java.awt.Dimension(300, 300));
         Lbl_PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 300));
@@ -508,30 +521,9 @@ public class MainFrame extends javax.swing.JFrame {
         Scroll_Table_CarsList.setPreferredSize(new java.awt.Dimension(560, 400));
 
         Table_CarsList.setBackground(new java.awt.Color(199, 227, 255));
-        Table_CarsList.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Placa", "Modelo", "Color", "Precio"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        Table_CarsList.setModel(TheMagic.SetDtm());
         Table_CarsList.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_NEXT_COLUMN);
+        Table_CarsList.setColumnSelectionAllowed(true);
         Table_CarsList.setGridColor(new java.awt.Color(255, 255, 255));
         Table_CarsList.setMaximumSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setMinimumSize(new java.awt.Dimension(400, 400));
@@ -539,13 +531,16 @@ public class MainFrame extends javax.swing.JFrame {
         Table_CarsList.setRowHeight(50);
         Table_CarsList.setSelectionBackground(new java.awt.Color(0, 102, 153));
         Table_CarsList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        Table_CarsList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Table_CarsList.setShowGrid(true);
+        Table_CarsList.setShowVerticalLines(false);
         Table_CarsList.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Table_CarsListMouseClicked(evt);
             }
         });
         Scroll_Table_CarsList.setViewportView(Table_CarsList);
+        Table_CarsList.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         IntFrame_ClientView.getContentPane().add(Scroll_Table_CarsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 820, 330));
 
@@ -1477,6 +1472,10 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_Instructions.setVisible(true);
     }//GEN-LAST:event_jMenuItemInstruccionesActionPerformed
 
+    private void PopUp_BaseWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_PopUp_BaseWindowClosing
+        Lbl_PopUp_Txt.setText("");
+    }//GEN-LAST:event_PopUp_BaseWindowClosing
+
     public void EliminarPorPlaca(String placa) {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equalsIgnoreCase(placa)) {
@@ -1594,6 +1593,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Entry_SalesAdminConfig;
     public static javax.swing.JLabel Lbl_PasswordChange;
     public static javax.swing.JLabel Lbl_PopUp_Base;
+    public static javax.swing.JLabel Lbl_PopUp_Txt;
     private javax.swing.JLabel Lbl_SalesInfo;
     public static javax.swing.JPasswordField Pfield_AdminPassword;
     public static javax.swing.JPasswordField Pfield_ConfirmNewPassword;

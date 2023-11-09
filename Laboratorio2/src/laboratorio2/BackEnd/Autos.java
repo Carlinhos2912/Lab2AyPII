@@ -1,5 +1,7 @@
 package laboratorio2.BackEnd;
 
+import java.text.DecimalFormat;
+
 public class Autos {
 
     private String Placa;   //Formato XXX000
@@ -49,10 +51,11 @@ public class Autos {
     }
 
     public static Object[] createTableItem(Autos item, Object[] NewCarsRow) {
+        DecimalFormat df = new DecimalFormat("#,###.##");
         NewCarsRow[0] = item.getPlaca();
         NewCarsRow[1] = item.getModelo();
         NewCarsRow[2] = item.getColor();
-        NewCarsRow[3] = item.getPrecioDeVenta();
+        NewCarsRow[3] = df.format(item.getPrecioDeVenta());
         return NewCarsRow;
     }
 

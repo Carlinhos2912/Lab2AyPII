@@ -75,11 +75,20 @@ public class TheMagic {
         }
     }
 
-    public static void UpdateCarsList(ArrayList<Autos> CarsList, JTable View) {
-        DefaultTableModel dtm = new DefaultTableModel();
-        String[] Header = {"Placa", "Modelo", "Color", "Precio"};
+    public static DefaultTableModel dtm = new DefaultTableModel();
+    public static String[] Header = {"Placa", "Modelo", "Color", "Precio"};
+    public static DefaultTableModel SetDtm(){
         dtm.setColumnIdentifiers(Header);
+        return dtm;
+    }
+    
+    public static void UpdateCarsList(ArrayList<Autos> CarsList, JTable View) {
+        dtm = SetDtm();
         View.setModel(dtm);
+        for (int i = 0; i < dtm.getRowCount(); i++) {
+            dtm.removeRow(i);
+        }
+        
         Object[] NewCarsRow = new Object[Header.length];
         for (int i = 0; i < CarsList.size(); i++) {
             NewCarsRow = Autos.createTableItem(CarsList.get(i), NewCarsRow);
