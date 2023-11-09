@@ -1,9 +1,17 @@
 package laboratorio2.BackEnd;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import javax.swing.JTable;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import laboratorio2.FrontEnd.MainFrame;
+import static laboratorio2.FrontEnd.MainFrame.PopUp_Base;
+import static laboratorio2.FrontEnd.MainFrame.Table_CarsList;
+import static laboratorio2.FrontEnd.MainFrame.automobileRecords;
+import static laboratorio2.FrontEnd.MainFrame.clientsRecords;
+import static laboratorio2.FrontEnd.MainFrame.salesRecords;
 
 public class TheMagic {
 
@@ -13,9 +21,9 @@ public class TheMagic {
     public static void Autentication(Admin TryCrendentials) {
         if ((TryCrendentials.getUser().equalsIgnoreCase(CorrectCredentials.getUser())) && (TryCrendentials.getPassword().equals(CorrectCredentials.getPassword()))) {
             //PopUp con diciendo que inició sesión correctamente
-            MainFrame.PopUp_AdminLogin.setTitle("Login Correcto");
+            MainFrame.PopUp_Base.setTitle("Login Correcto");
             //>>>>>>Cambiar el icono por la imagen correspondiente (Pendiente)
-            MainFrame.PopUp_AdminLogin.setVisible(true);
+            MainFrame.PopUp_Base.setVisible(true);
             //Borrar los campos del login
             MainFrame.Pfield_AdminPassword.setText("");
             //Cerrar el login
@@ -25,9 +33,9 @@ public class TheMagic {
             MainFrame.IntFrame_AdminView.setVisible(true);
         } else {
             //PopUp con error al incio de sesión
-            MainFrame.PopUp_AdminLogin.setTitle("Login Incorrecto");
+            MainFrame.PopUp_Base.setTitle("Login Incorrecto");
             //>>>>>>Cambiar el icono por la imagen correspondiente (Pendiente)
-            MainFrame.PopUp_AdminLogin.setVisible(true);
+            MainFrame.PopUp_Base.setVisible(true);
             //Borrar el campo de contraseña
             MainFrame.Pfield_AdminPassword.setText("");
         }
@@ -39,9 +47,9 @@ public class TheMagic {
             //Cambiar credenciales
             CorrectCredentials.setPassword(NewPassword);
             //PopUp con diciendo que se cambió la contraseña correctamente
-            MainFrame.PopUp_AdminLogin.setTitle("Cambio Correcto");
+            MainFrame.PopUp_Base.setTitle("Cambio Correcto");
             //>>>>>>Cambiar el icono por la imagen correspondiente
-            MainFrame.PopUp_AdminLogin.setVisible(true);
+            MainFrame.PopUp_Base.setVisible(true);
             //Borrar los campos del cambio
             MainFrame.Pfield_LastPassword.setText("");
             MainFrame.Pfield_NewPassword.setText("");
@@ -51,9 +59,9 @@ public class TheMagic {
             MainFrame.IntFrame_AdminLogin.setVisible(true);
         } else {
             //PopUp con error al incio de sesión
-            MainFrame.PopUp_AdminLogin.setTitle("Cambio Incorrecto");
+            MainFrame.PopUp_Base.setTitle("Cambio Incorrecto");
             //>>>>>>Cambiar el icono por la imagen correspondiente
-            MainFrame.PopUp_AdminLogin.setVisible(true);
+            MainFrame.PopUp_Base.setVisible(true);
             //Borrar el campo de contraseña
             MainFrame.Pfield_LastPassword.setText("");
             MainFrame.Pfield_NewPassword.setText("");
@@ -63,7 +71,7 @@ public class TheMagic {
 
     public static void UpdateCarsList(ArrayList<Autos> CarsList, JTable View) {
         DefaultTableModel dtm = new DefaultTableModel();
-        String[] Header = {"Modelo", "Color", "Precio"};
+        String[] Header = {"Placa", "Modelo", "Color", "Precio"};
         dtm.setColumnIdentifiers(Header);
         View.setModel(dtm);
         Object[] NewCarsRow = new Object[Header.length];
@@ -71,5 +79,93 @@ public class TheMagic {
             NewCarsRow = Autos.createTableItem(CarsList.get(i), NewCarsRow);
             dtm.addRow(NewCarsRow);
         }
+    }
+
+    public static String ShowSelectedCar(int SelectedRow, JTable View) {
+        if (SelectedRow < 0) {
+            return "<html><font color = 'White'>No hay nigun auto seleccionado</font></html>";
+        } else {
+            return "<html><font color = 'White'>Placa: " + View.getModel().getValueAt(SelectedRow, 0) + "<br>"
+                    + "Modelo: " + View.getModel().getValueAt(SelectedRow, 1) + " <br>"
+                    + "Color: " + View.getModel().getValueAt(SelectedRow, 2) + " <br>"
+                    + "Precio: " + View.getModel().getValueAt(SelectedRow, 3) + ".</font></html>";
+        }
+    }
+
+    public static boolean AtenticateClientRegister(int ID, String Nombres, String Apellidos, String FechaDeNacimiento, String Email, int Telefono, String Direccion) {
+        //Si campos vacios 
+        if (ID == 0 || Nombres == "" || Apellidos == "" || FechaDeNacimiento == "" || Email == "" || Telefono == 0 || Direccion == "") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static boolean AtenticateSalesRegister(long NumVenta, int IdComprador, String AutoVendido, String FechaYhoraDeLaVenta, double ValorTotal) {
+        //Si campos vacios 
+        if (NumVenta == 0 || IdComprador == 0 || AutoVendido == "" || FechaYhoraDeLaVenta == "" || ValorTotal == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static void ComprarAuto() {
+        Clientes Comprador = new Clientes();
+        //Llenas los datos del comprador
+        Comprador.setID(Integer.parseInt(MainFrame.TField_ClientIdentification_Buy.getText()));
+        Comprador.setNombres(MainFrame.TField_ClientName_Buy.getText());
+        Comprador.setApellidos(MainFrame.TField_ClientLastname_Buy.getText());
+        Comprador.setFechaDeNacimiento(MainFrame.TField_ClientBirthday_Buy.getText());
+        Comprador.setEmail(MainFrame.TField_ClientEmail_Buy.getText());
+        Comprador.setTelefono(Integer.parseInt(MainFrame.TField_ClientPhoneNumber_Buy.getText()));
+        Comprador.setDireccion(MainFrame.TField_ClientAdress_Buy.getText());
+        //Lo metes en el arraylist
+        if (TheMagic.AtenticateClientRegister(Comprador.getID(), Comprador.getNombres(), Comprador.getApellidos(), Comprador.getFechaDeNacimiento(), Comprador.getEmail(), Comprador.getTelefono(), Comprador.getDireccion())) {
+            clientsRecords.add(Comprador);
+            //Icon icon = new ImageIcon(getClass().getResource("/media/POPUPS/"));
+            //Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setTitle("Registro de cliente correcto");
+            PopUp_Base.setVisible(true);
+        } else {
+            //Icon icon = new ImageIcon(getClass().getResource("/media/POPUPS/"));
+            //Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setTitle("Registro de cliente incorrecto");
+            PopUp_Base.setVisible(true);
+        }
+        //Creas Nueva venta
+        Ventas Venta = new Ventas();
+        //Llenas los datos de la venta
+        Venta.setNumVenta(salesRecords.size() + 1);
+        Venta.setIdComprador(Comprador.getID());
+        Venta.setAutoVendido(String.valueOf(Table_CarsList.getModel().getValueAt(Table_CarsList.getSelectedRow(), 0)));
+        Venta.setNombreDelVendedor(TheMagic.CorrectCredentials.getUser());
+        Venta.setFechaYhoraDeLaVenta("" + LocalDateTime.of(LocalDate.now(), LocalTime.now()));
+        for (int i = 0; i < automobileRecords.size(); i++) {
+            if (automobileRecords.get(i).getPlaca().equals(Venta.getAutoVendido())) {
+                Venta.setValorTotal(automobileRecords.get(i).getPrecioDeVenta() - automobileRecords.get(i).getPrecioDeCompra());
+            }
+        }
+        System.out.println(Venta.getNumVenta() + "\t" + Venta.getIdComprador() + "\t" + Venta.getAutoVendido() +  "\t" + Venta.getNombreDelVendedor() + "\t" + Venta.getFechaYhoraDeLaVenta() + "\t" + Venta.getValorTotal());
+        if (TheMagic.AtenticateSalesRegister(Venta.getNumVenta(), Venta.getIdComprador(), Venta.getAutoVendido(), Venta.getFechaYhoraDeLaVenta(), Venta.getValorTotal())) {
+            salesRecords.add(Venta);
+            //Icon icon = new ImageIcon(getClass().getResource("/media/POPUPS/"));
+            //Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setTitle("Registro de venta correcto");
+            PopUp_Base.setVisible(true);
+        } else {
+            //Icon icon = new ImageIcon(getClass().getResource("/media/POPUPS/"));
+            //Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setTitle("Registro de venta incorrecto");
+            PopUp_Base.setVisible(true);
+        }
+        //Limpiar los campos
+        MainFrame.TField_ClientIdentification_Buy.setText("");
+        MainFrame.TField_ClientName_Buy.setText("");
+        MainFrame.TField_ClientLastname_Buy.setText("");
+        MainFrame.TField_ClientBirthday_Buy.setText("");
+        MainFrame.TField_ClientEmail_Buy.setText("");
+        MainFrame.TField_ClientPhoneNumber_Buy.setText("");
+        MainFrame.TField_ClientAdress_Buy.setText("");
     }
 }

@@ -4,7 +4,7 @@ public class Ventas {
     
     private long NumVenta;  //Numero de factura
     private int IdComprador;
-    private String[] AutosVendidos; //Vector de placas de los autos vendidos 
+    private String AutoVendido; //Vector de placas de los autos vendidos 
     private String NombreDelVendedor;
     private String FechaYhoraDeLaVenta;
     private double ValorTotal; //Monto total de la venta
@@ -25,12 +25,12 @@ public class Ventas {
         this.IdComprador = IdComprador;
     }
 
-    public String[] getAutosVendidos() {
-        return AutosVendidos;
+    public String getAutoVendido() {
+        return AutoVendido;
     }
 
-    public void setAutosVendidos(String[] AutosVendidos) {
-        this.AutosVendidos = AutosVendidos;
+    public void setAutoVendido(String AutoVendido) {
+        this.AutoVendido = AutoVendido;
     }
 
     public String getNombreDelVendedor() {
