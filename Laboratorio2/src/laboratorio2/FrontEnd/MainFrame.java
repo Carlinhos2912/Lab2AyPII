@@ -1156,10 +1156,10 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void Btn_CarRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarRegisterActionPerformed
         // Leer los datos de los campos y convertirlos a minúsculas
-        String placa = TField_Placa.getText().toLowerCase();
-        String color = TField_Color.getText().toLowerCase();
-        String marca = TField_Marca.getText().toLowerCase();
-        String nombreModelo = TField_NombreModelo.getText().toLowerCase();
+        String placa = TField_Placa.getText().toUpperCase();
+        String color = TField_Color.getText().toUpperCase();;
+        String marca = TField_Marca.getText().toUpperCase();
+        String nombreModelo = TField_NombreModelo.getText().toUpperCase();
         String añoLanzamientoStr = TField_AñoAuto.getText();
         String precioCompraStr = TField_PrecioCompra.getText().replace(',', '.');
         String precioVentaStr = TField_PreciodeVenta.getText().replace(',', '.');
@@ -1374,8 +1374,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn_CarDeleteActionPerformed
 
     private void jMenuItemAcercadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAcercadeActionPerformed
-      IntFrame_DevelopersInfo.setVisible(true);
-        
+        IntFrame_DevelopersInfo.setVisible(true);
+
     }//GEN-LAST:event_jMenuItemAcercadeActionPerformed
 
     private void IntFrame_ClientsListInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_IntFrame_ClientsListInternalFrameClosed
@@ -1407,9 +1407,9 @@ public class MainFrame extends javax.swing.JFrame {
         IntFrame_Instructions.setVisible(true);
     }//GEN-LAST:event_jMenuItemInstruccionesActionPerformed
 
-    private void EliminarPorPlaca(String placa) {
+    public void EliminarPorPlaca(String placa) {
         for (Autos registro : automobileRecords) {
-            if (registro.getPlaca().equals(placa)) {
+            if (registro.getPlaca().equalsIgnoreCase(placa)) {
                 automobileRecords.remove(registro);
                 JOptionPane.showMessageDialog(this, "Auto con placa " + placa + " eliminado.");
                 return;
