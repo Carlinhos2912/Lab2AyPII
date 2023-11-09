@@ -107,9 +107,9 @@ public class TheMagic {
         }
     }
 
-    public static boolean AtenticateSalesRegister(long NumVenta, int IdComprador, String AutoVendido, String FechaYhoraDeLaVenta, double ValorTotal) {
+    public static boolean AtenticateSalesRegister(long NumVenta, int IdComprador, String AutoVendido, String FechaYhoraDeLaVenta) {
         //Si campos vacios 
-        if (NumVenta == 0 || IdComprador == 0 || AutoVendido == "" || FechaYhoraDeLaVenta == "" || ValorTotal == 0) {
+        if (NumVenta == 0 || IdComprador == 0 || AutoVendido == "" || FechaYhoraDeLaVenta == "" ) {
             return false;
         } else {
             return true;
@@ -121,20 +121,17 @@ public class TheMagic {
     }
 
     public static void ComprarAuto() {
-        
+
         Clientes Comprador = new Clientes();
         //Llenas los datos del comprador
-        try {
-            Comprador.setID(Integer.parseInt(MainFrame.TField_ClientIdentification_Buy.getText()));
-            Comprador.setNombres(MainFrame.TField_ClientName_Buy.getText());
-            Comprador.setApellidos(MainFrame.TField_ClientLastname_Buy.getText());
-            Comprador.setFechaDeNacimiento(MainFrame.TField_ClientBirthday_Buy.getText());
-            Comprador.setEmail(MainFrame.TField_ClientEmail_Buy.getText());
-            Comprador.setTelefono(Integer.parseInt(MainFrame.TField_ClientPhoneNumber_Buy.getText()));
-            Comprador.setDireccion(MainFrame.TField_ClientAdress_Buy.getText());
-        } catch (Exception e) {
-            System.out.println("eooooooo");
-        }
+
+        Comprador.setID(Integer.parseInt(MainFrame.TField_ClientIdentification_Buy.getText()));
+        Comprador.setNombres(MainFrame.TField_ClientName_Buy.getText());
+        Comprador.setApellidos(MainFrame.TField_ClientLastname_Buy.getText());
+        Comprador.setFechaDeNacimiento(MainFrame.TField_ClientBirthday_Buy.getText());
+        Comprador.setEmail(MainFrame.TField_ClientEmail_Buy.getText());
+        Comprador.setTelefono(Integer.parseInt(MainFrame.TField_ClientPhoneNumber_Buy.getText()));
+        Comprador.setDireccion(MainFrame.TField_ClientAdress_Buy.getText());
 
         //Lo metes en el arraylist
         if (TheMagic.AtenticateClientRegister(Comprador.getID(), Comprador.getNombres(), Comprador.getApellidos(), Comprador.getFechaDeNacimiento(), Comprador.getEmail(), Comprador.getTelefono(), Comprador.getDireccion())) {
@@ -163,7 +160,7 @@ public class TheMagic {
             }
         }
         System.out.println(Venta.getNumVenta() + "\t" + Venta.getIdComprador() + "\t" + Venta.getAutoVendido() + "\t" + Venta.getNombreDelVendedor() + "\t" + Venta.getFechaYhoraDeLaVenta() + "\t" + Venta.getValorTotal());
-        if (TheMagic.AtenticateSalesRegister(Venta.getNumVenta(), Venta.getIdComprador(), Venta.getAutoVendido(), Venta.getFechaYhoraDeLaVenta(), Venta.getValorTotal())) {
+        if (TheMagic.AtenticateSalesRegister(Venta.getNumVenta(), Venta.getIdComprador(), Venta.getAutoVendido(), Venta.getFechaYhoraDeLaVenta())) {
             salesRecords.add(Venta);
             //Icon icon = new ImageIcon(getClass().getResource("/media/POPUPS/"));
             //Lbl_PopUp_Base.setIcon(icon);
@@ -183,5 +180,7 @@ public class TheMagic {
         MainFrame.TField_ClientEmail_Buy.setText("");
         MainFrame.TField_ClientPhoneNumber_Buy.setText("");
         MainFrame.TField_ClientAdress_Buy.setText("");
+        MainFrame.IntFrame_BuyACar.setVisible(false);
+                
     }
 }
