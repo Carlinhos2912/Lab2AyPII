@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import javax.swing.JTable;
 import java.util.ArrayList;
+import javax.swing.Icon;
+import laboratorio2.BackEnd.Clientes;
 import javax.swing.table.DefaultTableModel;
 import laboratorio2.FrontEnd.MainFrame;
 import static laboratorio2.FrontEnd.MainFrame.PopUp_Base;
@@ -21,9 +23,10 @@ public class TheMagic {
     public static void Autentication(Admin TryCrendentials) {
         if ((TryCrendentials.getUser().equalsIgnoreCase(CorrectCredentials.getUser())) && (TryCrendentials.getPassword().equals(CorrectCredentials.getPassword()))) {
             //PopUp con diciendo que inició sesión correctamente
-            MainFrame.PopUp_Base.setTitle("Login Correcto");
-            //>>>>>>Cambiar el icono por la imagen correspondiente (Pendiente)
-            MainFrame.PopUp_Base.setVisible(true);
+            PopUp_Base.setTitle("Inicio de sesión correcto");
+            Icon icon = MainFrame.ImgGetter_LoginCorrecto.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
             //Borrar los campos del login
             MainFrame.Pfield_AdminPassword.setText("");
             //Cerrar el login
@@ -33,9 +36,10 @@ public class TheMagic {
             MainFrame.IntFrame_AdminView.setVisible(true);
         } else {
             //PopUp con error al incio de sesión
-            MainFrame.PopUp_Base.setTitle("Login Incorrecto");
-            //>>>>>>Cambiar el icono por la imagen correspondiente (Pendiente)
-            MainFrame.PopUp_Base.setVisible(true);
+            PopUp_Base.setTitle("Inicio de sesión incorrecto");
+            Icon icon = MainFrame.ImgGetter_LoginIncorrecto.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
             //Borrar el campo de contraseña
             MainFrame.Pfield_AdminPassword.setText("");
         }
@@ -47,9 +51,10 @@ public class TheMagic {
             //Cambiar credenciales
             CorrectCredentials.setPassword(NewPassword);
             //PopUp con diciendo que se cambió la contraseña correctamente
-            MainFrame.PopUp_Base.setTitle("Cambio Correcto");
-            //>>>>>>Cambiar el icono por la imagen correspondiente
-            MainFrame.PopUp_Base.setVisible(true);
+            PopUp_Base.setTitle("Cambio de contraseña correcto");
+            //Icon icon = MainFrame.ImgGetter_CambioContraseñaCorrecto.getIcon();
+            //MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
             //Borrar los campos del cambio
             MainFrame.Pfield_LastPassword.setText("");
             MainFrame.Pfield_NewPassword.setText("");
@@ -59,9 +64,10 @@ public class TheMagic {
             MainFrame.IntFrame_AdminLogin.setVisible(true);
         } else {
             //PopUp con error al incio de sesión
-            MainFrame.PopUp_Base.setTitle("Cambio Incorrecto");
-            //>>>>>>Cambiar el icono por la imagen correspondiente
-            MainFrame.PopUp_Base.setVisible(true);
+            PopUp_Base.setTitle("Cambio de contraseña incorrecto");
+            //Icon icon = MainFrame.ImgGetter_CambioContraseñaCorrecto.getIcon();
+            //MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
             //Borrar el campo de contraseña
             MainFrame.Pfield_LastPassword.setText("");
             MainFrame.Pfield_NewPassword.setText("");
@@ -94,7 +100,7 @@ public class TheMagic {
 
     public static boolean AtenticateClientRegister(int ID, String Nombres, String Apellidos, String FechaDeNacimiento, String Email, int Telefono, String Direccion) {
         //Si campos vacios 
-        if (ID == 0 || Nombres == "" || Apellidos == "" || FechaDeNacimiento == "" || Email == "" || Telefono == 0 || Direccion == "") {
+        if (ID == 0 || Nombres.equals("") || Apellidos.equals("") || FechaDeNacimiento.equals("") || Email.equals("") || Telefono == 0 || Direccion.equals("")) {
             return false;
         } else {
             return true;
@@ -110,16 +116,26 @@ public class TheMagic {
         }
     }
 
+    public static void ComprobarCampos() {
+
+    }
+
     public static void ComprarAuto() {
+        
         Clientes Comprador = new Clientes();
         //Llenas los datos del comprador
-        Comprador.setID(Integer.parseInt(MainFrame.TField_ClientIdentification_Buy.getText()));
-        Comprador.setNombres(MainFrame.TField_ClientName_Buy.getText());
-        Comprador.setApellidos(MainFrame.TField_ClientLastname_Buy.getText());
-        Comprador.setFechaDeNacimiento(MainFrame.TField_ClientBirthday_Buy.getText());
-        Comprador.setEmail(MainFrame.TField_ClientEmail_Buy.getText());
-        Comprador.setTelefono(Integer.parseInt(MainFrame.TField_ClientPhoneNumber_Buy.getText()));
-        Comprador.setDireccion(MainFrame.TField_ClientAdress_Buy.getText());
+        try {
+            Comprador.setID(Integer.parseInt(MainFrame.TField_ClientIdentification_Buy.getText()));
+            Comprador.setNombres(MainFrame.TField_ClientName_Buy.getText());
+            Comprador.setApellidos(MainFrame.TField_ClientLastname_Buy.getText());
+            Comprador.setFechaDeNacimiento(MainFrame.TField_ClientBirthday_Buy.getText());
+            Comprador.setEmail(MainFrame.TField_ClientEmail_Buy.getText());
+            Comprador.setTelefono(Integer.parseInt(MainFrame.TField_ClientPhoneNumber_Buy.getText()));
+            Comprador.setDireccion(MainFrame.TField_ClientAdress_Buy.getText());
+        } catch (Exception e) {
+            System.out.println("eooooooo");
+        }
+
         //Lo metes en el arraylist
         if (TheMagic.AtenticateClientRegister(Comprador.getID(), Comprador.getNombres(), Comprador.getApellidos(), Comprador.getFechaDeNacimiento(), Comprador.getEmail(), Comprador.getTelefono(), Comprador.getDireccion())) {
             clientsRecords.add(Comprador);
@@ -146,7 +162,7 @@ public class TheMagic {
                 Venta.setValorTotal(automobileRecords.get(i).getPrecioDeVenta() - automobileRecords.get(i).getPrecioDeCompra());
             }
         }
-        System.out.println(Venta.getNumVenta() + "\t" + Venta.getIdComprador() + "\t" + Venta.getAutoVendido() +  "\t" + Venta.getNombreDelVendedor() + "\t" + Venta.getFechaYhoraDeLaVenta() + "\t" + Venta.getValorTotal());
+        System.out.println(Venta.getNumVenta() + "\t" + Venta.getIdComprador() + "\t" + Venta.getAutoVendido() + "\t" + Venta.getNombreDelVendedor() + "\t" + Venta.getFechaYhoraDeLaVenta() + "\t" + Venta.getValorTotal());
         if (TheMagic.AtenticateSalesRegister(Venta.getNumVenta(), Venta.getIdComprador(), Venta.getAutoVendido(), Venta.getFechaYhoraDeLaVenta(), Venta.getValorTotal())) {
             salesRecords.add(Venta);
             //Icon icon = new ImageIcon(getClass().getResource("/media/POPUPS/"));
