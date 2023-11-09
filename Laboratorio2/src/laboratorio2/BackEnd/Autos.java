@@ -49,9 +49,10 @@ public class Autos {
     }
 
     public static Object[] createTableItem(Autos item, Object[] NewCarsRow) {
-        NewCarsRow[0] = item.getModelo();
-        NewCarsRow[1] = item.getColor();
-        NewCarsRow[2] = item.getPrecioDeVenta();
+        NewCarsRow[0] = item.getPlaca();
+        NewCarsRow[1] = item.getModelo();
+        NewCarsRow[2] = item.getColor();
+        NewCarsRow[3] = item.getPrecioDeVenta();
         return NewCarsRow;
     }
 
