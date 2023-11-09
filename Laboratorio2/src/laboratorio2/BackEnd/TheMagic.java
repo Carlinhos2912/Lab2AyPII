@@ -1,5 +1,6 @@
 package laboratorio2.BackEnd;
 
+import com.sun.tools.javac.Main;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -143,6 +144,33 @@ public class TheMagic {
         if (onList) {
             //Si esta en lista se toma como el nuevo comprador
             Comprador = clientsRecords.get(index);
+            //Creas Nueva venta
+            Ventas Venta = new Ventas();
+            //Llenas los datos de la venta
+            Venta.setNumVenta(salesRecords.size() + 1);
+            Venta.setIdComprador(Comprador.getID());
+            Venta.setAutoVendido(String.valueOf(Table_CarsList.getModel().getValueAt(Table_CarsList.getSelectedRow(), 0)));
+            Venta.setNombreDelVendedor(TheMagic.CorrectCredentials.getUser());
+            Venta.setFechaYhoraDeLaVenta("" + LocalDateTime.of(LocalDate.now(), LocalTime.now()));
+            for (int i = 0; i < automobileRecords.size(); i++) {
+                if (automobileRecords.get(i).getPlaca().equals(Venta.getAutoVendido())) {
+                    Venta.setPagoTotal(automobileRecords.get(i).getPrecioDeVenta());
+                    Venta.setBalance(automobileRecords.get(i).getPrecioDeVenta() - automobileRecords.get(i).getPrecioDeCompra());
+                }
+            }
+            if (TheMagic.AtenticateSalesRegister(Venta.getNumVenta(), Venta.getIdComprador(), Venta.getAutoVendido(), Venta.getFechaYhoraDeLaVenta())) {
+                salesRecords.add(Venta);
+                PopUp_Base.setTitle("Compra correcta");
+                Icon icon = MainFrame.ImgGetter_CompraCorrecta.getIcon();
+                MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                PopUp_Base.setVisible(true);
+                //Mostrar un popUpconFondo vacío con los datos de la venta
+            } else {
+                PopUp_Base.setTitle("Error");
+                Icon icon = MainFrame.ImgGetter_ErrorAlComprar.getIcon();
+                MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                PopUp_Base.setVisible(true);
+            }
         } else {
             //Llenas los datos del comprador
             Comprador.setID(Long.parseLong(MainFrame.TField_ClientIdentification_Buy.getText()));
@@ -155,6 +183,33 @@ public class TheMagic {
             //Lo metes en el arraylist
             if (TheMagic.AtenticateClientRegister(Comprador.getID(), Comprador.getNombres(), Comprador.getApellidos(), Comprador.getFechaDeNacimiento(), Comprador.getEmail(), Comprador.getTelefono(), Comprador.getDireccion())) {
                 clientsRecords.add(Comprador);
+                //Creas Nueva venta
+                Ventas Venta = new Ventas();
+                //Llenas los datos de la venta
+                Venta.setNumVenta(salesRecords.size() + 1);
+                Venta.setIdComprador(Comprador.getID());
+                Venta.setAutoVendido(String.valueOf(Table_CarsList.getModel().getValueAt(Table_CarsList.getSelectedRow(), 0)));
+                Venta.setNombreDelVendedor(TheMagic.CorrectCredentials.getUser());
+                Venta.setFechaYhoraDeLaVenta("" + LocalDateTime.of(LocalDate.now(), LocalTime.now()));
+                for (int i = 0; i < automobileRecords.size(); i++) {
+                    if (automobileRecords.get(i).getPlaca().equals(Venta.getAutoVendido())) {
+                        Venta.setPagoTotal(automobileRecords.get(i).getPrecioDeVenta());
+                        Venta.setBalance(automobileRecords.get(i).getPrecioDeVenta() - automobileRecords.get(i).getPrecioDeCompra());
+                    }
+                }
+                if (TheMagic.AtenticateSalesRegister(Venta.getNumVenta(), Venta.getIdComprador(), Venta.getAutoVendido(), Venta.getFechaYhoraDeLaVenta())) {
+                    salesRecords.add(Venta);
+                    PopUp_Base.setTitle("Compra correcta");
+                    Icon icon = MainFrame.ImgGetter_CompraCorrecta.getIcon();
+                    MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                    PopUp_Base.setVisible(true);
+                    //Mostrar un popUpconFondo vacío con los datos de la venta
+                } else {
+                    PopUp_Base.setTitle("Error");
+                    Icon icon = MainFrame.ImgGetter_ErrorAlComprar.getIcon();
+                    MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                    PopUp_Base.setVisible(true);
+                }
             } else {
                 PopUp_Base.setTitle("Error");
                 Icon icon = MainFrame.ImgGetter_ErrorAlComprar.getIcon();
@@ -162,33 +217,7 @@ public class TheMagic {
                 PopUp_Base.setVisible(true);
             }
         }
-        //Creas Nueva venta
-        Ventas Venta = new Ventas();
-        //Llenas los datos de la venta
-        Venta.setNumVenta(salesRecords.size() + 1);
-        Venta.setIdComprador(Comprador.getID());
-        Venta.setAutoVendido(String.valueOf(Table_CarsList.getModel().getValueAt(Table_CarsList.getSelectedRow(), 0)));
-        Venta.setNombreDelVendedor(TheMagic.CorrectCredentials.getUser());
-        Venta.setFechaYhoraDeLaVenta("" + LocalDateTime.of(LocalDate.now(), LocalTime.now()));
-        for (int i = 0; i < automobileRecords.size(); i++) {
-            if (automobileRecords.get(i).getPlaca().equals(Venta.getAutoVendido())) {
-                Venta.setPagoTotal(automobileRecords.get(i).getPrecioDeVenta());
-                Venta.setBalance(automobileRecords.get(i).getPrecioDeVenta() - automobileRecords.get(i).getPrecioDeCompra());
-            }
-        }
-        if (TheMagic.AtenticateSalesRegister(Venta.getNumVenta(), Venta.getIdComprador(), Venta.getAutoVendido(), Venta.getFechaYhoraDeLaVenta())) {
-            salesRecords.add(Venta);
-            PopUp_Base.setTitle("Compra correcta");
-            Icon icon = MainFrame.ImgGetter_CompraCorrecta.getIcon();
-            MainFrame.Lbl_PopUp_Base.setIcon(icon);
-            PopUp_Base.setVisible(true);
-            //Mostrar un popUpconFondo vacío con los datos de la venta
-        } else {
-            PopUp_Base.setTitle("Error");
-            Icon icon = MainFrame.ImgGetter_ErrorAlComprar.getIcon();
-            MainFrame.Lbl_PopUp_Base.setIcon(icon);
-            PopUp_Base.setVisible(true);
-        }
+
         //Limpiar los campos
         MainFrame.TField_ClientIdentification_Buy.setText("");
         MainFrame.TField_ClientName_Buy.setText("");
@@ -391,6 +420,30 @@ public class TheMagic {
 
             }
         }
+
+    }
+
+    public static void FindSale(ArrayList<Ventas> SalesRecords, long NeededNumVenta) {
+        try {
+            Object SaleFound = SalesRecords.get((int) NeededNumVenta);
+            PopUp_Base.setTitle("Listo!");
+            Icon icon = MainFrame.ImgGetter_VentaEncontrada.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
+            MainFrame.Lbl_SalesInfo.setText("<html><font color = 'White'> No. Factura: " + (SalesRecords.get((int) NeededNumVenta).getNumVenta() - 1) + "<br>"
+                    + " ID Cliente: " + SalesRecords.get((int) NeededNumVenta).getIdComprador() + "<br>"
+                    + " Auto Comprado: " + SalesRecords.get((int) NeededNumVenta).getAutoVendido() + "<br>"
+                    + " Vendedor: " + SalesRecords.get((int) NeededNumVenta).getNombreDelVendedor() + "<br>"
+                    + " Fecha y hora de compra: " + SalesRecords.get((int) NeededNumVenta).getFechaYhoraDeLaVenta() + "<br>"
+                    + " Valor de la compra: " + SalesRecords.get((int) NeededNumVenta).getPagoTotal() + "<br>"
+                    + " Balance: " + SalesRecords.get((int) NeededNumVenta).getBalance() + "</font></html>");
+        } catch (Exception e) {
+            PopUp_Base.setTitle("Error");
+            Icon icon = MainFrame.ImgGetter_VentaNoEncontrada.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
+        }
+        MainFrame.TField_SalesFinder.setText("");
 
     }
 }

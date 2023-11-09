@@ -521,16 +521,37 @@ public class MainFrame extends javax.swing.JFrame {
         Scroll_Table_CarsList.setPreferredSize(new java.awt.Dimension(560, 400));
 
         Table_CarsList.setBackground(new java.awt.Color(199, 227, 255));
-        Table_CarsList.setModel(TheMagic.SetDtm());
+        Table_CarsList.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Placa", "Modelo", "Color", "Precio"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         Table_CarsList.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_NEXT_COLUMN);
-        Table_CarsList.setColumnSelectionAllowed(true);
+        Table_CarsList.setDragEnabled(true);
         Table_CarsList.setGridColor(new java.awt.Color(255, 255, 255));
         Table_CarsList.setMaximumSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setMinimumSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setPreferredSize(new java.awt.Dimension(400, 400));
         Table_CarsList.setRowHeight(50);
         Table_CarsList.setSelectionBackground(new java.awt.Color(0, 102, 153));
-        Table_CarsList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Table_CarsList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Table_CarsList.setShowGrid(true);
         Table_CarsList.setShowVerticalLines(false);
@@ -934,7 +955,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         Lbl_SalesInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lbl_SalesInfo.setText("*Aqui van los datos de la venta*");
-        IntFrame_SalesAdminConfig.getContentPane().add(Lbl_SalesInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 330, 270));
+        IntFrame_SalesAdminConfig.getContentPane().add(Lbl_SalesInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 300, 180));
 
         Lbl_Bg_SalesAdminCofig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/ConsultarFactura.png"))); // NOI18N
         IntFrame_SalesAdminConfig.getContentPane().add(Lbl_Bg_SalesAdminCofig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
@@ -1341,7 +1362,16 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn_BuySelectedActionPerformed
 
     private void Btn_FindSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_FindSaleActionPerformed
-        // TODO add your handling code here:
+        try {
+            TheMagic.FindSale(salesRecords, Long.parseLong(TField_SalesFinder.getText()));
+        } catch (Exception e) {
+            PopUp_Base.setTitle("Error al buscar la venta");
+            Icon icon = MainFrame.ImgGetter_VentaNoEncontrada.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
+        }
+
+
     }//GEN-LAST:event_Btn_FindSaleActionPerformed
 
     private void jMenuItemInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInstruccionesActionPerformed
@@ -1476,7 +1506,7 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JLabel Lbl_PasswordChange;
     public static javax.swing.JLabel Lbl_PopUp_Base;
     public static javax.swing.JLabel Lbl_PopUp_Txt;
-    private javax.swing.JLabel Lbl_SalesInfo;
+    public static javax.swing.JLabel Lbl_SalesInfo;
     public static javax.swing.JPasswordField Pfield_AdminPassword;
     public static javax.swing.JPasswordField Pfield_ConfirmNewPassword;
     public static javax.swing.JPasswordField Pfield_LastPassword;
@@ -1505,7 +1535,7 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JTextField TField_Placa;
     public static javax.swing.JTextField TField_PrecioCompra;
     public static javax.swing.JTextField TField_PreciodeVenta;
-    private javax.swing.JTextField TField_SalesFinder;
+    public static javax.swing.JTextField TField_SalesFinder;
     public static javax.swing.JTable Table_CarsList;
     private javax.swing.JTable Table_ClientsList;
     private javax.swing.JTextField Tfield_AdminUser;
