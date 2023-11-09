@@ -132,10 +132,8 @@ public class MainFrame extends javax.swing.JFrame {
         PopUp_Base.setIconImage(null);
         PopUp_Base.setIconImages(null);
         PopUp_Base.setLocation(IntFrame_AdminLogin.location());
-        PopUp_Base.setMaximumSize(new java.awt.Dimension(300, 330));
         PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 330));
         PopUp_Base.setModalityType(java.awt.Dialog.ModalityType.DOCUMENT_MODAL);
-        PopUp_Base.setPreferredSize(new java.awt.Dimension(300, 330));
         PopUp_Base.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Lbl_PopUp_Base.setMaximumSize(new java.awt.Dimension(300, 300));
