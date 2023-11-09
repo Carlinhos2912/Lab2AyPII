@@ -109,19 +109,21 @@ public class MainFrame extends javax.swing.JFrame {
         ImgGetter_LoginCorrecto = new javax.swing.JLabel();
         ImgGetter_LoginIncorrecto = new javax.swing.JLabel();
         ImgGetter_CambioContraseñaCorrecto = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        ImgGetter_CambioContraseñaIncorrecto = new javax.swing.JLabel();
+        ImgGetter_RegisAutoCorrecto = new javax.swing.JLabel();
+        ImgGetter_RegisAutoIncorrecto = new javax.swing.JLabel();
+        ImgGetter_ModifAutoCorrecto = new javax.swing.JLabel();
+        ImgGetter_ModifAutoIncorrecto = new javax.swing.JLabel();
+        ImgGetter_ElimAutoCorrecto = new javax.swing.JLabel();
+        ImgGetter_ElimAutoIncorrecto = new javax.swing.JLabel();
+        ImgGetter_ModifClienteCorrecto = new javax.swing.JLabel();
+        ImgGetter_ModifClienteIncorrecto = new javax.swing.JLabel();
+        ImgGetter_ElimClienteCorrecto = new javax.swing.JLabel();
+        ImgGetter_ElimClienteIncorrecto = new javax.swing.JLabel();
+        ImgGetter_VentaEncontrada = new javax.swing.JLabel();
+        ImgGetter_VentaNoEncontrada = new javax.swing.JLabel();
+        ImgGetter_ErrorAlComprar = new javax.swing.JLabel();
+        ImgGetter_CompraCorrecta = new javax.swing.JLabel();
         jMenuBarAcercade = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenuItemAcercade = new javax.swing.JMenuItem();
@@ -998,19 +1000,41 @@ public class MainFrame extends javax.swing.JFrame {
         ImgGetter_LoginIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/INGRESOINCORRECTO.png"))); // NOI18N
         BackRooms.add(ImgGetter_LoginIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
         BackRooms.add(ImgGetter_CambioContraseñaCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
-        BackRooms.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(ImgGetter_CambioContraseñaIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_RegisAutoCorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/REGISCARCORRECTO.png"))); // NOI18N
+        BackRooms.add(ImgGetter_RegisAutoCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_RegisAutoIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/REGISCARINCORRECTO.png"))); // NOI18N
+        BackRooms.add(ImgGetter_RegisAutoIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ModifAutoCorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/AUTOMODIFCORRECTAMENTE.png"))); // NOI18N
+        BackRooms.add(ImgGetter_ModifAutoCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ModifAutoIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/AUTOMODIFINCORRECTAMENTE.png"))); // NOI18N
+        BackRooms.add(ImgGetter_ModifAutoIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ElimAutoCorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/ELIMCARCORRECTO.png"))); // NOI18N
+        BackRooms.add(ImgGetter_ElimAutoCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ElimAutoIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/ELIMCARINCORRECTO.png"))); // NOI18N
+        BackRooms.add(ImgGetter_ElimAutoIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ModifClienteCorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/MODIFCLIENCORRECTAMENTE.png"))); // NOI18N
+        BackRooms.add(ImgGetter_ModifClienteCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ModifClienteIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/MODIFCLIENINCORRECTAMENTE.png"))); // NOI18N
+        BackRooms.add(ImgGetter_ModifClienteIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ElimClienteCorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/CLIENTEELIMCORRECTAMENTE.png"))); // NOI18N
+        BackRooms.add(ImgGetter_ElimClienteCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ElimClienteIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/CLIENTEELIMINCORRECTAMENTE.png"))); // NOI18N
+        BackRooms.add(ImgGetter_ElimClienteIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(ImgGetter_VentaEncontrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(ImgGetter_VentaNoEncontrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(ImgGetter_ErrorAlComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+        BackRooms.add(ImgGetter_CompraCorrecta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
 
         getContentPane().add(BackRooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 30, 20));
 
@@ -1511,8 +1535,23 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_FindSale;
     private javax.swing.JButton Btn_ModifyClient;
     private javax.swing.JLabel ImgGetter_CambioContraseñaCorrecto;
+    private javax.swing.JLabel ImgGetter_CambioContraseñaIncorrecto;
+    private javax.swing.JLabel ImgGetter_CompraCorrecta;
+    private javax.swing.JLabel ImgGetter_ElimAutoCorrecto;
+    private javax.swing.JLabel ImgGetter_ElimAutoIncorrecto;
+    private javax.swing.JLabel ImgGetter_ElimClienteCorrecto;
+    private javax.swing.JLabel ImgGetter_ElimClienteIncorrecto;
+    private javax.swing.JLabel ImgGetter_ErrorAlComprar;
     public static javax.swing.JLabel ImgGetter_LoginCorrecto;
     public static javax.swing.JLabel ImgGetter_LoginIncorrecto;
+    private javax.swing.JLabel ImgGetter_ModifAutoCorrecto;
+    private javax.swing.JLabel ImgGetter_ModifAutoIncorrecto;
+    private javax.swing.JLabel ImgGetter_ModifClienteCorrecto;
+    private javax.swing.JLabel ImgGetter_ModifClienteIncorrecto;
+    private javax.swing.JLabel ImgGetter_RegisAutoCorrecto;
+    private javax.swing.JLabel ImgGetter_RegisAutoIncorrecto;
+    private javax.swing.JLabel ImgGetter_VentaEncontrada;
+    private javax.swing.JLabel ImgGetter_VentaNoEncontrada;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     public static javax.swing.JInternalFrame IntFrame_BuyACar;
@@ -1575,19 +1614,6 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JTable Table_CarsList;
     private javax.swing.JTable Table_ClientsList;
     private javax.swing.JTextField Tfield_AdminUser;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBarAcercade;
     private javax.swing.JMenuItem jMenuItemAcercade;
