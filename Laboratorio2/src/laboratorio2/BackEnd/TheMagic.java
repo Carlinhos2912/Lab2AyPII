@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import javax.swing.JTable;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 import javax.swing.Icon;
 import laboratorio2.BackEnd.Clientes;
 import javax.swing.table.DefaultTableModel;
@@ -14,6 +15,7 @@ import static laboratorio2.FrontEnd.MainFrame.Table_CarsList;
 import static laboratorio2.FrontEnd.MainFrame.automobileRecords;
 import static laboratorio2.FrontEnd.MainFrame.clientsRecords;
 import static laboratorio2.FrontEnd.MainFrame.salesRecords;
+import laboratorio2.BackEnd.Autos;
 
 public class TheMagic {
 
@@ -77,18 +79,19 @@ public class TheMagic {
 
     public static DefaultTableModel dtm = new DefaultTableModel();
     public static String[] Header = {"Placa", "Modelo", "Color", "Precio"};
-    public static DefaultTableModel SetDtm(){
+
+    public static DefaultTableModel SetDtm() {
         dtm.setColumnIdentifiers(Header);
         return dtm;
     }
-    
+
     public static void UpdateCarsList(ArrayList<Autos> CarsList, JTable View) {
         dtm = SetDtm();
         View.setModel(dtm);
         for (int i = 0; i < dtm.getRowCount(); i++) {
             dtm.removeRow(i);
         }
-        
+
         Object[] NewCarsRow = new Object[Header.length];
         for (int i = 0; i < CarsList.size(); i++) {
             NewCarsRow = Autos.createTableItem(CarsList.get(i), NewCarsRow);
@@ -195,6 +198,169 @@ public class TheMagic {
         MainFrame.TField_ClientPhoneNumber_Buy.setText("");
         MainFrame.TField_ClientAdress_Buy.setText("");
         MainFrame.IntFrame_BuyACar.setVisible(false);
+
+    }
+
+    public static boolean containsSpecialCharacters(String str) {
+        // Permitir letras (mayúsculas y minúsculas), números, comas, puntos y espacios
+        String regex = "^[a-zA-Z0-9, .]+$";
+        return !Pattern.matches(regex, str);
+    }
+
+    public static void RegisterCar(String placa, String color, String marca, String nombreModelo, String añoLanzamientoStr, String precioCompraStr, String precioVentaStr) {
+
+// Verificar si ya existe un automóvil con la misma placa
+        for (Autos registro : automobileRecords) {
+            if (registro.getPlaca().equals(placa)) {
+                //No se encontró la placa
+                return;
+            }
+        }
+        String incompleteField = null;
+
+        if (placa.isEmpty()) {
+            incompleteField = "Placa";
+        } else if (color.isEmpty()) {
+            incompleteField = "Color";
+        } else if (marca.isEmpty()) {
+            incompleteField = "Marca";
+        } else if (nombreModelo.isEmpty()) {
+            incompleteField = "Nombre del Modelo";
+        } else if (añoLanzamientoStr.isEmpty()) {
+            incompleteField = "Año de Lanzamiento";
+        } else if (precioCompraStr.isEmpty()) {
+            incompleteField = "Precio de Compra";
+        } else if (precioVentaStr.isEmpty()) {
+            incompleteField = "Precio de Venta";
+        }
+
+        if (incompleteField != null) {
+            //Colocar "campos imcompletos"
+            return;
+        }
+
+        if (containsSpecialCharacters(placa) || containsSpecialCharacters(color)
+                || containsSpecialCharacters(marca) || containsSpecialCharacters(nombreModelo)
+                || containsSpecialCharacters(añoLanzamientoStr) || containsSpecialCharacters(precioCompraStr)
+                || containsSpecialCharacters(precioVentaStr)) {
+            //COLOCAR POPUP "CARACTERES ESPECIALES"
+            return;
+        }
+
+        // Validar y convertir los valores ingresados
+        int añoLanzamiento;
+        double precioCompra;
+        double precioVenta;
+
+        try {
+            añoLanzamiento = Integer.parseInt(añoLanzamientoStr);
+            precioCompra = Double.parseDouble(precioCompraStr.replace(',', '.'));
+            precioVenta = Double.parseDouble(precioVentaStr.replace(',', '.'));
+        } catch (NumberFormatException e) {
+
+            return;
+        }
+
+        // Concatenar la información del modelo
+        String modelostr = marca + "," + nombreModelo + "," + añoLanzamiento;
+
+        // Crear un objeto de tipo Autos con la información
+        Autos registro = new Autos();
+        registro.setPlaca(placa);
+        registro.setColor(color);
+        registro.setModelo(modelostr);
+        registro.setPrecioDeCompra(precioCompra);
+        registro.setPrecioDeVenta(precioVenta);
+
+        // Agregar el registro a la lista de automóviles
+        automobileRecords.add(registro);
+        // Limpiar los campos de entrada y mostrar un mensaje de éxito
+        MainFrame.TField_Placa.setText("");
+        MainFrame.TField_Color.setText("");
+        MainFrame.TField_Marca.setText("");
+        MainFrame.TField_NombreModelo.setText("");
+        MainFrame.TField_AñoAuto.setText("");
+        MainFrame.TField_PrecioCompra.setText("");
+        MainFrame.TField_PreciodeVenta.setText("");
+        //colocar el popup "Auto Registrado"
+    }
+
+    public static void EliminarPorPlaca(String placa) {
+        for (Autos registro : automobileRecords) {
+            if (registro.getPlaca().equalsIgnoreCase(placa)) {
+                automobileRecords.remove(registro);
+                //COLOCAR POPUP "AUTOELIMINADO"
+                return;
+            }
+        }
+        //COLOCAR POPUP "No se encontró un auto con la placa"
+    }
+
+    public static void ModifyCar(String placa, String color, String marca, String nombreModelo, String añoLanzamientoStr, String precioCompraStr, String precioVentaStr) {
+
+        // Bucle para buscar el carro con la placa
+        boolean carroEncontrado = false;
+        for (Autos auto : automobileRecords) {
+            if (auto.getPlaca().equalsIgnoreCase(placa)) {
+                carroEncontrado = true;
+
+                // leee valores de campos de entrada
+                // Actualiza los campos del automóvil solo si no están vacíos
+                if (!color.isEmpty()) {
+                    auto.setColor(color);
+                }
+                if (!marca.isEmpty()) {
+                    String[] modeloParts = auto.getModelo().split(",");
+                    auto.setModelo(marca + "," + modeloParts[1] + "," + modeloParts[2]);
+                }
+                if (!nombreModelo.isEmpty()) {
+                    String[] modeloParts = auto.getModelo().split(",");
+                    auto.setModelo(modeloParts[0] + "," + nombreModelo + "," + modeloParts[2]);
+                }
+                if (!añoLanzamientoStr.isEmpty()) {
+                    try {
+                        int añoLanzamiento = Integer.parseInt(añoLanzamientoStr);
+                        String[] modeloParts = auto.getModelo().split(",");
+                        auto.setModelo(modeloParts[0] + "," + modeloParts[1] + "," + añoLanzamiento);
+                    } catch (NumberFormatException e) {
+
+                    }
+                }
+                if (!precioCompraStr.isEmpty()) {
+                    try {
+                        double precioCompra = Double.parseDouble(precioCompraStr.replace(',', '.'));
+                        auto.setPrecioDeCompra(precioCompra);
+                    } catch (NumberFormatException e) {
+
+                    }
+                }
+
+               
+
+                if (!precioVentaStr.isEmpty()) {
+                    try {
+                        double precioVenta = Double.parseDouble(precioVentaStr.replace(',', '.'));
+                        auto.setPrecioDeVenta(precioVenta);
+                        //POPUP "modificados con éxito"
+                        break;
+                    } catch (Exception e) {
+                    }
+                }
+
+                if (!carroEncontrado) {
+                    //POP UP NO SE ECONTRO AUTO CON LA PLACA
+                    
+                }
+                MainFrame.TField_Placa.setText("");
+                MainFrame.TField_Color.setText("");
+                MainFrame.TField_Marca.setText("");
+                MainFrame.TField_NombreModelo.setText("");
+                MainFrame.TField_AñoAuto.setText("");
+                MainFrame.TField_PrecioCompra.setText("");
+                MainFrame.TField_PreciodeVenta.setText("");
+
+            }
+        }
 
     }
 }

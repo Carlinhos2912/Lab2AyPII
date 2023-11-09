@@ -1148,163 +1148,39 @@ public class MainFrame extends javax.swing.JFrame {
     private void Btn_CarModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarModifyActionPerformed
         String placa = TField_Placa.getText();
 
-        // Realiza la validación de si esta vacia el field de la placa
+        // Realiza la validación de si esta vacía el field de la placa
         if (placa.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Ingrese una placa válida para modificar un auto.");
             return;
         }
-        // Bucle para buscar el carro con la placa
-        boolean carroEncontrado = false;
-        for (Autos auto : automobileRecords) {
-            if (auto.getPlaca().equalsIgnoreCase(placa)) {
-                carroEncontrado = true;
-
-                // leee valores de campos de entrada
-                String color = TField_Color.getText().toLowerCase();
-                String marca = TField_Marca.getText().toLowerCase();
-                String nombreModelo = TField_NombreModelo.getText().toLowerCase();
-                String añoLanzamientoStr = TField_AñoAuto.getText();
-                String precioCompraStr = TField_PrecioCompra.getText().replace(',', '.');
-                String precioVentaStr = TField_PreciodeVenta.getText().replace(',', '.');
-
-                // Actualiza los campos del automóvil solo si no están vacíos
-                if (!color.isEmpty()) {
-                    auto.setColor(color);
-                }
-                if (!marca.isEmpty()) {
-                    String[] modeloParts = auto.getModelo().split(",");
-                    auto.setModelo(marca + "," + modeloParts[1] + "," + modeloParts[2]);
-                }
-                if (!nombreModelo.isEmpty()) {
-                    String[] modeloParts = auto.getModelo().split(",");
-                    auto.setModelo(modeloParts[0] + "," + nombreModelo + "," + modeloParts[2]);
-                }
-                if (!añoLanzamientoStr.isEmpty()) {
-                    try {
-                        int añoLanzamiento = Integer.parseInt(añoLanzamientoStr);
-                        String[] modeloParts = auto.getModelo().split(",");
-                        auto.setModelo(modeloParts[0] + "," + modeloParts[1] + "," + añoLanzamiento);
-                    } catch (NumberFormatException e) {
-                        JOptionPane.showMessageDialog(this, "Año de Lanzamiento debe ser válido.");
-                    }
-                }
-                if (!precioCompraStr.isEmpty()) {
-                    try {
-                        double precioCompra = Double.parseDouble(precioCompraStr);
-                        auto.setPrecioDeCompra(precioCompra);
-                    } catch (NumberFormatException e) {
-                        JOptionPane.showMessageDialog(this, "Precio de Compra debe ser válido.");
-                    }
-                }
-                if (!precioVentaStr.isEmpty()) {
-                    try {
-                        double precioVenta = Double.parseDouble(precioVentaStr);
-                        auto.setPrecioDeVenta(precioVenta);
-                    } catch (NumberFormatException e) {
-                        JOptionPane.showMessageDialog(this, "Precio de Venta debe ser válido.");
-                    }
-                }
-
-                JOptionPane.showMessageDialog(this, "Datos del auto con placa " + placa + " modificados con éxito.");
-                break; // Salir del bucle después de modificar el automóvil
-            }
-        }
-        // Si no se encontró el automóvil
-        if (!carroEncontrado) {
-            JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
-        }
-    }//GEN-LAST:event_Btn_CarModifyActionPerformed
-    private boolean containsSpecialCharacters(String str) {
-        String regex = "^[a-zA-Z0-9.,]+$";
-        return !Pattern.matches(regex, str);
-    }
-
-    private void Btn_CarRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarRegisterActionPerformed
-        // Leer los datos de los campos y convertirlos a minúsculas
-        String placa = TField_Placa.getText().toUpperCase();
-        String color = TField_Color.getText().toUpperCase();;
+        String color = TField_Color.getText().toUpperCase();
         String marca = TField_Marca.getText().toUpperCase();
         String nombreModelo = TField_NombreModelo.getText().toUpperCase();
         String añoLanzamientoStr = TField_AñoAuto.getText();
         String precioCompraStr = TField_PrecioCompra.getText().replace(',', '.');
         String precioVentaStr = TField_PreciodeVenta.getText().replace(',', '.');
 
-        // Verificar si ya existe un automóvil con la misma placa
-        for (Autos registro : automobileRecords) {
-            if (registro.getPlaca().equals(placa)) {
-                JOptionPane.showMessageDialog(this, "Ya existe un auto con la misma placa.");
-                return;
-            }
-        }
+        // Llama a la función de modificación de automóviles en TheMagic
+        TheMagic.ModifyCar(placa, TField_Color.getText(), TField_Marca.getText(), TField_NombreModelo.getText(),
+                TField_AñoAuto.getText(), TField_PrecioCompra.getText(), TField_PreciodeVenta.getText());
 
-        String incompleteField = null;
+    }//GEN-LAST:event_Btn_CarModifyActionPerformed
 
-        if (placa.isEmpty()) {
-            incompleteField = "Placa";
-        } else if (color.isEmpty()) {
-            incompleteField = "Color";
-        } else if (marca.isEmpty()) {
-            incompleteField = "Marca";
-        } else if (nombreModelo.isEmpty()) {
-            incompleteField = "Nombre del Modelo";
-        } else if (añoLanzamientoStr.isEmpty()) {
-            incompleteField = "Año de Lanzamiento";
-        } else if (precioCompraStr.isEmpty()) {
-            incompleteField = "Precio de Compra";
-        } else if (precioVentaStr.isEmpty()) {
-            incompleteField = "Precio de Venta";
-        }
 
-        if (incompleteField != null) {
-            JOptionPane.showMessageDialog(this, "El campo '" + incompleteField + "' está incompleto.");
-            return;
-        }
+    private void Btn_CarRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarRegisterActionPerformed
+        String placa = TField_Placa.getText().toUpperCase();
+        String color = TField_Color.getText().toUpperCase();
+        String marca = TField_Marca.getText().toUpperCase();
+        String nombreModelo = TField_NombreModelo.getText().toUpperCase();
+        String añoLanzamientoStr = TField_AñoAuto.getText();
+        String precioCompraStr = TField_PrecioCompra.getText().replace(',', '.');
+        String precioVentaStr = TField_PreciodeVenta.getText().replace(',', '.');
 
-        if (containsSpecialCharacters(placa) || containsSpecialCharacters(color)
-                || containsSpecialCharacters(marca) || containsSpecialCharacters(nombreModelo)
-                || containsSpecialCharacters(añoLanzamientoStr) || containsSpecialCharacters(precioCompraStr)
-                || containsSpecialCharacters(precioVentaStr)) {
-            JOptionPane.showMessageDialog(this, "Campos contienen caracteres especiales.");
-            return;
-        }
+        // Llama a la función de registro de automóviles en TheMagic
+        TheMagic.RegisterCar(placa, color, marca, nombreModelo, añoLanzamientoStr, precioCompraStr, precioVentaStr);
 
-        int añoLanzamiento;
-        double precioCompra;
-        double precioVenta;
+        
 
-        try {
-            añoLanzamiento = Integer.parseInt(añoLanzamientoStr);
-            precioCompra = Double.parseDouble(precioCompraStr);
-            precioVenta = Double.parseDouble(precioVentaStr);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Año de Lanzamiento, Precio de Compra y Precio de Venta deben ser válidos.");
-            return;
-        }
-
-        // Concatenar la información de los campos para dejarlo único en el modelo
-        String modelostr = marca + "," + nombreModelo + "," + añoLanzamiento;
-
-        // Crear un objeto de tipo Autos con la información
-        Autos registro = new Autos();
-        registro.setPlaca(placa);
-        registro.setColor(color);
-        registro.setModelo(modelostr);
-        registro.setPrecioDeCompra(precioCompra);
-        registro.setPrecioDeVenta(precioVenta);
-
-        // Agregar el registro a la lista de automóviles
-        automobileRecords.add(registro);
-
-        // Limpiar los campos de entrada y mostrar un mensaje de éxito
-        TField_Placa.setText("");
-        TField_Color.setText("");
-        TField_Marca.setText("");
-        TField_NombreModelo.setText("");
-        TField_AñoAuto.setText("");
-        TField_PrecioCompra.setText("");
-        TField_PreciodeVenta.setText("");
-
-        JOptionPane.showMessageDialog(this, "Registro exitoso");
     }//GEN-LAST:event_Btn_CarRegisterActionPerformed
 
     private void TField_PlacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_PlacaActionPerformed
@@ -1602,7 +1478,7 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JDialog PopUp_Base;
     private javax.swing.JScrollPane Scroll_Table_CarsList;
     private javax.swing.JScrollPane Scroll_Table_ClientsList;
-    private javax.swing.JTextField TField_AñoAuto;
+    public static javax.swing.JTextField TField_AñoAuto;
     private javax.swing.JTextField TField_CLientEmail;
     private javax.swing.JTextField TField_ClientAdress;
     public static javax.swing.JTextField TField_ClientAdress_Buy;
@@ -1617,12 +1493,12 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JTextField TField_ClientName_Buy;
     private javax.swing.JTextField TField_ClientPhoneNumber;
     public static javax.swing.JTextField TField_ClientPhoneNumber_Buy;
-    private javax.swing.JTextField TField_Color;
-    private javax.swing.JTextField TField_Marca;
-    private javax.swing.JTextField TField_NombreModelo;
-    private javax.swing.JTextField TField_Placa;
-    private javax.swing.JTextField TField_PrecioCompra;
-    private javax.swing.JTextField TField_PreciodeVenta;
+    public static javax.swing.JTextField TField_Color;
+    public static javax.swing.JTextField TField_Marca;
+    public static javax.swing.JTextField TField_NombreModelo;
+    public static javax.swing.JTextField TField_Placa;
+    public static javax.swing.JTextField TField_PrecioCompra;
+    public static javax.swing.JTextField TField_PreciodeVenta;
     private javax.swing.JTextField TField_SalesFinder;
     public static javax.swing.JTable Table_CarsList;
     private javax.swing.JTable Table_ClientsList;
