@@ -483,7 +483,7 @@ public class MainFrame extends javax.swing.JFrame {
         }
 
         Btn_BuySelected.setBackground(new java.awt.Color(108, 169, 230));
-        Btn_BuySelected.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Btn_BuySelected.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         Btn_BuySelected.setForeground(new java.awt.Color(255, 255, 255));
         Btn_BuySelected.setText("Comprar Seleccionado");
         Btn_BuySelected.addActionListener(new java.awt.event.ActionListener() {
@@ -491,14 +491,13 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_BuySelectedActionPerformed(evt);
             }
         });
-        IntFrame_ClientView.getContentPane().add(Btn_BuySelected, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 240, 80));
+        IntFrame_ClientView.getContentPane().add(Btn_BuySelected, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 200, 40));
 
         Scroll_Table_CarsList.setMaximumSize(new java.awt.Dimension(560, 400));
         Scroll_Table_CarsList.setMinimumSize(new java.awt.Dimension(560, 400));
         Scroll_Table_CarsList.setPreferredSize(new java.awt.Dimension(560, 400));
 
         Table_CarsList.setBackground(new java.awt.Color(199, 227, 255));
-        Table_CarsList.setForeground(new java.awt.Color(0, 0, 0));
         Table_CarsList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -540,7 +539,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         IntFrame_ClientView.getContentPane().add(Scroll_Table_CarsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 820, 280));
 
-        Lbl_AdminEntry.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        Lbl_AdminEntry.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         Lbl_AdminEntry.setForeground(new java.awt.Color(69, 101, 195));
         Lbl_AdminEntry.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lbl_AdminEntry.setText("Entrar a las opciones de administrador");
@@ -549,9 +548,9 @@ public class MainFrame extends javax.swing.JFrame {
                 Lbl_AdminEntryMouseClicked(evt);
             }
         });
-        IntFrame_ClientView.getContentPane().add(Lbl_AdminEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 380, 50));
+        IntFrame_ClientView.getContentPane().add(Lbl_AdminEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 400, 70));
 
-        Lbl_Bg_ClientView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Vistadecliente.png"))); // NOI18N
+        Lbl_Bg_ClientView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/Adminview(960 x 540 px).png"))); // NOI18N
         Lbl_Bg_ClientView.setMaximumSize(new java.awt.Dimension(960, 510));
         Lbl_Bg_ClientView.setMinimumSize(new java.awt.Dimension(960, 510));
         Lbl_Bg_ClientView.setPreferredSize(new java.awt.Dimension(960, 510));
