@@ -38,6 +38,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         PopUp_Base = new javax.swing.JDialog();
         Lbl_PopUp_Base = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         IntFrame_DevelopersInfo = new javax.swing.JInternalFrame();
         Lbl_Bg_DevelopersInfo = new javax.swing.JLabel();
         IntFrame_Instructions = new javax.swing.JInternalFrame();
@@ -102,6 +103,9 @@ public class MainFrame extends javax.swing.JFrame {
         Btn_DeleteClient = new javax.swing.JButton();
         Lbl_Bg_ClientsAdminConfig = new javax.swing.JLabel();
         IntFrame_SalesAdminConfig = new javax.swing.JInternalFrame();
+        TField_SalesFinder = new javax.swing.JTextField();
+        Btn_FindSale = new javax.swing.JButton();
+        Lbl_SalesInfo = new javax.swing.JLabel();
         Lbl_Bg_SalesAdminCofig = new javax.swing.JLabel();
         Btn_Back_AdminView = new javax.swing.JButton();
         Lbl_Entry_CarsAdminConfig = new javax.swing.JLabel();
@@ -126,6 +130,8 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_PopUp_Base.setMinimumSize(new java.awt.Dimension(300, 300));
         Lbl_PopUp_Base.setPreferredSize(new java.awt.Dimension(300, 300));
         PopUp_Base.getContentPane().add(Lbl_PopUp_Base, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototype 1");
@@ -905,6 +911,24 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         IntFrame_SalesAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TField_SalesFinder.setText("jTextField1");
+        IntFrame_SalesAdminConfig.getContentPane().add(TField_SalesFinder, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 200, 30));
+
+        Btn_FindSale.setBackground(new java.awt.Color(108, 169, 230));
+        Btn_FindSale.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        Btn_FindSale.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_FindSale.setText("Buscar");
+        Btn_FindSale.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_FindSaleActionPerformed(evt);
+            }
+        });
+        IntFrame_SalesAdminConfig.getContentPane().add(Btn_FindSale, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 150, 60));
+
+        Lbl_SalesInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Lbl_SalesInfo.setText("*Aqui van los datos de la venta*");
+        IntFrame_SalesAdminConfig.getContentPane().add(Lbl_SalesInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 330, 270));
         IntFrame_SalesAdminConfig.getContentPane().add(Lbl_Bg_SalesAdminCofig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_SalesAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
@@ -1374,6 +1398,10 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_CarInfo.setText(TheMagic.ShowSelectedCar(Table_CarsList.getSelectedRow(), Table_CarsList));
     }//GEN-LAST:event_Btn_BuySelectedActionPerformed
 
+    private void Btn_FindSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_FindSaleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_FindSaleActionPerformed
+
     private void EliminarPorPlaca(String placa) {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
@@ -1441,8 +1469,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton Btn_ConfirmPasswordChange;
     private javax.swing.JButton Btn_DeleteClient;
     public static javax.swing.JButton Btn_ExitAdminLogin;
-    private javax.swing.JButton Btn_ExitDevelopersInfo;
-    private javax.swing.JButton Btn_ExitInstructions;
+    private javax.swing.JButton Btn_FindSale;
     private javax.swing.JButton Btn_ModifyClient;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
@@ -1473,6 +1500,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Entry_SalesAdminConfig;
     public static javax.swing.JLabel Lbl_PasswordChange;
     public static javax.swing.JLabel Lbl_PopUp_Base;
+    private javax.swing.JLabel Lbl_SalesInfo;
     public static javax.swing.JPasswordField Pfield_AdminPassword;
     public static javax.swing.JPasswordField Pfield_ConfirmNewPassword;
     public static javax.swing.JPasswordField Pfield_LastPassword;
@@ -1501,9 +1529,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField TField_Placa;
     private javax.swing.JTextField TField_PrecioCompra;
     private javax.swing.JTextField TField_PreciodeVenta;
+    private javax.swing.JTextField TField_SalesFinder;
     public static javax.swing.JTable Table_CarsList;
     private javax.swing.JTable Table_ClientsList;
     private javax.swing.JTextField Tfield_AdminUser;
+    private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBarAcercade;
     private javax.swing.JMenuItem jMenuItemAcercade;
