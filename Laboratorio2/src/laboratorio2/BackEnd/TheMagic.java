@@ -209,10 +209,14 @@ public class TheMagic {
 
     public static void RegisterCar(String placa, String color, String marca, String nombreModelo, String añoLanzamientoStr, String precioCompraStr, String precioVentaStr) {
 
-// Verificar si ya existe un automóvil con la misma placa
+        // Verificar si ya existe un automóvil con la misma placa
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equals(placa)) {
                 //No se encontró la placa
+                PopUp_Base.setTitle("El auto ya esta registrado");
+                Icon icon = MainFrame.ImgGetter_RegisAutoIncorrecto.getIcon();
+                MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                PopUp_Base.setVisible(true);
                 return;
             }
         }
@@ -236,6 +240,10 @@ public class TheMagic {
 
         if (incompleteField != null) {
             //Colocar "campos imcompletos"
+            PopUp_Base.setTitle("Campos incompletos");
+            Icon icon = MainFrame.ImgGetter_RegisAutoIncorrecto.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
             return;
         }
 
@@ -244,6 +252,10 @@ public class TheMagic {
                 || containsSpecialCharacters(añoLanzamientoStr) || containsSpecialCharacters(precioCompraStr)
                 || containsSpecialCharacters(precioVentaStr)) {
             //COLOCAR POPUP "CARACTERES ESPECIALES"
+            PopUp_Base.setTitle("Caracteres especiales");
+            Icon icon = MainFrame.ImgGetter_RegisAutoIncorrecto.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
             return;
         }
 
@@ -283,6 +295,10 @@ public class TheMagic {
         MainFrame.TField_PrecioCompra.setText("");
         MainFrame.TField_PreciodeVenta.setText("");
         //colocar el popup "Auto Registrado"
+        PopUp_Base.setTitle("Listo!");
+        Icon icon = MainFrame.ImgGetter_RegisAutoCorrecto.getIcon();
+        MainFrame.Lbl_PopUp_Base.setIcon(icon);
+        PopUp_Base.setVisible(true);
     }
 
     public static void EliminarPorPlaca(String placa) {
@@ -290,10 +306,18 @@ public class TheMagic {
             if (registro.getPlaca().equalsIgnoreCase(placa)) {
                 automobileRecords.remove(registro);
                 //COLOCAR POPUP "AUTOELIMINADO"
+                PopUp_Base.setTitle("Listo!");
+                Icon icon = MainFrame.ImgGetter_ElimAutoCorrecto.getIcon();
+                MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                PopUp_Base.setVisible(true);
                 return;
             }
         }
         //COLOCAR POPUP "No se encontró un auto con la placa"
+        PopUp_Base.setTitle("No se encontró la placa");
+        Icon icon = MainFrame.ImgGetter_ElimAutoIncorrecto.getIcon();
+        MainFrame.Lbl_PopUp_Base.setIcon(icon);
+        PopUp_Base.setVisible(true);
     }
 
     public static void ModifyCar(String placa, String color, String marca, String nombreModelo, String añoLanzamientoStr, String precioCompraStr, String precioVentaStr) {
@@ -335,13 +359,15 @@ public class TheMagic {
                     }
                 }
 
-               
-
                 if (!precioVentaStr.isEmpty()) {
                     try {
                         double precioVenta = Double.parseDouble(precioVentaStr.replace(',', '.'));
                         auto.setPrecioDeVenta(precioVenta);
                         //POPUP "modificados con éxito"
+                        PopUp_Base.setTitle("Listo!");
+                        Icon icon = MainFrame.ImgGetter_ModifAutoCorrecto.getIcon();
+                        MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                        PopUp_Base.setVisible(true);
                         break;
                     } catch (Exception e) {
                     }
@@ -349,7 +375,11 @@ public class TheMagic {
 
                 if (!carroEncontrado) {
                     //POP UP NO SE ECONTRO AUTO CON LA PLACA
-                    
+                    PopUp_Base.setTitle("No se encontró la placa");
+                    Icon icon = MainFrame.ImgGetter_ModifAutoIncorrecto.getIcon();
+                    MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                    PopUp_Base.setVisible(true);
+
                 }
                 MainFrame.TField_Placa.setText("");
                 MainFrame.TField_Color.setText("");

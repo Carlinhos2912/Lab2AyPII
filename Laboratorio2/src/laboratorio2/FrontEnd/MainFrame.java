@@ -1048,7 +1048,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenu2.setText("CarCrafter");
 
-        jMenuItemAcercade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemAcercade.setText("Acerca de");
         jMenuItemAcercade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1057,7 +1056,6 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItemAcercade);
 
-        jMenuItemInstrucciones.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         jMenuItemInstrucciones.setText("Instrucciones");
         jMenuItemInstrucciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1150,7 +1148,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         // Realiza la validación de si esta vacía el field de la placa
         if (placa.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Ingrese una placa válida para modificar un auto.");
+            PopUp_Base.setTitle("Placa invalida");
+            Icon icon = MainFrame.ImgGetter_ModifAutoIncorrecto.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
             return;
         }
         String color = TField_Color.getText().toUpperCase();
@@ -1179,7 +1180,6 @@ public class MainFrame extends javax.swing.JFrame {
         // Llama a la función de registro de automóviles en TheMagic
         TheMagic.RegisterCar(placa, color, marca, nombreModelo, añoLanzamientoStr, precioCompraStr, precioVentaStr);
 
-        
 
     }//GEN-LAST:event_Btn_CarRegisterActionPerformed
 
@@ -1356,11 +1356,17 @@ public class MainFrame extends javax.swing.JFrame {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equalsIgnoreCase(placa)) {
                 automobileRecords.remove(registro);
-                JOptionPane.showMessageDialog(this, "Auto con placa " + placa + " eliminado.");
+                PopUp_Base.setTitle("Listo!");
+                Icon icon = MainFrame.ImgGetter_ElimAutoCorrecto.getIcon();
+                MainFrame.Lbl_PopUp_Base.setIcon(icon);
+                PopUp_Base.setVisible(true);
                 return;
             }
         }
-        JOptionPane.showMessageDialog(this, "No se encontró un auto con la placa " + placa);
+        PopUp_Base.setTitle("Error");
+        Icon icon = MainFrame.ImgGetter_ElimAutoIncorrecto.getIcon();
+        MainFrame.Lbl_PopUp_Base.setIcon(icon);
+        PopUp_Base.setVisible(true);
     }
 
     /**

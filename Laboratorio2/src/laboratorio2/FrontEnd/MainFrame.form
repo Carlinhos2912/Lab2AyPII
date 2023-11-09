@@ -92,9 +92,6 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemAcercade">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Ctrl+W"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Acerca de"/>
               </Properties>
               <Events>
@@ -103,9 +100,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemInstrucciones">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Shift+R"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Instrucciones"/>
               </Properties>
               <Events>
