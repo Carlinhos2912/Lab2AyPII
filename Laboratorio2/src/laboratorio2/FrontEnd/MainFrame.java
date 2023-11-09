@@ -1,5 +1,6 @@
 package laboratorio2.FrontEnd;
 
+import java.awt.event.ActionEvent;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -1401,6 +1402,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void Btn_FindSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_FindSaleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Btn_FindSaleActionPerformed
+
+    private void jMenuItemInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInstruccionesActionPerformed
+        IntFrame_Instructions.setVisible(true);
+    }//GEN-LAST:event_jMenuItemInstruccionesActionPerformed
 
     private void EliminarPorPlaca(String placa) {
         for (Autos registro : automobileRecords) {
