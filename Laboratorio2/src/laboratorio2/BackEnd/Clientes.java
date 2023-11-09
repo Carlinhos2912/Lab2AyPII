@@ -2,19 +2,19 @@ package laboratorio2.BackEnd;
 
 public class Clientes {
     
-    private int ID; //Documento de identidad del cliente
+    private long ID; //Documento de identidad del cliente
     private String Nombres; 
     private String Apellidos; 
     private String FechaDeNacimiento;
     private String Email;
-    private int Telefono;
+    private long Telefono;
     private String Direccion;
 
-    public int getID() {
+    public long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(long ID) {
         this.ID = ID;
     }
 
@@ -50,11 +50,11 @@ public class Clientes {
         this.Email = Email;
     }
 
-    public int getTelefono() {
+    public long getTelefono() {
         return Telefono;
     }
 
-    public void setTelefono(int Telefono) {
+    public void setTelefono(long Telefono) {
         this.Telefono = Telefono;
     }
 

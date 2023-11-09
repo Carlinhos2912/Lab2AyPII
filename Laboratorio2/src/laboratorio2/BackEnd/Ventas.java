@@ -3,11 +3,12 @@ package laboratorio2.BackEnd;
 public class Ventas {
     
     private long NumVenta;  //Numero de factura
-    private int IdComprador;
+    private long IdComprador;
     private String AutoVendido; //Vector de placas de los autos vendidos 
     private String NombreDelVendedor;
     private String FechaYhoraDeLaVenta;
-    private double ValorTotal; //Monto total de la venta
+    private double PagoTotal;
+    private double Balance;
 
     public long getNumVenta() {
         return NumVenta;
@@ -17,11 +18,11 @@ public class Ventas {
         this.NumVenta = NumVenta;
     }
 
-    public int getIdComprador() {
+    public long getIdComprador() {
         return IdComprador;
     }
 
-    public void setIdComprador(int IdComprador) {
+    public void setIdComprador(long IdComprador) {
         this.IdComprador = IdComprador;
     }
 
@@ -49,12 +50,20 @@ public class Ventas {
         this.FechaYhoraDeLaVenta = FechaYhoraDeLaVenta;
     }
 
-    public double getValorTotal() {
-        return ValorTotal;
+    public double getPagoTotal() {
+        return PagoTotal;
     }
 
-    public void setValorTotal(double ValorTotal) {
-        this.ValorTotal = ValorTotal;
+    public void setPagoTotal(double PagoTotal) {
+        this.PagoTotal = PagoTotal;
+    }
+
+    public double getBalance() {
+        return Balance;
+    }
+
+    public void setBalance(double Balance) {
+        this.Balance = Balance;
     }
     
 }

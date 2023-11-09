@@ -2,6 +2,7 @@ package laboratorio2.FrontEnd;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
+import javax.swing.Icon;
 import javax.swing.JOptionPane;
 import laboratorio2.BackEnd.Admin;
 import laboratorio2.BackEnd.Autos;
@@ -999,7 +1000,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         ImgGetter_LoginIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/INGRESOINCORRECTO.png"))); // NOI18N
         BackRooms.add(ImgGetter_LoginIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_CambioContraseñaCorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/CONTRMODIFIEXITO.png"))); // NOI18N
         BackRooms.add(ImgGetter_CambioContraseñaCorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_CambioContraseñaIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/CONTRMODIFISINEXITO.png"))); // NOI18N
         BackRooms.add(ImgGetter_CambioContraseñaIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
 
         ImgGetter_RegisAutoCorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/REGISCARCORRECTO.png"))); // NOI18N
@@ -1031,9 +1036,17 @@ public class MainFrame extends javax.swing.JFrame {
 
         ImgGetter_ElimClienteIncorrecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/CLIENTEELIMINCORRECTAMENTE.png"))); // NOI18N
         BackRooms.add(ImgGetter_ElimClienteIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_VentaEncontrada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/VENTAENCONTRADA.png"))); // NOI18N
         BackRooms.add(ImgGetter_VentaEncontrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_VentaNoEncontrada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/VENTANOENCOTRADA.png"))); // NOI18N
         BackRooms.add(ImgGetter_VentaNoEncontrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_ErrorAlComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/ERRORCOMPRa.png"))); // NOI18N
         BackRooms.add(ImgGetter_ErrorAlComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
+
+        ImgGetter_CompraCorrecta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/POPUPS/COMPRAEXITOS.png"))); // NOI18N
         BackRooms.add(ImgGetter_CompraCorrecta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 300));
 
         getContentPane().add(BackRooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 30, 20));
@@ -1387,9 +1400,9 @@ public class MainFrame extends javax.swing.JFrame {
         try {
             TheMagic.ComprarAuto();
         } catch (Exception e) {
-            //Icon icon = new ImageIcon(getClass().getResource("/media/POPUPS/"));
-            //Lbl_PopUp_Base.setIcon(icon);
-            PopUp_Base.setTitle("Error al comprar");
+            PopUp_Base.setTitle("Error");
+            Icon icon = MainFrame.ImgGetter_ErrorAlComprar.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
             PopUp_Base.setVisible(true);
         }
     }//GEN-LAST:event_Btn_BuyActionPerformed
@@ -1534,24 +1547,24 @@ public class MainFrame extends javax.swing.JFrame {
     public static javax.swing.JButton Btn_ExitAdminLogin;
     private javax.swing.JButton Btn_FindSale;
     private javax.swing.JButton Btn_ModifyClient;
-    private javax.swing.JLabel ImgGetter_CambioContraseñaCorrecto;
-    private javax.swing.JLabel ImgGetter_CambioContraseñaIncorrecto;
-    private javax.swing.JLabel ImgGetter_CompraCorrecta;
-    private javax.swing.JLabel ImgGetter_ElimAutoCorrecto;
-    private javax.swing.JLabel ImgGetter_ElimAutoIncorrecto;
-    private javax.swing.JLabel ImgGetter_ElimClienteCorrecto;
-    private javax.swing.JLabel ImgGetter_ElimClienteIncorrecto;
-    private javax.swing.JLabel ImgGetter_ErrorAlComprar;
+    public static javax.swing.JLabel ImgGetter_CambioContraseñaCorrecto;
+    public static javax.swing.JLabel ImgGetter_CambioContraseñaIncorrecto;
+    public static javax.swing.JLabel ImgGetter_CompraCorrecta;
+    public static javax.swing.JLabel ImgGetter_ElimAutoCorrecto;
+    public static javax.swing.JLabel ImgGetter_ElimAutoIncorrecto;
+    public static javax.swing.JLabel ImgGetter_ElimClienteCorrecto;
+    public static javax.swing.JLabel ImgGetter_ElimClienteIncorrecto;
+    public static javax.swing.JLabel ImgGetter_ErrorAlComprar;
     public static javax.swing.JLabel ImgGetter_LoginCorrecto;
     public static javax.swing.JLabel ImgGetter_LoginIncorrecto;
-    private javax.swing.JLabel ImgGetter_ModifAutoCorrecto;
-    private javax.swing.JLabel ImgGetter_ModifAutoIncorrecto;
-    private javax.swing.JLabel ImgGetter_ModifClienteCorrecto;
-    private javax.swing.JLabel ImgGetter_ModifClienteIncorrecto;
-    private javax.swing.JLabel ImgGetter_RegisAutoCorrecto;
-    private javax.swing.JLabel ImgGetter_RegisAutoIncorrecto;
-    private javax.swing.JLabel ImgGetter_VentaEncontrada;
-    private javax.swing.JLabel ImgGetter_VentaNoEncontrada;
+    public static javax.swing.JLabel ImgGetter_ModifAutoCorrecto;
+    public static javax.swing.JLabel ImgGetter_ModifAutoIncorrecto;
+    public static javax.swing.JLabel ImgGetter_ModifClienteCorrecto;
+    public static javax.swing.JLabel ImgGetter_ModifClienteIncorrecto;
+    public static javax.swing.JLabel ImgGetter_RegisAutoCorrecto;
+    public static javax.swing.JLabel ImgGetter_RegisAutoIncorrecto;
+    public static javax.swing.JLabel ImgGetter_VentaEncontrada;
+    public static javax.swing.JLabel ImgGetter_VentaNoEncontrada;
     public static javax.swing.JInternalFrame IntFrame_AdminLogin;
     public static javax.swing.JInternalFrame IntFrame_AdminView;
     public static javax.swing.JInternalFrame IntFrame_BuyACar;
