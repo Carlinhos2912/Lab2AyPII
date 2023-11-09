@@ -1529,7 +1529,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="130" width="180" height="20"/>
+                  <AbsoluteConstraints x="100" y="130" width="180" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1604,7 +1604,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="337" width="180" height="20"/>
+                  <AbsoluteConstraints x="100" y="334" width="180" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1702,11 +1702,16 @@
           <SubComponents>
             <Component class="javax.swing.JTextField" name="TField_SalesFinder">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="e3" red="c7" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="13" style="0"/>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="50" y="120" width="200" height="30"/>
+                  <AbsoluteConstraints x="90" y="140" width="190" height="50"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1728,7 +1733,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="70" y="200" width="150" height="60"/>
+                  <AbsoluteConstraints x="110" y="210" width="150" height="60"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1744,6 +1749,11 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="Lbl_Bg_SalesAdminCofig">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/laboratorio2/FrontEnd/media/ConsultarFactura.png"/>
+                </Property>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="0" width="700" height="370"/>

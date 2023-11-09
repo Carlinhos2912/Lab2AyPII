@@ -818,7 +818,7 @@ public class MainFrame extends javax.swing.JFrame {
                 TField_ClientNameActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 180, -1));
 
         TField_ClientLastname.setBackground(new java.awt.Color(199, 227, 255));
         TField_ClientLastname.addActionListener(new java.awt.event.ActionListener() {
@@ -858,7 +858,7 @@ public class MainFrame extends javax.swing.JFrame {
                 TField_ClientAdressActionPerformed(evt);
             }
         });
-        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientAdress, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 337, 180, 20));
+        IntFrame_ClientsAdminConfig.getContentPane().add(TField_ClientAdress, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 334, 180, -1));
 
         Btn_ModifyClient.setBackground(new java.awt.Color(108, 169, 230));
         Btn_ModifyClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
@@ -919,8 +919,9 @@ public class MainFrame extends javax.swing.JFrame {
         });
         IntFrame_SalesAdminConfig.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TField_SalesFinder.setText("jTextField1");
-        IntFrame_SalesAdminConfig.getContentPane().add(TField_SalesFinder, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 200, 30));
+        TField_SalesFinder.setBackground(new java.awt.Color(199, 227, 255));
+        TField_SalesFinder.setFont(new java.awt.Font("Arial Narrow", 0, 13)); // NOI18N
+        IntFrame_SalesAdminConfig.getContentPane().add(TField_SalesFinder, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 190, 50));
 
         Btn_FindSale.setBackground(new java.awt.Color(108, 169, 230));
         Btn_FindSale.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
@@ -931,11 +932,13 @@ public class MainFrame extends javax.swing.JFrame {
                 Btn_FindSaleActionPerformed(evt);
             }
         });
-        IntFrame_SalesAdminConfig.getContentPane().add(Btn_FindSale, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 150, 60));
+        IntFrame_SalesAdminConfig.getContentPane().add(Btn_FindSale, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 150, 60));
 
         Lbl_SalesInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lbl_SalesInfo.setText("*Aqui van los datos de la venta*");
         IntFrame_SalesAdminConfig.getContentPane().add(Lbl_SalesInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 330, 270));
+
+        Lbl_Bg_SalesAdminCofig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio2/FrontEnd/media/ConsultarFactura.png"))); // NOI18N
         IntFrame_SalesAdminConfig.getContentPane().add(Lbl_Bg_SalesAdminCofig, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         IntFrame_AdminView.getContentPane().add(IntFrame_SalesAdminConfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 700, 400));
