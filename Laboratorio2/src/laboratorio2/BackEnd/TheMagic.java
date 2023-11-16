@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import javax.swing.JTable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.regex.Pattern;
 import javax.swing.Icon;
 import laboratorio2.BackEnd.Clientes;
@@ -446,4 +447,63 @@ public class TheMagic {
         MainFrame.TField_SalesFinder.setText("");
 
     }
+
+    public static void ModifyClient(long id, String nuevosNombres, String nuevosApellidos,
+                                String nuevaFechaNacimiento, String nuevoEmail, Long nuevoTelefono,
+                                String nuevaDireccion) {
+
+    
+    boolean clienteEncontrado = false;
+    for (Clientes client : clientsRecords) {
+        if (client.getID() == id) {
+            clienteEncontrado = true;
+
+            
+            if (nuevosNombres != null && !nuevosNombres.isEmpty()) {
+                client.setNombres(nuevosNombres);
+            }
+            if (nuevosApellidos != null && !nuevosApellidos.isEmpty()) {
+                client.setApellidos(nuevosApellidos);
+            }
+            if (nuevaFechaNacimiento != null && !nuevaFechaNacimiento.isEmpty()) {
+                client.setFechaDeNacimiento(nuevaFechaNacimiento);
+            }
+            if (nuevoEmail != null && !nuevoEmail.isEmpty()) {
+                client.setEmail(nuevoEmail);
+            }
+            if (nuevoTelefono != null && nuevoTelefono > 0) {
+                client.setTelefono(nuevoTelefono);
+            }
+            if (nuevaDireccion != null && !nuevaDireccion.isEmpty()) {
+                client.setDireccion(nuevaDireccion);
+            }
+
+           
+            PopUp_Base.setTitle("Listo!");
+            Icon icon = MainFrame.ImgGetter_ModifClienteCorrecto.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
+
+          
+            break;
+        }
+    }
+
+    if (!clienteEncontrado) {
+       
+        PopUp_Base.setTitle("No se encontró el cliente");
+        Icon icon = MainFrame.ImgGetter_ModifClienteIncorrecto.getIcon();
+        MainFrame.Lbl_PopUp_Base.setIcon(icon);
+        PopUp_Base.setVisible(true);
+    }
+}
+
+    public static void EliminarClientePorID(long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+   
+
+    
+    
 }

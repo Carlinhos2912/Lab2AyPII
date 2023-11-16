@@ -883,6 +883,11 @@ public class MainFrame extends javax.swing.JFrame {
         Btn_ModifyClient.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         Btn_ModifyClient.setForeground(new java.awt.Color(255, 255, 255));
         Btn_ModifyClient.setText("Modificar");
+        Btn_ModifyClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_ModifyClientActionPerformed(evt);
+            }
+        });
         IntFrame_ClientsAdminConfig.getContentPane().add(Btn_ModifyClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 210, 70));
 
         Btn_DeleteClient.setBackground(new java.awt.Color(108, 169, 230));
@@ -1166,8 +1171,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void Btn_CarModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CarModifyActionPerformed
         String placa = TField_Placa.getText();
-
-        // Realiza la validación de si esta vacía el field de la placa
         if (placa.isEmpty()) {
             PopUp_Base.setTitle("Placa invalida");
             Icon icon = MainFrame.ImgGetter_ModifAutoIncorrecto.getIcon();
@@ -1217,9 +1220,28 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_TField_PrecioCompraActionPerformed
 
     private void Btn_DeleteClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_DeleteClientActionPerformed
-        // TODO add your handling code here:
+     
+        long clienteID = Long.parseLong(TField_ClientIdentification.getText());
+        EliminarClientePorIdentificacion(clienteID);
+        TField_ClientIdentification.setText("");
+    
     }//GEN-LAST:event_Btn_DeleteClientActionPerformed
-
+private static void EliminarClientePorIdentificacion(long clienteID) {
+    for (Clientes cliente : clientsRecords) {
+        if (cliente.getID() == clienteID) {
+            clientsRecords.remove(cliente);
+            PopUp_Base.setTitle("Listo!");
+            Icon icon = MainFrame.ImgGetter_ElimClienteCorrecto.getIcon();
+            MainFrame.Lbl_PopUp_Base.setIcon(icon);
+            PopUp_Base.setVisible(true);
+            return;
+        }
+    }
+    PopUp_Base.setTitle("Error");
+    Icon icon = MainFrame.ImgGetter_ElimClienteIncorrecto.getIcon();
+    MainFrame.Lbl_PopUp_Base.setIcon(icon);
+    PopUp_Base.setVisible(true);
+}
     private void TField_ClientIdentificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TField_ClientIdentificationActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TField_ClientIdentificationActionPerformed
@@ -1382,7 +1404,29 @@ public class MainFrame extends javax.swing.JFrame {
         Lbl_PopUp_Txt.setText("");
     }//GEN-LAST:event_PopUp_BaseWindowClosing
 
-    public void EliminarPorPlaca(String placa) {
+    private void Btn_ModifyClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ModifyClientActionPerformed
+        try {
+            long id = Long.parseLong(TField_ClientIdentification.getText());
+            String nuevosNombres = TField_ClientName.getText();
+            String nuevosApellidos = TField_ClientLastname.getText();
+            String nuevaFechaNacimiento = TField_ClientBirthday.getText();
+            String nuevoEmail = TField_CLientEmail.getText();
+            Long nuevoTelefono = null;
+            if (!TField_ClientPhoneNumber.getText().isEmpty()) {
+                nuevoTelefono = Long.parseLong(TField_ClientPhoneNumber.getText());
+            }
+            String nuevaDireccion = TField_ClientAdress.getText();
+
+            TheMagic.ModifyClient(id, nuevosNombres, nuevosApellidos, nuevaFechaNacimiento, nuevoEmail, nuevoTelefono, nuevaDireccion);
+
+            // Display a success message
+        } catch (NumberFormatException e) {
+            // Handle the number format exception if parsing long values fails
+
+        }
+    }//GEN-LAST:event_Btn_ModifyClientActionPerformed
+
+    public static void EliminarPorPlaca(String placa) {
         for (Autos registro : automobileRecords) {
             if (registro.getPlaca().equalsIgnoreCase(placa)) {
                 automobileRecords.remove(registro);
@@ -1398,6 +1442,8 @@ public class MainFrame extends javax.swing.JFrame {
         MainFrame.Lbl_PopUp_Base.setIcon(icon);
         PopUp_Base.setVisible(true);
     }
+
+    
 
     /**
      * @param args the command line arguments
